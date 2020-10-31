@@ -1,0 +1,216 @@
+#logonbox-logoarea { 
+background-image : url('../custom_media/logoVirtua-color.png'); 
+ }
+
+#logonbox-logoarea.NS-AAA { 
+background-image : url('../custom_media/logoVirtua-color.png'); 
+ }
+
+.CTX_ContentTitleHeader { 
+font-size : 16px; 
+ }
+
+.ctxsui-messagebox .headermessage { 
+font-size : 16px; 
+ }
+
+.CTX_ContentTitleHeader { 
+ color: #ffffff;
+}
+
+.eula_title {
+ color : #ffffff;
+}
+
+.ctxsui-messagebox .headermessage { 
+ color: #ffffff;
+}
+
+#dialogueHeader { 
+ color: #ffffff;
+}
+
+.content_choices .heading{ 
+ color: #ffffff;
+}
+
+#logonbox-logonform .plain:not(.CTX_ContentTitleHeader) { 
+ font-size : 14px;
+}
+
+.eula .agreement {
+ font-size : 14px;
+}
+
+#logonbox-logonform .plain.form_text { 
+ font-size : 14px;
+}
+
+#logonbox-logonform .plain.CTXMSAM_LogonFont { 
+ font-size : 14px;
+}
+
+#logonbox-logonform .plain.dialogueChallengeCell { 
+ font-size : 14px;
+}
+
+.form_text { 
+ font-size : 14px;
+}
+
+#logonbox-logonform .error { 
+ font-size : 14px;
+}
+
+#logonbox-logonform .plain:not(.CTX_ContentTitleHeader)  { 
+ color: #ffffff;
+}
+
+.eula .agreement{ 
+ color: #ffffff;
+}
+
+.form_text  { 
+ color: #ffffff;
+}
+
+#logonbox-logonform .plain.form_text  { 
+ color: #ffffff;
+}
+
+.CTXMSAM_LogonFont  { 
+ color: #ffffff;
+}
+
+.messageStyle  { 
+ color: #ffffff;
+}
+
+#logonbox-logonform .error { 
+ color: #ffffff;
+}
+
+#logonbox-logonform .plain.CTXMSAM_LogonFont { 
+ color: #ffffff;
+}
+
+#logonbox-logonform .plain.dialogueChallengeCell { 
+ color: #ffffff;
+}
+
+.description, .box-content-title { 
+ color: #ffffff;
+}
+
+.custombutton {
+ background : #02a1c1;
+}
+
+.custombutton:hover {
+ background: #02a1c1;
+}
+
+.header {
+ background-color :#f4f5f6; 
+}
+
+.setting-dropdown {
+ background :#f4f5f6; 
+}
+
+#logonbox-innerbox {
+ background :rgba(63, 54, 67, 0.8); 
+}
+
+.eula .agreement {
+ background-color :rgba(63, 54, 67, 0.8); 
+}.ctxsui-messagebox .messagebox-middle>div {
+ background :rgba(63, 54, 67, 0.8); 
+}.block-container .box {
+ border : 1px solid rgba(63, 54, 67, 0.8); 
+}.eula_title { 
+ font-size : 20px;
+}
+
+
+
+.nav {
+ background :rgba(0, 0, 0, 0.15); 
+}
+
+.website_section#homepage b:after {
+ background: -moz-linear-gradient(left, rgba(0, 0, 0, 0.15) 0%, rgba(29,73,67,.1) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left left, left right, color-stop(0%rgba(0, 0, 0, 0.15)), color-stop(50%,rgba(29,73,67,.1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.15) 0%,rgba(29,73,67,.1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(left, rgba(0, 0, 0, 0.15) 0%,rgba(29,73,67,.1) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(left, rgba(0, 0, 0, 0.15) 0%,rgba(29,73,67,.1) 100%); /* IE10+ */
+background: linear-gradient(left right, rgba(0, 0, 0, 0.15) 0%,rgba(29,73,67,.1) 100%); /* W3C */
+
+}
+
+.nav {
+ color :rgba(255, 255, 255, 0.7); 
+}
+
+.nav .primary li.selected {
+ background-color :#315a68; 
+}
+
+.nav .primary li:hover {
+ background-color :#315a68; 
+}
+
+.nav .primary li.selected {
+ color :#ffffff; 
+}
+
+ input.Apply_Cancel_OK { 
+  background: #02a1c1; 
+ text-shadow: none;
+}
+
+#id_Add, #id_Remove {
+ background-color :#02a1c1; 
+ text-shadow: none;
+}
+
+.changePasswordNameColumn {
+ color :#dcdcdc; 
+}
+
+.bookmark_text {
+ color :#dcdcdc; 
+}
+
+.NUI_Icon a {
+ color :#dcdcdc; 
+}
+
+.username_text {
+ color :#dcdcdc; 
+}
+
+#tip {
+ color :#dcdcdc; 
+}
+
+.website_section .NUI_Icon table td.cell3 a.bookmark_icon_anchor {
+ color :#dcdcdc; 
+}
+
+.NUI_Icon table a, .none_fs {
+ color :#dcdcdc; 
+}
+
+.messageTitle {
+ color :#dcdcdc; 
+}
+
+#homepage b {
+ color :#dcdcdc; 
+}
+
+.personal_fileshare_section .NUI_Icon table td span.descr {
+ color :#cccccc; 
+}
+
