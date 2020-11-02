@@ -30,7 +30,7 @@ This latest version no longer redirects users of the landing pages to the API di
 
 # To Setup :
 
-1) It's all in Docker now! Just install Docker and Docker-Compose and run via `docker-compose build` from the /var/www directory. Then, `docker-compose up -d`.
+1) It's all in Docker now! Just install Docker and Docker-Compose and run via `docker-compose build` from with the Phishing-API directory. Then, `docker-compose up -d`.
 
 2) Use HTTPS (Let's Encrypt!) and a Domain for the Hosted API (Coming soon to Docker automagically!)
 
