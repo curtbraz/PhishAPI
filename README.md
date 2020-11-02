@@ -1,4 +1,4 @@
-# Phishing-API
+# PhishAPI
 See my blog @ https://curtbraz.blogspot.com/2018/10/phishapi-tool-rapid-deployment-of-fake.html for more details.  This API has three main features.  One allows you to easily deploy cloned landing pages for credential stealing, another is weaponized Word doc creation, and the third is saved email campaign templates.  Both attack methods are integrated into Slack for real-time alerting.  <b>Unfortunately, I'm no longer running this code as a free service @ https://phishapi.com due to cost, sorry!</b>
 
 
