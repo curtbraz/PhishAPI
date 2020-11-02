@@ -30,15 +30,17 @@ This latest version no longer redirects users of the landing pages to the API di
 
 # To Setup :
 
-1) It's all in Docker now! Clone this repo and edit config.txt. Install docker-compose with `sudo curl -L "https://github.com/docker/compose/releases/download/1.26.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose` and `sudo chmod +x /usr/local/bin/docker-compose`.
+1) It's all in Docker now! Clone this repo and edit config.txt. 
 
-2) Run docker-compose via `docker-compose build` from within the Phishing-API directory. Then, `docker-compose up` (add -d to background it).
+2) Install docker-compose with `sudo curl -L "https://github.com/docker/compose/releases/download/1.26.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose` and `sudo chmod +x /usr/local/bin/docker-compose`.
 
-3) Use HTTPS (Let's Encrypt!) and a Domain for the Hosted API (Coming soon to Docker automagically!)
+3) Run docker-compose via `docker-compose build` from within the Phishing-API directory. Then, `docker-compose up` (add -d to background it).
 
-4) Optionally run Responder and BeEF in a screen session and import the crontab file (Coming soon to Docker!)
+4) Use HTTPS (Let's Encrypt!) and a Domain for the Hosted API (Coming soon to Docker automagically!)
 
-5) Enjoy! :)  Message me if you have any issues.  This does not work on Windows!
+5) Optionally run Responder and BeEF in a screen session and import the crontab file (Coming soon to Docker!)
+
+Enjoy! :)
 
 
 
