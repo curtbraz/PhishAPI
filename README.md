@@ -30,25 +30,13 @@ This latest version no longer redirects users of the landing pages to the API di
 
 # To Setup :
 
-1) Import the DB SQL Dump Schema to a new MySQL Instance `mysql -u root -h localhost < DatabaseSQLDump.sql;`. If you're using "root" as the user, you'll want to run `ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'YOUR_ROOT_PASSWORD_HERE';`
+1) It's all in Docker now! Just install Docker and Docker-Compose and run via `docker-compose build` from the /var/www directory. Then, `docker-compose up -d`.
 
-2) Host the PHP (PHP7 is supported!) from a web service (Tested with Apache)
+2) Use HTTPS (Let's Encrypt!) and a Domain for the Hosted API (Coming soon to Docker automagically!)
 
-3) Configure `/var/www/html/config.php` with your variables
+3) Optionally run Responder and BeEF in a screen session and import the crontab file (Coming soon to Docker!)
 
-4) Install `apt-get install zip`
-
-5) Chmod 777 all `/var/www/html/phishingdocs` and `/var/www/html/templates/` subdirectories (or Docs and Templates will not work!)
-
-6) Limit Access to the "Results" Directories `/var/www/html/results` and `/var/www/html/phishingdocs/results` (Apache's Basic Auth is Recommended)
-
-7) Use HTTPS (Let's Encrypt!) and a Domain for the Hosted API
-
-8) Optionally run Responder and BeEF in a screen session and import the crontab file
-
-9) Enable browscap in your php.ini config and point to it in your web directory `/var/www/html/browscap.ini` (included in this repo)
-
-10) Enjoy! :)  Message me if you have any issues.  This does not work on Windows!
+4) Enjoy! :)  Message me if you have any issues.  This does not work on Windows!
 
 
 
