@@ -38,7 +38,7 @@ This latest version no longer redirects users of the landing pages to the API di
 
 4) Use HTTPS (Let's Encrypt!) and a Domain for the Hosted API (Coming soon to Docker automagically!)
 
-5) Optionally run Responder and BeEF in a screen session and import the crontab file (Coming soon to Docker!)
+5) Optionally run Responder and BeEF in a screen session (Coming soon to Docker!)
 
 Enjoy! :)
 
