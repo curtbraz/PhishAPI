@@ -1,0 +1,54 @@
+p.denotereqfield {
+	background: url("../images/icon_required.gif") no-repeat 0px 2px; margin: 10px 0px 5px 14px; padding-left: 10px; font-size: 11px;
+}
+.appwrap {
+	border-width: 13px 1px 1px; border-style: solid; border-color: rgb(102, 102, 102); border-image: none; width: 745px;
+}
+.indent {
+	margin-left: 14px;
+}
+.alertwrap {
+	margin: 10px 14px 0px; padding: 6px; border: 1px solid rgb(187, 187, 187); border-image: none; font-size: 12px; background-color: rgb(230, 230, 230);
+}
+.colleft {
+	padding-left: 14px; margin-right: 15px; float: left; background-color: rgb(255, 255, 255);
+}
+.colright {
+	float: left; background-color: rgb(255, 255, 255);
+}
+.formarea {
+	margin: 0px 0px 15px; border: 1px solid rgb(139, 80, 168); border-image: none; background-color: rgb(245, 245, 245);
+}
+.formarea th {
+	padding: 4px 7px; text-align: left; border-bottom-color: rgb(102, 0, 153); border-bottom-width: 2px; border-bottom-style: solid;
+}
+.formarea td {
+	padding: 4px 7px 0px;
+}
+.formarea td.required {
+	background: url("../images/icon_required.gif") no-repeat 6px 10px;
+}
+.formarea td.prompt {
+	padding: 8px 3px 2px 16px; width: 100px;
+}
+.formarea td.details {
+	width: 250px; padding-top: 8px;
+}
+.formarea td p {
+	font-size: 11px;
+}
+.optional {
+	border: 1px solid rgb(204, 204, 204); border-image: none; background-color: rgb(255, 255, 255);
+}
+.optional th {
+	border-bottom-color: rgb(204, 204, 204); border-bottom-width: 2px; border-bottom-style: solid;
+}
+.optional th h2 {
+	color: rgb(0, 0, 0); font-weight: normal;
+}
+.cleanup {
+	height: 0px; clear: both;
+}
+.required {
+	background: url("../images/icon_required.gif") no-repeat 4px; padding: 3px 3px 2px 16px; width: 100px; -ms-word-break: break-all;
+}

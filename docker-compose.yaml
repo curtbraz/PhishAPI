@@ -1,0 +1,27 @@
+version: "3.7"
+services:
+  web-server:
+    build:
+      dockerfile: php.Dockerfile
+      context: .
+    restart: always
+    volumes:
+      - "./:/var/www/"
+    ports:
+      - "8080:80"
+      - "8443:443"
+  mysql-server:
+    build:
+      dockerfile: mysql.Dockerfile
+      context: .
+    image: mysql:8.0.19
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: PhishAPIDef@ulT
+      DB_HOST: 
+    volumes:
+      - mysql-data:/var/lib/mysql
+    volumes:
+      - "./db/:/docker-entrypoint-initdb.d/"
+volumes:
+  mysql-data:
