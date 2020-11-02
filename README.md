@@ -30,7 +30,7 @@ This latest version no longer redirects users of the landing pages to the API di
 
 # To Setup :
 
-1) It's all in Docker now! Clone this repo and edit config.txt. Default User/Pass for basic auth is PhishAPI:PhishAPI1 .
+1) It's all in Docker now! Clone this repo and edit config.txt. Default User/Pass for basic auth is PhishAPI:PhishAPI.
 
 2) Install docker-compose with `sudo curl -L "https://github.com/docker/compose/releases/download/1.26.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose` and `sudo chmod +x /usr/local/bin/docker-compose`.
 
