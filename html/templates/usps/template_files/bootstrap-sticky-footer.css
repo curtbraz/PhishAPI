@@ -1,0 +1,15 @@
+html {
+	width: 100%; height: 100%;
+}
+body {
+	width: 100%; height: 100%;
+}
+body {
+	display: table;
+}
+.container {
+	height: auto;
+}
+.footer {
+	height: 1px; display: table-row; background-color: rgb(247, 247, 247);
+}

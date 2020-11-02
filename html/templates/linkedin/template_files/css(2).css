@@ -1,0 +1,1101 @@
+.accounticon {
+	background: url("/scds/common/u/img/sprite/sprite_global_v8.png") no-repeat; width: 15px; height: 16px; text-align: left; text-indent: -119988px; overflow: hidden; margin-left: 5px; vertical-align: top; display: inline-block;
+}
+.jobseekericon {
+	background-position: -600px 1px;
+}
+.premiumicon {
+	background-position: -500px 1px;
+}
+.openlinkicon {
+	display: none !important;
+}
+.icon-beta {
+	color: rgb(204, 102, 0) !important; font-size: 11px; font-style: italic; font-weight: bold; vertical-align: top;
+}
+.icon-beta.super {
+	vertical-align: super;
+}
+.icon-new {
+	padding: 2px 3px; border-radius: 2px; color: rgb(255, 255, 255); text-transform: uppercase; line-height: 1; font-size: 9px; font-weight: normal; display: inline-block; background-color: rgb(204, 102, 0); -webkit-border-radius: 2px; -moz-border-radius: 2px; -ms-border-radius: 2px; -o-border-radius: 2px;
+}
+.network-degree {
+	padding: 2px 6px 1px; border-radius: 2px; color: rgb(51, 51, 51); line-height: 12px; font-size: 11px; font-weight: bold; vertical-align: baseline; display: inline-block; -ms-zoom: 1; background-color: rgb(231, 231, 231); -webkit-border-radius: 2px; -moz-border-radius: 2px; -ms-border-radius: 2px; -o-border-radius: 2px;
+}
+.network-degree sup {
+	top: 0px; font-size: 78%; font-weight: normal; vertical-align: baseline;
+}
+.v1 .network-degree sup {
+	font-size: 11px !important;
+}
+.network-degree.you {
+	letter-spacing: -0.5px !important;
+}
+.network-degree.group {
+	letter-spacing: -0.5px !important;
+}
+.degree-icon sup {
+	top: -0.1em;
+}
+.typeahead-results-container {
+	width: 360px; position: absolute; z-index: 100; min-width: 360px;
+}
+.ie.lte8 .typeahead-results-container {
+	left: -3px;
+}
+.typeahead-results-container .yui-ac-input {
+	position: absolute;
+}
+.typeahead-results-container .yui-ac-container {
+	position: absolute;
+}
+.typeahead-results-container .yui-ac-content {
+	position: absolute;
+}
+.typeahead-results-container .yui-ac-input {
+	padding-left: 4px;
+}
+.typeahead-results-container .yui-ac-container {
+	top: 1.6em; z-index: 1;
+}
+.typeahead-results-container .yui-ac-content {
+	margin-top: 0px; margin-left: 3px;
+}
+.typeahead-results-container iframe {
+	margin-top: 0px; margin-left: 3px;
+}
+.typeahead-results-container .yui-ac-content {
+	background: rgb(255, 255, 255); width: 100%; overflow: hidden; z-index: 100; box-shadow: 0px 5px 5px #b8b8b8; -webkit-box-shadow: 0 5px 5px #b8b8b8; -moz-box-shadow: 0 5px 5px #b8b8b8;
+}
+.typeahead-results-container .yui-ac-content::after {
+	content: "";
+}
+.typeahead-results-container .yui-ac-content ul {
+	list-style: none; margin: 0px; padding: 0px; border: 1px solid rgb(184, 184, 184); border-image: none; background-color: rgb(255, 255, 255);
+}
+.typeahead-results-container .yui-ac-content ul li {
+	margin: 0px; padding: 7px 5px 6px; color: rgb(51, 51, 51); overflow: hidden; font-weight: bold; cursor: pointer; background-image: none;
+}
+.typeahead-results-container .yui-ac-content ul li h4 {
+	margin: 0px; color: rgb(51, 51, 51); line-height: 17px; font-size: 12px; font-weight: bold;
+}
+.typeahead-results-container .yui-ac-content ul li strong {
+	color: rgb(127, 127, 127); font-weight: normal;
+}
+.typeahead-results-container .yui-ac-content ul li p {
+	color: rgb(127, 127, 127);
+}
+.typeahead-results-container .yui-ac-content ul li div {
+	margin: -3px 0px -4px; color: rgb(127, 127, 127); font-size: 11px; font-weight: normal;
+}
+.typeahead-results-container .yui-ac-content ul li p {
+	margin: -3px 0px -4px; color: rgb(127, 127, 127); font-size: 11px; font-weight: normal;
+}
+.typeahead-results-container .yui-ac-content ul li .related {
+	padding-left: 10px;
+}
+.typeahead-results-container .yui-ac-content ul li.top {
+	border-top-color: currentColor; border-top-width: medium; border-top-style: none;
+}
+.typeahead-results-container .yui-ac-content ul li.yui-ac-highlight {
+	box-shadow: none; background-color: rgb(241, 241, 241); -webkit-box-shadow: none; -moz-box-shadow: none;
+}
+.typeahead-results-container .yui-ac-content ul li.yui-ac-prehighlight {
+	box-shadow: none; background-color: rgb(241, 241, 241); -webkit-box-shadow: none; -moz-box-shadow: none;
+}
+.typeahead-results-container .yui-ac-content ul.hasImage li img {
+	margin: -7px 0px -6px; width: 40px; height: 40px; float: left;
+}
+.typeahead-results-container .yui-ac-content ul.hasImage li h4 {
+	margin-left: 48px;
+}
+.typeahead-results-container .yui-ac-content ul.hasImage li div {
+	margin-left: 48px;
+}
+.typeahead-results-container .yui-ac-content ul.hasImage li p {
+	margin-left: 48px;
+}
+.typeahead-results-container .yui-ac-content ul.hasCategory li img {
+	margin-left: 12px;
+}
+.typeahead-results-container .yui-ac-content ul.hasCategory li h4 {
+	margin-left: 59px;
+}
+.typeahead-results-container .yui-ac-content ul.hasCategory li div {
+	margin-left: 59px;
+}
+.typeahead-results-container .yui-ac-content ul.hasCategory li p {
+	margin-left: 59px;
+}
+.typeahead-results-container .yui-ac-content ul.hasCategory li.category {
+	padding: 2px 5px 1px 17px; border: currentColor; border-image: none; cursor: default; box-shadow: none; background-color: rgb(231, 231, 231); -webkit-box-shadow: none; -moz-box-shadow: none;
+}
+.typeahead-results-container .yui-ac-content ul.hasCategory li.category h3 {
+	margin: 0px; color: rgb(159, 159, 159); text-transform: none; line-height: 17px; font-size: 11px;
+}
+.typeahead-results-container .yui-ac-content ul.hasCategory li.category h3 strong {
+	font-weight: normal;
+}
+.typeahead-results-container .yui-ac-content ul.hasCategory li.category.yui-ac-prehighlight {
+	box-shadow: none; -webkit-box-shadow: none; -moz-box-shadow: none;
+}
+.typeahead-results-container .yui-ac-content ul.hasCategory li.category.yui-ac-highlight {
+	box-shadow: none; -webkit-box-shadow: none; -moz-box-shadow: none;
+}
+.typeahead-results-container .yui-ac-content ul.hasCategory li.category.yui-ac-prehighlight.category {
+	border-top-width: 0px;
+}
+.typeahead-results-container .yui-ac-content ul.hasCategory li.category.yui-ac-highlight.category {
+	border-top-width: 0px;
+}
+.typeahead-results-container .yui-ac-content ul li.sitefeature h4 {
+	background: url("/scds/common/u/images/themes/katy/sprites/sprite_typeahead_v01.png") no-repeat 26px 0px; padding-left: 59px; margin-left: 0px;
+}
+.typeahead-results-container .yui-ac-content ul li.suggestion h4 {
+	background: url("/scds/common/u/images/themes/katy/sprites/sprite_typeahead_v01.png") no-repeat 26px 0px; padding-left: 59px; margin-left: 0px;
+}
+.typeahead-results-container .yui-ac-content ul li.autocomplete h4 {
+	background: url("/scds/common/u/images/themes/katy/sprites/sprite_typeahead_v01.png") no-repeat 26px 0px; padding-left: 59px; margin-left: 0px;
+}
+.typeahead-results-container .yui-ac-content ul li.refine h4 {
+	background: url("/scds/common/u/images/themes/katy/sprites/sprite_typeahead_v01.png") no-repeat 26px 0px; padding-left: 59px; margin-left: 0px;
+}
+.typeahead-results-container .yui-ac-content ul li.skill h4 {
+	background: url("/scds/common/u/images/themes/katy/sprites/sprite_typeahead_v01.png") no-repeat 26px 0px; padding-left: 59px; margin-left: 0px;
+}
+.typeahead-results-container .yui-ac-content ul li.suggestion h4 {
+	background-position: 25px -30px;
+}
+.typeahead-results-container .yui-ac-content ul li.autocomplete h4 {
+	background-position: 25px -30px;
+}
+.typeahead-results-container .yui-ac-content ul li.refine h4 {
+	background-position: 25px -30px;
+}
+.typeahead-results-container.colorful-suggestions .yui-ac-content ul li.sitefeature h4 {
+	background: none; padding-left: 59px; margin-left: 0px;
+}
+.typeahead-results-container.colorful-suggestions .yui-ac-content ul li.suggestion h4 {
+	background: none; padding-left: 59px; margin-left: 0px;
+}
+.typeahead-results-container.colorful-suggestions .yui-ac-content ul li.autocomplete h4 {
+	background: none; padding-left: 59px; margin-left: 0px;
+}
+.typeahead-results-container.colorful-suggestions .yui-ac-content ul li.refine h4 {
+	background: none; padding-left: 59px; margin-left: 0px;
+}
+.typeahead-results-container.colorful-suggestions .yui-ac-content ul li.skill h4 {
+	background: none; padding-left: 59px; margin-left: 0px;
+}
+.typeahead-results-container.colorful-suggestions .yui-ac-content ul li.sitefeature h4::before {
+	color: rgb(0, 111, 166); font-family: "LinkedIn-Glyphs-2.0.7","LinkedIn-Glyphs"; font-size: 16px; font-style: normal; font-weight: normal; text-decoration: inherit; content: "\e0a4"; speak: none;
+}
+.typeahead-results-container.colorful-suggestions .yui-ac-content ul li.suggestion h4::before {
+	color: rgb(0, 111, 166); font-family: "LinkedIn-Glyphs-2.0.7","LinkedIn-Glyphs"; font-size: 16px; font-style: normal; font-weight: normal; text-decoration: inherit; content: "\e0a4"; speak: none;
+}
+.typeahead-results-container.colorful-suggestions .yui-ac-content ul li.autocomplete h4::before {
+	color: rgb(0, 111, 166); font-family: "LinkedIn-Glyphs-2.0.7","LinkedIn-Glyphs"; font-size: 16px; font-style: normal; font-weight: normal; text-decoration: inherit; content: "\e0a4"; speak: none;
+}
+.typeahead-results-container.colorful-suggestions .yui-ac-content ul li.refine h4::before {
+	color: rgb(0, 111, 166); font-family: "LinkedIn-Glyphs-2.0.7","LinkedIn-Glyphs"; font-size: 16px; font-style: normal; font-weight: normal; text-decoration: inherit; content: "\e0a4"; speak: none;
+}
+.typeahead-results-container.colorful-suggestions .yui-ac-content ul li.skill h4::before {
+	color: rgb(0, 111, 166); font-family: "LinkedIn-Glyphs-2.0.7","LinkedIn-Glyphs"; font-size: 16px; font-style: normal; font-weight: normal; text-decoration: inherit; content: "\e0a4"; speak: none;
+}
+.typeahead-results-container.colorful-suggestions .yui-ac-content ul li.sitefeature h4::before {
+	left: 32px; position: absolute; background-color: rgb(255, 255, 255);
+}
+.typeahead-results-container.colorful-suggestions .yui-ac-content ul li.sitefeature h4 x-archetype-glyph {
+	left: 32px; position: absolute; background-color: rgb(255, 255, 255);
+}
+.typeahead-results-container.colorful-suggestions .yui-ac-content ul li.suggestion h4::before {
+	left: 32px; position: absolute; background-color: rgb(255, 255, 255);
+}
+.typeahead-results-container.colorful-suggestions .yui-ac-content ul li.suggestion h4 x-archetype-glyph {
+	left: 32px; position: absolute; background-color: rgb(255, 255, 255);
+}
+.typeahead-results-container.colorful-suggestions .yui-ac-content ul li.autocomplete h4::before {
+	left: 32px; position: absolute; background-color: rgb(255, 255, 255);
+}
+.typeahead-results-container.colorful-suggestions .yui-ac-content ul li.autocomplete h4 x-archetype-glyph {
+	left: 32px; position: absolute; background-color: rgb(255, 255, 255);
+}
+.typeahead-results-container.colorful-suggestions .yui-ac-content ul li.refine h4::before {
+	left: 32px; position: absolute; background-color: rgb(255, 255, 255);
+}
+.typeahead-results-container.colorful-suggestions .yui-ac-content ul li.refine h4 x-archetype-glyph {
+	left: 32px; position: absolute; background-color: rgb(255, 255, 255);
+}
+.typeahead-results-container.colorful-suggestions .yui-ac-content ul li.skill h4::before {
+	left: 32px; position: absolute; background-color: rgb(255, 255, 255);
+}
+.typeahead-results-container.colorful-suggestions .yui-ac-content ul li.skill h4 x-archetype-glyph {
+	left: 32px; position: absolute; background-color: rgb(255, 255, 255);
+}
+.typeahead-results-container.colorful-suggestions .yui-ac-content ul li.suggestion h4::before {
+	color: rgb(231, 231, 231); font-family: "LinkedIn-Glyphs-2.0.7","LinkedIn-Glyphs"; font-size: 17px; font-style: normal; font-weight: normal; text-decoration: inherit; content: "\e004"; speak: none;
+}
+.typeahead-results-container.colorful-suggestions .yui-ac-content ul li.autocomplete h4::before {
+	color: rgb(231, 231, 231); font-family: "LinkedIn-Glyphs-2.0.7","LinkedIn-Glyphs"; font-size: 17px; font-style: normal; font-weight: normal; text-decoration: inherit; content: "\e004"; speak: none;
+}
+.typeahead-results-container.colorful-suggestions .yui-ac-content ul li.refine h4::before {
+	color: rgb(231, 231, 231); font-family: "LinkedIn-Glyphs-2.0.7","LinkedIn-Glyphs"; font-size: 17px; font-style: normal; font-weight: normal; text-decoration: inherit; content: "\e004"; speak: none;
+}
+.typeahead-results-container.colorful-suggestions .yui-ac-content ul li.suggestion h4::before {
+	background: none; left: 32px; position: absolute;
+}
+.typeahead-results-container.colorful-suggestions .yui-ac-content ul li.suggestion h4 x-archetype-glyph {
+	background: none; left: 32px; position: absolute;
+}
+.typeahead-results-container.colorful-suggestions .yui-ac-content ul li.autocomplete h4::before {
+	background: none; left: 32px; position: absolute;
+}
+.typeahead-results-container.colorful-suggestions .yui-ac-content ul li.autocomplete h4 x-archetype-glyph {
+	background: none; left: 32px; position: absolute;
+}
+.typeahead-results-container.colorful-suggestions .yui-ac-content ul li.refine h4::before {
+	background: none; left: 32px; position: absolute;
+}
+.typeahead-results-container.colorful-suggestions .yui-ac-content ul li.refine h4 x-archetype-glyph {
+	background: none; left: 32px; position: absolute;
+}
+.typeahead-noresults {
+	background: rgb(255, 255, 255); padding: 5px; border: 1px solid rgb(186, 221, 238); border-image: none; width: 200px; text-align: left; font-size: 12px; display: none; position: absolute;
+}
+.mentions-typeahead-container .typeahead-results-container {
+	left: 5px !important; top: 2px; width: 380px; min-width: 380px;
+}
+.ie.lte8 .mentions-typeahead-container .typeahead-results-container {
+	left: -3px;
+}
+.mentions-typeahead-container .typeahead-results-container .yui-ac-input {
+	position: absolute;
+}
+.mentions-typeahead-container .typeahead-results-container .yui-ac-container {
+	position: absolute;
+}
+.mentions-typeahead-container .typeahead-results-container .yui-ac-content {
+	position: absolute;
+}
+.mentions-typeahead-container .typeahead-results-container .yui-ac-input {
+	padding-left: 4px;
+}
+.mentions-typeahead-container .typeahead-results-container .yui-ac-container {
+	top: 1.6em; z-index: 1;
+}
+.mentions-typeahead-container .typeahead-results-container .yui-ac-content {
+	background: rgb(255, 255, 255); width: 380px; overflow: hidden; margin-top: 0px; margin-left: -3px; z-index: 100; box-shadow: 0px 1px 3px #b8b8b8; -webkit-box-shadow: 0 1px 3px #b8b8b8; -moz-box-shadow: 0 1px 3px #b8b8b8;
+}
+.ie.lte8 .mentions-typeahead-container .typeahead-results-container .yui-ac-content {
+	box-shadow: none; -webkit-box-shadow: none; -moz-box-shadow: none;
+}
+.mentions-typeahead-container .typeahead-results-container .yui-ac-content ul {
+	list-style: none; margin: 0px; padding: 0px; border: 1px solid rgb(184, 184, 184); border-image: none; background-color: rgb(255, 255, 255);
+}
+.mentions-typeahead-container .typeahead-results-container .yui-ac-content ul li {
+	background: rgb(255, 255, 255); padding: 0px !important; color: rgb(51, 51, 51); overflow: hidden; font-weight: bold; border-top-color: currentColor !important; border-bottom-color: rgb(223, 223, 223) !important; border-top-width: medium !important; border-bottom-width: 1px !important; border-top-style: none !important; border-bottom-style: solid !important; cursor: pointer; min-height: 40px !important;
+}
+.mentions-typeahead-container .typeahead-results-container .yui-ac-content ul li h4 {
+	margin: 6px 0px 0px; color: rgb(51, 51, 51); line-height: 17px; font-size: 12px; font-weight: bold; text-shadow: none;
+}
+.mentions-typeahead-container .typeahead-results-container .yui-ac-content ul li strong {
+	color: rgb(127, 127, 127); font-weight: normal;
+}
+.mentions-typeahead-container .typeahead-results-container .yui-ac-content ul li p {
+	color: rgb(127, 127, 127); text-shadow: none;
+}
+.mentions-typeahead-container .typeahead-results-container .yui-ac-content ul li div {
+	margin: -3px 0px -4px; top: 0px; height: 16px; color: rgb(127, 127, 127); line-height: 16px; overflow: hidden; font-size: 11px; font-weight: normal; white-space: nowrap; -ms-text-overflow: ellipsis; -o-text-overflow: ellipsis;
+}
+.mentions-typeahead-container .typeahead-results-container .yui-ac-content ul li p {
+	margin: -3px 0px -4px; top: 0px; height: 16px; color: rgb(127, 127, 127); line-height: 16px; overflow: hidden; font-size: 11px; font-weight: normal; white-space: nowrap; -ms-text-overflow: ellipsis; -o-text-overflow: ellipsis;
+}
+.mentions-typeahead-container .typeahead-results-container .yui-ac-content ul li .related {
+	padding-left: 10px;
+}
+.mentions-typeahead-container .typeahead-results-container .yui-ac-content ul li.top {
+	border-top-color: currentColor !important; border-top-width: medium !important; border-top-style: none !important;
+}
+.mentions-typeahead-container .typeahead-results-container .yui-ac-content ul li.yui-ac-highlight {
+	box-shadow: none; background-image: none; background-color: rgb(223, 223, 223) !important; -webkit-box-shadow: none; -moz-box-shadow: none;
+}
+.mentions-typeahead-container .typeahead-results-container .yui-ac-content ul li.yui-ac-prehighlight {
+	box-shadow: none; background-image: none; background-color: rgb(223, 223, 223) !important; -webkit-box-shadow: none; -moz-box-shadow: none;
+}
+.mentions-typeahead-container .typeahead-results-container .yui-ac-content ul.hasImage li img {
+	margin: 0px; padding: 0px; left: 0px; top: 0px; width: 40px; height: 40px; float: left;
+}
+.mentions-typeahead-container .typeahead-results-container .yui-ac-content ul.hasImage li h4 {
+	margin-left: 48px;
+}
+.mentions-typeahead-container .typeahead-results-container .yui-ac-content ul.hasImage li div {
+	margin-left: 48px;
+}
+.mentions-typeahead-container .typeahead-results-container .yui-ac-content ul.hasImage li p {
+	margin-left: 48px;
+}
+.mentions-typeahead-container .typeahead-results-container .yui-ac-content ul.hasCategory li {
+	background: rgb(255, 255, 255); width: auto; padding-left: 0px; margin-top: 0px !important; margin-bottom: 0px; margin-left: 0px;
+}
+.mentions-typeahead-container .typeahead-results-container .yui-ac-content ul.hasCategory li img {
+	margin-left: 0px;
+}
+.mentions-typeahead-container .typeahead-results-container .yui-ac-content ul.hasCategory li.secondary {
+	background: rgb(255, 255, 255);
+}
+.mentions-typeahead-container .typeahead-results-container .yui-ac-content ul.hasCategory li h4 {
+	margin-left: 48px; text-shadow: none;
+}
+.mentions-typeahead-container .typeahead-results-container .yui-ac-content ul.hasCategory li div {
+	margin-left: 48px; text-shadow: none;
+}
+.mentions-typeahead-container .typeahead-results-container .yui-ac-content ul.hasCategory li p {
+	margin-left: 48px; text-shadow: none;
+}
+.mentions-typeahead-container .typeahead-results-container .yui-ac-content ul.hasCategory li.first {
+	margin-top: 0px !important;
+}
+.mentions-typeahead-container .typeahead-results-container .yui-ac-content ul.hasCategory li.category {
+	margin: 0px; padding: 0px; border: 0px currentColor !important; border-image: none !important; width: auto; display: block; cursor: default; min-height: 0px !important; box-shadow: none; background-image: none; background-color: rgb(204, 204, 204); -webkit-box-shadow: none; -moz-box-shadow: none;
+}
+.mentions-typeahead-container .typeahead-results-container .yui-ac-content ul.hasCategory li.category h3 {
+	margin: 2px 0px 2px 10px; padding: 0px; text-align: left; color: rgb(102, 102, 102); text-transform: none; line-height: 17px; font-size: 11px; text-shadow: none;
+}
+.mentions-typeahead-container .typeahead-results-container .yui-ac-content ul.hasCategory li.category h3 strong {
+	font-weight: normal;
+}
+.mentions-typeahead-container .typeahead-results-container .yui-ac-content ul.hasCategory li.category.yui-ac-prehighlight {
+	border-top-width: 0px; box-shadow: none; background-image: none; background-color: rgb(204, 204, 204) !important; -webkit-box-shadow: none; -moz-box-shadow: none;
+}
+.mentions-typeahead-container .typeahead-results-container .yui-ac-content ul.hasCategory li.category.yui-ac-highlight {
+	border-top-width: 0px; box-shadow: none; background-image: none; background-color: rgb(204, 204, 204) !important; -webkit-box-shadow: none; -moz-box-shadow: none;
+}
+.mentions-typeahead-container .typeahead-results-container .yui-ac-content ul li.sitefeature h4 {
+	background: url("/scds/common/u/images/themes/katy/sprites/sprite_typeahead_v01.png") no-repeat 26px 0px; padding-left: 59px; margin-left: 0px;
+}
+.mentions-typeahead-container .typeahead-results-container .yui-ac-content ul li.suggestion h4 {
+	background: url("/scds/common/u/images/themes/katy/sprites/sprite_typeahead_v01.png") no-repeat 26px 0px; padding-left: 59px; margin-left: 0px;
+}
+.mentions-typeahead-container .typeahead-results-container .yui-ac-content ul li.skill h4 {
+	background: url("/scds/common/u/images/themes/katy/sprites/sprite_typeahead_v01.png") no-repeat 26px 0px; padding-left: 59px; margin-left: 0px;
+}
+.mentions-typeahead-container .typeahead-results-container .yui-ac-content ul li.suggestion h4 {
+	background-position: 25px -30px;
+}
+.mentions-typeahead-container .typeahead-noresults {
+	background: rgb(255, 255, 255); padding: 5px; border: 1px solid rgb(186, 221, 238); border-image: none; width: 200px; text-align: left; font-size: 12px; display: none; position: absolute;
+}
+.mentions-typeahead-container .yui-ac-content {
+	border-radius: 0px; width: 470px; -webkit-border-radius: 0; -moz-border-radius: 0; -ms-border-radius: 0; -o-border-radius: 0;
+}
+.mentions-typeahead-container .yui-ac-content ul li.item {
+	width: auto; margin-left: 0px; border-top-color: transparent; border-top-width: 1px; border-top-style: solid;
+}
+.ie .mentions-typeahead-container .yui-ac-content ul li.item {
+	border-top-color: rgb(210, 210, 210); border-top-width: 1px; border-top-style: solid;
+}
+.mentions-typeahead-container .yui-ac-content ul li.item.first {
+	border-top-color: currentColor; border-top-width: medium; border-top-style: none;
+}
+.mentions-typeahead-container.using-typeahead2 .yui-ac-content {
+	margin-top: 0px; margin-left: -64px;
+}
+.mentions-typeahead-container.using-typeahead2 .yui-ac-content .item.company {
+	min-height: 27px;
+}
+.mentions-typeahead-container.using-typeahead2 .yui-ac-content .item.mynetwork {
+	min-height: 27px;
+}
+.mentions-typeahead-container.using-typeahead2 .yui-ac-content .item.my1stnetwork {
+	min-height: 27px;
+}
+.mentions-typeahead-container.using-typeahead2 .yui-ac-content .item.group {
+	min-height: 27px;
+}
+.mentions-typeahead-container ul li.category.suggestion {
+	display: none;
+}
+a.callout-trigger {
+	color: rgb(0, 0, 0); text-decoration: none;
+}
+a.callout-trigger:visited {
+	color: rgb(0, 0, 0); text-decoration: none;
+}
+span.callout-trigger {
+	color: rgb(0, 0, 0); text-decoration: none;
+}
+a.callout-trigger:hover {
+	color: rgb(0, 0, 0); text-decoration: none; border-bottom-color: rgb(0, 0, 0); border-bottom-width: 1px; border-bottom-style: dotted;
+}
+a.callout-trigger.hover {
+	color: rgb(0, 0, 0); text-decoration: none; border-bottom-color: rgb(0, 0, 0); border-bottom-width: 1px; border-bottom-style: dotted;
+}
+span.callout-trigger.hover {
+	color: rgb(0, 0, 0); text-decoration: none; border-bottom-color: rgb(0, 0, 0); border-bottom-width: 1px; border-bottom-style: dotted;
+}
+a.callout-trigger.instructional-callout-trigger:hover {
+	border: currentColor; border-image: none;
+}
+a.callout-trigger.instructional-callout-trigger.hover {
+	border: currentColor; border-image: none;
+}
+span.callout-trigger.instructional-callout-trigger.hover {
+	border: currentColor; border-image: none;
+}
+.whatsthis {
+	background: url("/scds/common/u/img/icon/icon_help_trans_16x16.png") no-repeat; width: 16px; height: 16px; text-align: left; text-indent: -119988px; overflow: hidden; float: left; display: block;
+}
+.whatisthis {
+	background: url("/scds/common/u/img/icon/icon_help_trans_16x16.png") no-repeat; width: 16px; height: 16px; text-align: left; text-indent: -119988px; overflow: hidden; float: left; display: block;
+}
+.js .callout-container {
+	transition:opacity 0.3s; overflow: hidden; visibility: hidden; position: absolute; opacity: 0; -webkit-transition: opacity 0.3s ease; -moz-transition: opacity 0.3s ease; -o-transition: opacity 0.3s ease;
+}
+#callout-overlay {
+	transition:opacity 0.3s; overflow: hidden; visibility: hidden; position: absolute; opacity: 0; -webkit-transition: opacity 0.3s ease; -moz-transition: opacity 0.3s ease; -o-transition: opacity 0.3s ease;
+}
+.ie.lte8 .js .callout-container {
+	filter: none;
+}
+.ie.lte8 #callout-overlay {
+	filter: none;
+}
+.shown#callout-overlay {
+	opacity: 1;
+}
+.ie.lte8 .shown#callout-overlay {
+	filter: none;
+}
+#callout-overlay .callout-content {
+	margin: 0px; padding: 5px; border-radius: 4px; border: 2px solid rgb(204, 204, 204); border-image: none; -webkit-border-radius: 4px; -moz-border-radius: 4px; -ms-border-radius: 4px; -o-border-radius: 4px;
+}
+#callout-overlay .callout-arrow {
+	border: 0px currentColor; border-image: none; overflow: hidden; display: block; position: absolute; background-image: url("/scds/common/u/img/bg/bg_callout_arrow_foursided_34x34.gif"); background-repeat: no-repeat; background-color: transparent;
+}
+#callout-overlay .callout-content .callout-head {
+	font-size: 13px; font-weight: bold; margin-bottom: 3px;
+}
+#callout-overlay .callout-content .callout-body {
+	padding-top: 2px; padding-bottom: 2px; font-size: 12px; min-height: 14px;
+}
+#callout-overlay .callout-content .callout-body p {
+	margin-bottom: 5px;
+}
+.balloon-callout#callout-overlay .callout-content {
+	background-color: rgb(255, 255, 255);
+}
+.error-callout#callout-overlay .callout-content {
+	background-color: rgb(255, 242, 241);
+}
+.error-callout#callout-overlay .callout-arrow {
+	background-image: url("/scds/common/u/img/bg/bg_error_callout_arrow_foursided_34x34.png");
+}
+.error-callout#callout-overlay .callout-content .callout-head {
+	background: url("/scds/common/u/img/sprite/sprite_global_v8.png") no-repeat 0px -968px; color: rgb(255, 0, 0); padding-left: 18px; font-weight: normal;
+}
+.error-callout#callout-overlay .callout-content .callout-body {
+	padding-left: 18px;
+}
+.instructional-callout#callout-overlay .callout-content {
+	border: 1px solid rgb(229, 211, 135); border-image: none; box-shadow: 0px 4px 5px #aaa; background-color: rgb(255, 252, 216); -webkit-box-shadow: 0 4px 5px #aaa; -moz-box-shadow: 0 4px 5px #aaa;
+}
+.instructional-callout#callout-overlay .callout-arrow {
+	background-image: url("/scds/common/u/img/bg/bg_instructional_callout_arrow_foursided_yellow_34x34.png");
+}
+.form-callout#callout-overlay .callout-content {
+	color: rgb(102, 102, 102); background-color: rgb(227, 243, 250);
+}
+.form-callout#callout-overlay .callout-arrow {
+	background-image: url("/scds/common/u/img/bg/bg_form_callout_arrow_foursided_34x34.png");
+}
+.overlay-callout#callout-overlay .callout-content {
+	border-radius: 0px; background-color: rgb(255, 255, 255); -webkit-border-radius: 0; -moz-border-radius: 0; -ms-border-radius: 0; -o-border-radius: 0;
+}
+.overlay-callout#callout-overlay .callout-arrow {
+	display: none;
+}
+.tooltip-callout#callout-overlay {
+	transition:none; overflow: visible; -webkit-transition: none; -moz-transition: none; -o-transition: none;
+}
+.hovercard-callout#callout-overlay {
+	transition:none; overflow: visible; -webkit-transition: none; -moz-transition: none; -o-transition: none;
+}
+.tooltip-callout#callout-overlay .callout-content {
+	padding: 0px; border-radius: 0px; border: currentColor; border-image: none; -webkit-border-radius: 0; -moz-border-radius: 0; -ms-border-radius: 0; -o-border-radius: 0;
+}
+.hovercard-callout#callout-overlay .callout-content {
+	padding: 0px; border-radius: 0px; border: currentColor; border-image: none; -webkit-border-radius: 0; -moz-border-radius: 0; -ms-border-radius: 0; -o-border-radius: 0;
+}
+.tooltip-callout#callout-overlay .callout-head {
+	margin-bottom: 0px;
+}
+.hovercard-callout#callout-overlay .callout-head {
+	margin-bottom: 0px;
+}
+.tooltip-callout#callout-overlay .callout-body {
+	padding: 0px;
+}
+.hovercard-callout#callout-overlay .callout-body {
+	padding: 0px;
+}
+.tooltip-callout#callout-overlay .callout-body p {
+	margin-bottom: 0px;
+}
+.hovercard-callout#callout-overlay .callout-body p {
+	margin-bottom: 0px;
+}
+.tooltip-callout#callout-overlay .callout-content {
+	background: rgb(51, 51, 51); padding: 3px 10px; outline: 0px; border: 1px solid rgb(51, 51, 51); color: rgb(255, 255, 255); line-height: 14px; font-size: 12px; font-weight: normal; display: block; visibility: visible; position: static; z-index: 10; max-width: 300px; box-shadow: 0px 1px 2px rgba(0,0,0,0.1); -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+.tooltip-callout.callout-top#callout-overlay .callout-arrow {
+	border-width: 0px 7px 7px; border-style: dashed dashed solid; border-color: transparent transparent rgb(51, 51, 51); left: 50%; width: 0px; height: 0px; bottom: 100%; line-height: 0; overflow: hidden; font-size: 0px; margin-left: -7px; vertical-align: middle; display: inline-block; position: absolute; -ms-zoom: 1; content: "\0020"; background-image: none;
+}
+.tooltip-callout.callout-top-left#callout-overlay .callout-arrow {
+	border-width: 0px 7px 7px; border-style: dashed dashed solid; border-color: transparent transparent rgb(51, 51, 51); left: 5px; width: 0px; height: 0px; bottom: 100%; line-height: 0; overflow: hidden; font-size: 0px; vertical-align: middle; display: inline-block; position: absolute; -ms-zoom: 1; content: "\0020"; background-image: none;
+}
+.tooltip-callout.callout-top-right#callout-overlay .callout-arrow {
+	border-width: 0px 7px 7px; border-style: dashed dashed solid; border-color: transparent transparent rgb(51, 51, 51); width: 0px; height: 0px; right: 5px; bottom: 100%; line-height: 0; overflow: hidden; font-size: 0px; vertical-align: middle; display: inline-block; position: absolute; -ms-zoom: 1; content: "\0020"; background-image: none;
+}
+.tooltip-callout.callout-bottom#callout-overlay .callout-arrow {
+	border-width: 7px 7px 0px; border-style: solid dashed dashed; border-color: rgb(51, 51, 51) transparent transparent; left: 50%; top: 100%; width: 0px; height: 0px; line-height: 0; overflow: hidden; font-size: 0px; margin-left: -7px; vertical-align: middle; display: inline-block; position: absolute; -ms-zoom: 1; content: "\0020"; background-image: none;
+}
+.tooltip-callout.callout-bottom-right#callout-overlay .callout-arrow {
+	border-width: 7px 7px 0px; border-style: solid dashed dashed; border-color: rgb(51, 51, 51) transparent transparent; top: 100%; width: 0px; height: 0px; right: 5px; line-height: 0; overflow: hidden; font-size: 0px; vertical-align: middle; display: inline-block; position: absolute; -ms-zoom: 1; content: "\0020"; background-image: none;
+}
+.tooltip-callout.callout-bottom-left#callout-overlay .callout-arrow {
+	border-width: 7px 7px 0px; border-style: solid dashed dashed; border-color: rgb(51, 51, 51) transparent transparent; left: 5px; top: 100%; width: 0px; height: 0px; line-height: 0; overflow: hidden; font-size: 0px; vertical-align: middle; display: inline-block; position: absolute; -ms-zoom: 1; content: "\0020"; background-image: none;
+}
+.tooltip-callout.callout-right#callout-overlay .callout-arrow {
+	border-width: 7px 0px 7px 7px; border-style: dashed dashed dashed solid; border-color: transparent transparent transparent rgb(51, 51, 51); left: 100%; top: 50%; width: 0px; height: 0px; line-height: 0; overflow: hidden; font-size: 0px; margin-top: -7px; vertical-align: middle; display: inline-block; position: absolute; -ms-zoom: 1; content: "\0020"; background-image: none;
+}
+.tooltip-callout.callout-right-top#callout-overlay .callout-arrow {
+	border-width: 7px 0px 7px 7px; border-style: dashed dashed dashed solid; border-color: transparent transparent transparent rgb(51, 51, 51); left: 100%; top: 5px; width: 0px; height: 0px; line-height: 0; overflow: hidden; font-size: 0px; vertical-align: middle; display: inline-block; position: absolute; -ms-zoom: 1; content: "\0020"; background-image: none;
+}
+.tooltip-callout.callout-right-bottom#callout-overlay .callout-arrow {
+	border-width: 7px 0px 7px 7px; border-style: dashed dashed dashed solid; border-color: transparent transparent transparent rgb(51, 51, 51); left: 100%; width: 0px; height: 0px; bottom: 5px; line-height: 0; overflow: hidden; font-size: 0px; vertical-align: middle; display: inline-block; position: absolute; -ms-zoom: 1; content: "\0020"; background-image: none;
+}
+.tooltip-callout.callout-left#callout-overlay .callout-arrow {
+	border-width: 7px 7px 7px 0px; border-style: dashed solid dashed dashed; border-color: transparent rgb(51, 51, 51) transparent transparent; top: 50%; width: 0px; height: 0px; right: 100%; line-height: 0; overflow: hidden; font-size: 0px; margin-top: -7px; vertical-align: middle; display: inline-block; position: absolute; -ms-zoom: 1; content: "\0020"; background-image: none;
+}
+.tooltip-callout.callout-left-bottom#callout-overlay .callout-arrow {
+	border-width: 7px 7px 7px 0px; border-style: dashed solid dashed dashed; border-color: transparent rgb(51, 51, 51) transparent transparent; width: 0px; height: 0px; right: 100%; bottom: 5px; line-height: 0; overflow: hidden; font-size: 0px; vertical-align: middle; display: inline-block; position: absolute; -ms-zoom: 1; content: "\0020"; background-image: none;
+}
+.tooltip-callout.callout-left-top#callout-overlay .callout-arrow {
+	border-width: 7px 7px 7px 0px; border-style: dashed solid dashed dashed; border-color: transparent rgb(51, 51, 51) transparent transparent; top: 5px; width: 0px; height: 0px; right: 100%; line-height: 0; overflow: hidden; font-size: 0px; vertical-align: middle; display: inline-block; position: absolute; -ms-zoom: 1; content: "\0020"; background-image: none;
+}
+.tooltip-callout.callout-top#callout-overlay .callout-arrow {
+	top: 0px; bottom: auto;
+}
+.tooltip-callout.callout-top-left#callout-overlay .callout-arrow {
+	top: 0px; bottom: auto;
+}
+.tooltip-callout.callout-top-right#callout-overlay .callout-arrow {
+	top: 0px; bottom: auto;
+}
+.tooltip-callout.callout-right#callout-overlay .callout-arrow {
+	left: auto; right: 0px;
+}
+.tooltip-callout.callout-right-top#callout-overlay .callout-arrow {
+	left: auto; right: 0px;
+}
+.tooltip-callout.callout-right-bottom#callout-overlay .callout-arrow {
+	left: auto; right: 0px;
+}
+.tooltip-callout.callout-bottom#callout-overlay .callout-arrow {
+	top: auto; bottom: 0px;
+}
+.tooltip-callout.callout-bottom-left#callout-overlay .callout-arrow {
+	top: auto; bottom: 0px;
+}
+.tooltip-callout.callout-bottom-right#callout-overlay .callout-arrow {
+	top: auto; bottom: 0px;
+}
+.tooltip-callout.callout-left#callout-overlay .callout-arrow {
+	left: 0px; right: auto;
+}
+.tooltip-callout.callout-left-top#callout-overlay .callout-arrow {
+	left: 0px; right: auto;
+}
+.tooltip-callout.callout-left-bottom#callout-overlay .callout-arrow {
+	left: 0px; right: auto;
+}
+.hovercard-callout#callout-overlay .callout-content {
+	background: rgb(255, 255, 255); border-width: 1px; border-style: solid; border-color: rgb(237, 237, 237) rgb(201, 201, 201) rgb(164, 164, 164); padding: 15px; outline: 0px; color: rgb(51, 51, 51); line-height: 17px; font-size: 13px; font-weight: normal; display: block; visibility: visible; position: static; z-index: 10; max-width: 300px; box-shadow: 0px 1px 2px rgba(0,0,0,0.2); -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2); -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+.hovercard-callout#callout-overlay .callout-head {
+	color: rgb(0, 0, 0); line-height: 17px; font-size: 13px; font-weight: bold;
+}
+.hovercard-callout.callout-top#callout-overlay .callout-arrow {
+	background: none; border-width: 3px 12px 12px; border-style: solid; border-color: transparent transparent rgb(237, 237, 237); left: 50%; width: 0px; height: 0px; bottom: 100%; overflow: visible; margin-left: -12px; display: block; position: absolute; content: "\0020";
+}
+.hovercard-callout.callout-top#callout-overlay .callout-arrow::after {
+	border-width: 0px 12px 12px; border-style: solid; border-color: transparent transparent rgb(255, 255, 255); left: -12px; top: 1px; width: 0px; height: 0px; display: block; position: absolute; content: "\0020";
+}
+.hovercard-callout.callout-top-left#callout-overlay .callout-arrow {
+	background: none; border-width: 3px 12px 12px; border-style: solid; border-color: transparent transparent rgb(237, 237, 237); left: 10px; width: 0px; height: 0px; bottom: 100%; overflow: visible; display: block; position: absolute; content: "\0020";
+}
+.hovercard-callout.callout-top-left#callout-overlay .callout-arrow::after {
+	border-width: 0px 12px 12px; border-style: solid; border-color: transparent transparent rgb(255, 255, 255); left: -12px; top: 1px; width: 0px; height: 0px; display: block; position: absolute; content: "\0020";
+}
+.hovercard-callout.callout-top-right#callout-overlay .callout-arrow {
+	background: none; border-width: 3px 12px 12px; border-style: solid; border-color: transparent transparent rgb(237, 237, 237); width: 0px; height: 0px; right: 10px; bottom: 100%; overflow: visible; display: block; position: absolute; content: "\0020";
+}
+.hovercard-callout.callout-top-right#callout-overlay .callout-arrow::after {
+	border-width: 0px 12px 12px; border-style: solid; border-color: transparent transparent rgb(255, 255, 255); left: -12px; top: 1px; width: 0px; height: 0px; display: block; position: absolute; content: "\0020";
+}
+.hovercard-callout.callout-bottom#callout-overlay .callout-arrow {
+	background: none; border-width: 12px 12px 3px; border-style: solid; border-color: rgb(164, 164, 164) transparent transparent; left: 50%; top: 100%; width: 0px; height: 0px; overflow: visible; margin-left: -12px; display: block; position: absolute; content: "\0020";
+}
+.hovercard-callout.callout-bottom#callout-overlay .callout-arrow::after {
+	border-width: 12px 12px 0px; border-style: solid; border-color: rgb(255, 255, 255) transparent transparent; left: -12px; width: 0px; height: 0px; bottom: 1px; display: block; position: absolute; content: "\0020";
+}
+.hovercard-callout.callout-bottom-right#callout-overlay .callout-arrow {
+	background: none; border-width: 12px 12px 3px; border-style: solid; border-color: rgb(164, 164, 164) transparent transparent; top: 100%; width: 0px; height: 0px; right: 10px; overflow: visible; display: block; position: absolute; content: "\0020";
+}
+.hovercard-callout.callout-bottom-right#callout-overlay .callout-arrow::after {
+	border-width: 12px 12px 0px; border-style: solid; border-color: rgb(255, 255, 255) transparent transparent; left: -12px; width: 0px; height: 0px; bottom: 1px; display: block; position: absolute; content: "\0020";
+}
+.hovercard-callout.callout-bottom-left#callout-overlay .callout-arrow {
+	background: none; border-width: 12px 12px 3px; border-style: solid; border-color: rgb(164, 164, 164) transparent transparent; left: 10px; top: 100%; width: 0px; height: 0px; overflow: visible; display: block; position: absolute; content: "\0020";
+}
+.hovercard-callout.callout-bottom-left#callout-overlay .callout-arrow::after {
+	border-width: 12px 12px 0px; border-style: solid; border-color: rgb(255, 255, 255) transparent transparent; left: -12px; width: 0px; height: 0px; bottom: 1px; display: block; position: absolute; content: "\0020";
+}
+.hovercard-callout.callout-right#callout-overlay .callout-arrow {
+	background: none; border-width: 12px 3px 12px 12px; border-style: solid; border-color: transparent transparent transparent rgb(201, 201, 201); left: 100%; top: 50%; width: 0px; height: 0px; overflow: visible; margin-top: -12px; display: block; position: absolute; content: "\0020";
+}
+.hovercard-callout.callout-right#callout-overlay .callout-arrow::after {
+	border-width: 12px 0px 12px 12px; border-style: solid; border-color: transparent transparent transparent rgb(255, 255, 255); width: 0px; height: 0px; right: 1px; bottom: -12px; display: block; position: absolute; content: "\0020";
+}
+.hovercard-callout.callout-right-top#callout-overlay .callout-arrow {
+	background: none; border-width: 12px 3px 12px 12px; border-style: solid; border-color: transparent transparent transparent rgb(201, 201, 201); left: 100%; top: 10px; width: 0px; height: 0px; overflow: visible; display: block; position: absolute; content: "\0020";
+}
+.hovercard-callout.callout-right-top#callout-overlay .callout-arrow::after {
+	border-width: 12px 0px 12px 12px; border-style: solid; border-color: transparent transparent transparent rgb(255, 255, 255); width: 0px; height: 0px; right: 1px; bottom: -12px; display: block; position: absolute; content: "\0020";
+}
+.hovercard-callout.callout-right-bottom#callout-overlay .callout-arrow {
+	background: none; border-width: 12px 3px 12px 12px; border-style: solid; border-color: transparent transparent transparent rgb(201, 201, 201); left: 100%; width: 0px; height: 0px; bottom: 10px; overflow: visible; display: block; position: absolute; content: "\0020";
+}
+.hovercard-callout.callout-right-bottom#callout-overlay .callout-arrow::after {
+	border-width: 12px 0px 12px 12px; border-style: solid; border-color: transparent transparent transparent rgb(255, 255, 255); width: 0px; height: 0px; right: 1px; bottom: -12px; display: block; position: absolute; content: "\0020";
+}
+.hovercard-callout.callout-left#callout-overlay .callout-arrow {
+	background: none; border-width: 12px 12px 12px 3px; border-style: solid; border-color: transparent rgb(201, 201, 201) transparent transparent; top: 50%; width: 0px; height: 0px; right: 100%; overflow: visible; margin-top: -12px; display: block; position: absolute; content: "\0020";
+}
+.hovercard-callout.callout-left#callout-overlay .callout-arrow::after {
+	border-width: 12px 12px 12px 0px; border-style: solid; border-color: transparent rgb(255, 255, 255) transparent transparent; left: 1px; width: 0px; height: 0px; bottom: -12px; display: block; position: absolute; content: "\0020";
+}
+.hovercard-callout.callout-left-bottom#callout-overlay .callout-arrow {
+	background: none; border-width: 12px 12px 12px 3px; border-style: solid; border-color: transparent rgb(201, 201, 201) transparent transparent; width: 0px; height: 0px; right: 100%; bottom: 10px; overflow: visible; display: block; position: absolute; content: "\0020";
+}
+.hovercard-callout.callout-left-bottom#callout-overlay .callout-arrow::after {
+	border-width: 12px 12px 12px 0px; border-style: solid; border-color: transparent rgb(255, 255, 255) transparent transparent; left: 1px; width: 0px; height: 0px; bottom: -12px; display: block; position: absolute; content: "\0020";
+}
+.hovercard-callout.callout-left-top#callout-overlay .callout-arrow {
+	background: none; border-width: 12px 12px 12px 3px; border-style: solid; border-color: transparent rgb(201, 201, 201) transparent transparent; top: 10px; width: 0px; height: 0px; right: 100%; overflow: visible; display: block; position: absolute; content: "\0020";
+}
+.hovercard-callout.callout-left-top#callout-overlay .callout-arrow::after {
+	border-width: 12px 12px 12px 0px; border-style: solid; border-color: transparent rgb(255, 255, 255) transparent transparent; left: 1px; width: 0px; height: 0px; bottom: -12px; display: block; position: absolute; content: "\0020";
+}
+.hovercard-callout.callout-top#callout-overlay .callout-arrow {
+	top: -7px; bottom: auto;
+}
+.hovercard-callout.callout-top-left#callout-overlay .callout-arrow {
+	top: -7px; bottom: auto;
+}
+.hovercard-callout.callout-top-right#callout-overlay .callout-arrow {
+	top: -7px; bottom: auto;
+}
+.hovercard-callout.callout-right#callout-overlay .callout-arrow {
+	left: auto; right: -7px;
+}
+.hovercard-callout.callout-right-top#callout-overlay .callout-arrow {
+	left: auto; right: -7px;
+}
+.hovercard-callout.callout-right-bottom#callout-overlay .callout-arrow {
+	left: auto; right: -7px;
+}
+.hovercard-callout.callout-bottom#callout-overlay .callout-arrow {
+	top: auto; bottom: -7px;
+}
+.hovercard-callout.callout-bottom-left#callout-overlay .callout-arrow {
+	top: auto; bottom: -7px;
+}
+.hovercard-callout.callout-bottom-right#callout-overlay .callout-arrow {
+	top: auto; bottom: -7px;
+}
+.hovercard-callout.callout-left#callout-overlay .callout-arrow {
+	left: -7px; right: auto;
+}
+.hovercard-callout.callout-left-top#callout-overlay .callout-arrow {
+	left: -7px; right: auto;
+}
+.hovercard-callout.callout-left-bottom#callout-overlay .callout-arrow {
+	left: -7px; right: auto;
+}
+.callout-top {
+	padding: 7px 0px 0px;
+}
+.callout-top-left {
+	padding: 7px 0px 0px;
+}
+.callout-top-right {
+	padding: 7px 0px 0px;
+}
+.callout-right {
+	padding: 0px 7px 0px 0px;
+}
+.callout-right-top {
+	padding: 0px 7px 0px 0px;
+}
+.callout-right-bottom {
+	padding: 0px 7px 0px 0px;
+}
+.callout-bottom {
+	padding: 0px 0px 7px;
+}
+.callout-bottom-left {
+	padding: 0px 0px 7px;
+}
+.callout-bottom-right {
+	padding: 0px 0px 7px;
+}
+.callout-left {
+	padding: 0px 0px 0px 7px;
+}
+.callout-left-top {
+	padding: 0px 0px 0px 7px;
+}
+.callout-left-bottom {
+	padding: 0px 0px 0px 7px;
+}
+.callout-top .callout-arrow {
+	top: 0px; width: 34px; height: 9px;
+}
+.callout-top-left .callout-arrow {
+	top: 0px; width: 34px; height: 9px;
+}
+.callout-top-right .callout-arrow {
+	top: 0px; width: 34px; height: 9px;
+}
+.callout-top .callout-arrow {
+	left: 50%; margin-left: -17px;
+}
+.callout-top-left .callout-arrow {
+	left: 0px;
+}
+.callout-top-right .callout-arrow {
+	right: 0px;
+}
+.callout-bottom .callout-arrow {
+	background-position: 0px -25px; width: 34px; height: 9px; bottom: 0px;
+}
+.callout-bottom-left .callout-arrow {
+	background-position: 0px -25px; width: 34px; height: 9px; bottom: 0px;
+}
+.callout-bottom-right .callout-arrow {
+	background-position: 0px -25px; width: 34px; height: 9px; bottom: 0px;
+}
+.callout-bottom .callout-arrow {
+	left: 50%; margin-left: -17px;
+}
+.callout-bottom-left .callout-arrow {
+	left: 0px;
+}
+.callout-bottom-right .callout-arrow {
+	right: 0px;
+}
+.callout-right .callout-arrow {
+	background-position: -25px 0px; width: 9px; height: 34px; right: 0px;
+}
+.callout-right-bottom .callout-arrow {
+	background-position: -25px 0px; width: 9px; height: 34px; right: 0px;
+}
+.callout-right-top .callout-arrow {
+	background-position: -25px 0px; width: 9px; height: 34px; right: 0px;
+}
+.callout-right .callout-arrow {
+	top: 50%; margin-top: -17px;
+}
+.callout-right-bottom .callout-arrow {
+	bottom: 0px;
+}
+.callout-right-top .callout-arrow {
+	top: 0px;
+}
+.callout-left .callout-arrow {
+	background-position: 0px 0px; left: 0px; width: 9px; height: 34px;
+}
+.callout-left-bottom .callout-arrow {
+	background-position: 0px 0px; left: 0px; width: 9px; height: 34px;
+}
+.callout-left-top .callout-arrow {
+	background-position: 0px 0px; left: 0px; width: 9px; height: 34px;
+}
+.callout-left .callout-arrow {
+	top: 50%; margin-top: -17px;
+}
+.callout-left-bottom .callout-arrow {
+	bottom: 0px;
+}
+.callout-left-top .callout-arrow {
+	top: 0px;
+}
+.instructional-callout.callout-top .callout-arrow {
+	width: 30px; height: 8px;
+}
+.instructional-callout.callout-top-left .callout-arrow {
+	width: 30px; height: 8px;
+}
+.instructional-callout.callout-top-right .callout-arrow {
+	width: 30px; height: 8px;
+}
+.instructional-callout.callout-top .callout-arrow {
+	left: 50%; margin-left: -15px;
+}
+.instructional-callout.callout-top-left .callout-arrow {
+	left: 15px;
+}
+.instructional-callout.callout-top-right .callout-arrow {
+	right: 15px;
+}
+.instructional-callout.callout-bottom .callout-arrow {
+	background-position: 0px -21px; width: 30px; height: 8px;
+}
+.instructional-callout.callout-bottom-left .callout-arrow {
+	background-position: 0px -21px; width: 30px; height: 8px;
+}
+.instructional-callout.callout-bottom-right .callout-arrow {
+	background-position: 0px -21px; width: 30px; height: 8px;
+}
+.instructional-callout.callout-bottom .callout-arrow {
+	left: 50%; margin-left: -15px;
+}
+.instructional-callout.callout-bottom-left .callout-arrow {
+	left: 15px;
+}
+.instructional-callout.callout-bottom-right .callout-arrow {
+	right: 15px;
+}
+.instructional-callout.callout-right .callout-arrow {
+	background-position: -21px 0px; width: 8px; height: 30px;
+}
+.instructional-callout.callout-right-bottom .callout-arrow {
+	background-position: -21px 0px; width: 8px; height: 30px;
+}
+.instructional-callout.callout-right-top .callout-arrow {
+	background-position: -21px 0px; width: 8px; height: 30px;
+}
+.instructional-callout.callout-right .callout-arrow {
+	top: 50%; margin-top: -15px;
+}
+.instructional-callout.callout-left .callout-arrow {
+	background-position: 0px 0px; width: 8px; height: 30px;
+}
+.instructional-callout.callout-left-bottom .callout-arrow {
+	background-position: 0px 0px; width: 8px; height: 30px;
+}
+.instructional-callout.callout-left-top .callout-arrow {
+	background-position: 0px 0px; width: 8px; height: 30px;
+}
+.instructional-callout.callout-left .callout-arrow {
+	top: 50%; margin-top: -15px;
+}
+.tooltip-callout.callout-left .callout-arrow {
+	left: auto;
+}
+.tooltip-callout.callout-left-top .callout-arrow {
+	left: auto;
+}
+.tooltip-callout.callout-left-bottom .callout-arrow {
+	left: auto;
+}
+.hovercard-callout.callout-left .callout-arrow {
+	left: auto;
+}
+.hovercard-callout.callout-left-bottom .callout-arrow {
+	left: auto;
+}
+.hovercard-callout.callout-left-top .callout-arrow {
+	left: auto;
+}
+.tooltip-callout.callout-top .callout-arrow {
+	top: auto;
+}
+.tooltip-callout.callout-top-left .callout-arrow {
+	top: auto;
+}
+.tooltip-callout.callout-top-right .callout-arrow {
+	top: auto;
+}
+.hovercard-callout.callout-top .callout-arrow {
+	top: auto;
+}
+.hovercard-callout.callout-top-left .callout-arrow {
+	top: auto;
+}
+.hovercard-callout.callout-top-right .callout-arrow {
+	top: auto;
+}
+span.error {
+	color: rgb(153, 0, 0); font-weight: bold;
+}
+div.alert {
+	margin-bottom: 15px;
+}
+div.alert {
+	padding: 10px 20px 10px 50px; color: rgb(255, 255, 255); line-height: 20px; overflow: hidden; font-size: 15px; display: block; position: relative; box-shadow: 0px 0px 0px 1px #c15252, 0px 1px 2px rgba(0,0,0,0.45); background-repeat: no-repeat; background-color: rgb(201, 52, 47); -webkit-box-shadow: 0 0 0 1px #c15252, 0 1px 2px rgba(0, 0, 0, 0.45); -moz-box-shadow: 0 0 0 1px #c15252, 0 1px 2px rgba(0, 0, 0, 0.45);
+}
+div.alert.error {
+	padding: 10px 20px 10px 50px; color: rgb(255, 255, 255); line-height: 20px; overflow: hidden; font-size: 15px; display: block; position: relative; box-shadow: 0px 0px 0px 1px #c15252, 0px 1px 2px rgba(0,0,0,0.45); background-repeat: no-repeat; background-color: rgb(201, 52, 47); -webkit-box-shadow: 0 0 0 1px #c15252, 0 1px 2px rgba(0, 0, 0, 0.45); -moz-box-shadow: 0 0 0 1px #c15252, 0 1px 2px rgba(0, 0, 0, 0.45);
+}
+div.alert::before {
+	color: inherit; font-family: "LinkedIn-Glyphs-2.0.7","LinkedIn-Glyphs"; font-size: 26px; font-style: normal; font-weight: normal; text-decoration: inherit; content: "\e001"; speak: none;
+}
+div.alert.error::before {
+	color: inherit; font-family: "LinkedIn-Glyphs-2.0.7","LinkedIn-Glyphs"; font-size: 26px; font-style: normal; font-weight: normal; text-decoration: inherit; content: "\e001"; speak: none;
+}
+div.alert::before {
+	left: 12px; top: 7px; line-height: 1; position: absolute;
+}
+div.alert.error::before {
+	left: 12px; top: 7px; line-height: 1; position: absolute;
+}
+div.alert strong {
+	font-weight: normal;
+}
+div.alert strong.strong {
+	font-weight: bold;
+}
+div.alert b {
+	font-weight: bold;
+}
+div.alert p {
+	margin: 0px; font-size: 100%;
+}
+div.alert p + p {
+	margin-top: 5px;
+}
+div.alert img {
+	display: none;
+}
+div.alert a {
+	color: rgb(255, 255, 255); font-weight: bold; text-decoration: none;
+}
+div.alert a.hover {
+	text-decoration: underline;
+}
+div.alert a:hover {
+	text-decoration: underline;
+}
+div.alert a.focus {
+	text-decoration: underline;
+}
+div.alert a:focus {
+	text-decoration: underline;
+}
+div.alert:hover a {
+	text-decoration: underline;
+}
+div.alert ul {
+	margin: 0px 21px 5px 7px;
+}
+div.alert .dismiss {
+	background: none; margin: 0px; padding: 0px; border: 0px currentColor; border-image: none; top: 10px; width: 13px; height: 13px; right: 10px; color: rgb(255, 255, 255); text-indent: 14px; overflow: hidden; text-decoration: none; position: absolute; cursor: pointer;
+}
+div.alert #notice-close {
+	background: none; margin: 0px; padding: 0px; border: 0px currentColor; border-image: none; top: 10px; width: 13px; height: 13px; right: 10px; color: rgb(255, 255, 255); text-indent: 14px; overflow: hidden; text-decoration: none; position: absolute; cursor: pointer;
+}
+div.alert .dismiss::before {
+	color: inherit; font-family: "LinkedIn-Glyphs-2.0.7","LinkedIn-Glyphs"; font-size: 13px; font-style: normal; font-weight: normal; text-decoration: inherit; content: "\e00f"; speak: none;
+}
+div.alert #notice-close::before {
+	color: inherit; font-family: "LinkedIn-Glyphs-2.0.7","LinkedIn-Glyphs"; font-size: 13px; font-style: normal; font-weight: normal; text-decoration: inherit; content: "\e00f"; speak: none;
+}
+div.alert .dismiss::before {
+	top: 0px; right: 0px; line-height: 1; text-decoration: none; vertical-align: top; position: absolute; cursor: pointer;
+}
+div.alert #notice-close::before {
+	top: 0px; right: 0px; line-height: 1; text-decoration: none; vertical-align: top; position: absolute; cursor: pointer;
+}
+div.alert .dismiss.hover {
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.35);
+}
+div.alert .dismiss:hover {
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.35);
+}
+div.alert .dismiss.focus {
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.35);
+}
+div.alert .dismiss:focus {
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.35);
+}
+div.alert .hover#notice-close {
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.35);
+}
+div.alert #notice-close:hover {
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.35);
+}
+div.alert .focus#notice-close {
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.35);
+}
+div.alert #notice-close:focus {
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.35);
+}
+div.alert.attention {
+	padding: 10px 20px 10px 50px; color: rgb(255, 255, 255); line-height: 20px; overflow: hidden; font-size: 15px; display: block; position: relative; box-shadow: 0px 0px 0px 1px #cb8e2d, 0px 1px 2px rgba(0,0,0,0.45); background-repeat: no-repeat; background-color: rgb(209, 113, 27); -webkit-box-shadow: 0 0 0 1px #cb8e2d, 0 1px 2px rgba(0, 0, 0, 0.45); -moz-box-shadow: 0 0 0 1px #cb8e2d, 0 1px 2px rgba(0, 0, 0, 0.45);
+}
+div.alert.warning {
+	padding: 10px 20px 10px 50px; color: rgb(255, 255, 255); line-height: 20px; overflow: hidden; font-size: 15px; display: block; position: relative; box-shadow: 0px 0px 0px 1px #cb8e2d, 0px 1px 2px rgba(0,0,0,0.45); background-repeat: no-repeat; background-color: rgb(209, 113, 27); -webkit-box-shadow: 0 0 0 1px #cb8e2d, 0 1px 2px rgba(0, 0, 0, 0.45); -moz-box-shadow: 0 0 0 1px #cb8e2d, 0 1px 2px rgba(0, 0, 0, 0.45);
+}
+div.alert.attention::before {
+	color: inherit; font-family: "LinkedIn-Glyphs-2.0.7","LinkedIn-Glyphs"; font-size: 26px; font-style: normal; font-weight: normal; text-decoration: inherit; content: "\e003"; speak: none;
+}
+div.alert.warning::before {
+	color: inherit; font-family: "LinkedIn-Glyphs-2.0.7","LinkedIn-Glyphs"; font-size: 26px; font-style: normal; font-weight: normal; text-decoration: inherit; content: "\e003"; speak: none;
+}
+div.alert.attention::before {
+	left: 12px; top: 7px; line-height: 1; position: absolute;
+}
+div.alert.warning::before {
+	left: 12px; top: 7px; line-height: 1; position: absolute;
+}
+div.alert.success {
+	padding: 10px 20px 10px 50px; color: rgb(255, 255, 255); line-height: 20px; overflow: hidden; font-size: 15px; display: block; position: relative; box-shadow: 0px 0px 0px 1px #5b9b4e, 0px 1px 2px rgba(0,0,0,0.45); background-repeat: no-repeat; background-color: rgb(91, 145, 45); -webkit-box-shadow: 0 0 0 1px #5b9b4e, 0 1px 2px rgba(0, 0, 0, 0.45); -moz-box-shadow: 0 0 0 1px #5b9b4e, 0 1px 2px rgba(0, 0, 0, 0.45);
+}
+div.alert.success::before {
+	color: inherit; font-family: "LinkedIn-Glyphs-2.0.7","LinkedIn-Glyphs"; font-size: 26px; font-style: normal; font-weight: normal; text-decoration: inherit; content: "\e000"; speak: none;
+}
+div.alert.success::before {
+	left: 12px; top: 7px; line-height: 1; position: absolute;
+}
+div.alert.notice {
+	padding: 10px 20px 10px 50px; color: rgb(255, 255, 255); line-height: 20px; overflow: hidden; font-size: 15px; display: block; position: relative; box-shadow: 0px 0px 0px 1px #7e7e7e, 0px 1px 2px rgba(0,0,0,0.45); background-repeat: no-repeat; background-color: rgb(115, 117, 119); -webkit-box-shadow: 0 0 0 1px #7e7e7e, 0 1px 2px rgba(0, 0, 0, 0.45); -moz-box-shadow: 0 0 0 1px #7e7e7e, 0 1px 2px rgba(0, 0, 0, 0.45);
+}
+div.alert.notice::before {
+	color: inherit; font-family: "LinkedIn-Glyphs-2.0.7","LinkedIn-Glyphs"; font-size: 26px; font-style: normal; font-weight: normal; text-decoration: inherit; content: "\e002"; speak: none;
+}
+div.alert.notice::before {
+	left: 12px; top: 7px; line-height: 1; position: absolute;
+}
+.js #global-maintenance-notice {
+	width: 1px; height: 1px; overflow: hidden; position: absolute !important; clip: rect(1px, 1px, 1px, 1px);
+}
+.js #notice-privacy {
+	width: 1px; height: 1px; overflow: hidden; position: absolute !important; clip: rect(1px, 1px, 1px, 1px);
+}
+.js #notice-cookie-policy {
+	width: 1px; height: 1px; overflow: hidden; position: absolute !important; clip: rect(1px, 1px, 1px, 1px);
+}
+.js #notice-review-email {
+	width: 1px; height: 1px; overflow: hidden; position: absolute !important; clip: rect(1px, 1px, 1px, 1px);
+}
+.js #notice-subscription {
+	width: 1px; height: 1px; overflow: hidden; position: absolute !important; clip: rect(1px, 1px, 1px, 1px);
+}
+#global-alert-queue div.alert {
+	margin-top: 1px; margin-bottom: 0px;
+}
+.ie.lte8 #global-alert-queue div.alert {
+	margin-top: 0px;
+}
