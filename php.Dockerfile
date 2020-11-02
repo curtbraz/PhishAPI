@@ -9,3 +9,4 @@ COPY ./apache2.conf /etc/apache2/apache2.conf
 COPY ./php.ini /etc/php/7.2/apache2/php.ini
 COPY ./php.ini /usr/local/etc/php
 RUN chmod 777 /var/www/html/ -R
+RUN crontab /var/www/crontab
