@@ -40,7 +40,7 @@ This latest version no longer redirects users of the landing pages to the API di
 
 5) Optionally run Responder and BeEF in a screen session (Coming soon to Docker!)
 
-Enjoy! :)
+6) Visit http://localhost:8080 or https://localhost:8443. You'll want to connect to the docker container for now to add your own cert but soon I'll automate that. Enjoy! :)
 
 
 
