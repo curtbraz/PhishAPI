@@ -34,13 +34,13 @@ This latest version no longer redirects users of the landing pages to the API di
 
 2) Install docker-compose on Ubuntu with `sudo apt-get install docker-compose` (or on WSL2 with `sudo curl -L "https://github.com/docker/compose/releases/download/1.26.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose` and `sudo chmod +x /usr/local/bin/docker-compose`.) Then start `dockerd` via the service or in a Screen session.
 
-3) Run docker-compose via `docker-compose build` from within the Phishing-API directory. Then, `docker-compose up` (add -d to background it).
+3) Run docker-compose via `docker-compose build` from within the Phishing-API directory. Then, `docker-compose up -d`.
 
-4) For HTTPS (RECOMMENDED!), replace the certificate and key in `/certs/ssl/` with yours (LetsEncrypt?) and update the domain and cert/key names in `000-default-le-ssl.conf`.
+4) For HTTPS (RECOMMENDED!), replace the certificate and key (keeping the filenames the same) in `/certs/ssl/` with yours (LetsEncrypt?) and update the domain in `000-default-le-ssl.conf`.
 
 5) Optionally run Responder and BeEF in a screen session (Coming soon to Docker!)
 
-6) Visit http://localhost or https://localhost.
+6) Visit http://localhost, https://localhost, or your domain address externally. All should be ready!
 
 
 
