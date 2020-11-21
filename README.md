@@ -40,7 +40,7 @@ This latest version no longer redirects users of the landing pages to the API di
 
 5) Optionally run Responder and BeEF in a screen session, but not required. (Coming soon to Docker!)
 
-6) Visit http://localhost, https://localhost, or your domain address externally. All should be ready! The Default User/Pass for basic auth is PhishAPI:PhishAPI for the reporting pages but I recommend changing this by editing `.htpasswd`.
+6) Visit your URL and all should be ready! The Default User/Pass for basic auth is PhishAPI:PhishAPI for the reporting pages but I recommend changing this by editing `.htpasswd`.
 
 
 
