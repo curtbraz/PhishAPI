@@ -30,13 +30,13 @@ This latest version no longer redirects users of the landing pages to the API di
 
 # To Setup :
 
-1) It's all in Docker now! Clone this repo, `cd PhishAPI` and edit config.txt. Default User/Pass for basic auth is PhishAPI:PhishAPI.
+1) It's all in Docker now! Clone this repo, `cd PhishAPI` and edit config.txt. Default User/Pass for basic auth is PhishAPI:PhishAPI. I typically host on an AWS EC2 Ubuntu image or on WSL2 locally on Win 10 but you can host it anywhere.
 
 2) Install docker-compose on Ubuntu with `sudo apt-get install docker-compose` (or on WSL2 with `sudo curl -L "https://github.com/docker/compose/releases/download/1.26.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose` and `sudo chmod +x /usr/local/bin/docker-compose`.) Then start `dockerd` via the service or in a Screen session.
 
-3) Run docker-compose via `docker-compose build` from within the Phishing-API directory. Then, `docker-compose up -d`.
+3) For HTTPS (RECOMMENDED!), replace the certificate and key (keeping the filenames the same) in `/certs/ssl/` with yours (LetsEncrypt?) and update the domain in `000-default-le-ssl.conf`.
 
-4) For HTTPS (RECOMMENDED!), replace the certificate and key (keeping the filenames the same) in `/certs/ssl/` with yours (LetsEncrypt?) and update the domain in `000-default-le-ssl.conf`.
+4) Run docker-compose via `docker-compose build` from within the Phishing-API directory. Then, `docker-compose up -d`. (`docker-compose down` will kill it)
 
 5) Optionally run Responder and BeEF in a screen session (Coming soon to Docker!)
 
