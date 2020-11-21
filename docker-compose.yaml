@@ -7,9 +7,10 @@ services:
     restart: always
     volumes:
       - "./:/var/www/"
+      - "./certs/ssl/:/etc/apache2/ssl/"
     ports:
-      - "8080:80"
-      - "8443:443"
+      - "80:80"
+      - "443:443"
   mysql-server:
     build:
       dockerfile: mysql.Dockerfile
