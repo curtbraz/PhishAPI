@@ -7,7 +7,7 @@ $password = "PhishAPIDef@ulT"; //If Changed You Need to Update docker-compose.ya
 $dbname = "fakesite";
 
 // API Server Info
-$APIDomain = "YOUR_SLACK_API_DOMAIN_HERE:8080"; // e.g https://phishapi.com:8443 - This API's Domain
+$APIDomain = "YOUR_SLACK_API_DOMAIN_HERE"; // e.g https://phishapi.com - This API's Domain
 
 // Slack Info
 $SlackIncomingWebhookURL = "YOUR_SLACK_INCOMING_WEBHOOK_URL_HERE"; // Used for DocBot, PhishBot, & BeEFBot (ex: https://hooks.slack.com/services/...)
