@@ -36,11 +36,11 @@ This latest version no longer redirects users of the landing pages to the API di
 
 3) Run docker-compose via `docker-compose build` from within the Phishing-API directory. Then, `docker-compose up` (add -d to background it).
 
-4) Use HTTPS (Let's Encrypt!) and a Domain for the Hosted API (Coming soon to Docker automagically!)
+4) For HTTPS (RECOMMENDED!), replace the certificate and key in `/certs/ssl/` with yours (LetsEncrypt?) and update the domain and cert/key names in `000-default-le-ssl.conf`.
 
 5) Optionally run Responder and BeEF in a screen session (Coming soon to Docker!)
 
-6) Visit http://localhost:8080 or https://localhost:8443. You'll want to connect to the docker container for now to add your own cert but soon I'll automate that. Enjoy! :)
+6) Visit http://localhost or https://localhost.
 
 
 
