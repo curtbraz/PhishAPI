@@ -479,17 +479,19 @@ exec($cmd18,$output18);
 
 }
 
-$cmd10 = "sed -i -e 's~URLVALUE~".stripslashes($URL)."~g' word/_rels/document.xml.rels;";
-//$cmd10 = escapeshellcmd($cmd10);
-exec($cmd10,$output10);
-//var_dump($output10);
-
 $domainonly = parse_url($URL, PHP_URL_HOST);
 
 $cmdunc = "sed -i -e 's~UNCVALUE~".stripslashes($domainonly)."~g' word/_rels/document.xml.rels;";
 //$cmd10 = escapeshellcmd($cmd10);
 exec($cmdunc,$outputunc);
 //var_dump($output10);
+
+$cmd10 = "sed -i -e 's~URLVALUE~".stripslashes($URL)."~g' word/_rels/document.xml.rels;";
+//$cmd10 = escapeshellcmd($cmd10);
+exec($cmd10,$output10);
+//var_dump($output10);
+
+
 
 $cmd11 = "sed -i -e 's~TARGETVALUE~".stripslashes($Target)."~g' word/_rels/document.xml.rels;";
 //$cmd11 = escapeshellcmd($cmd11);
