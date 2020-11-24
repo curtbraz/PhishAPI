@@ -36,7 +36,7 @@ This latest version no longer redirects users of the landing pages to the API di
 
 3) For HTTPS (RECOMMENDED!), replace the certificate and key (keeping the filenames the same) in `/certs/ssl/` with yours (LetsEncrypt?) and update the domain (ServerName) in `000-default-le-ssl.conf`. Otherwise, skip this step but browsers will warn against POSTing to insecure sites.
 
-4) Run docker-compose via `docker-compose build` from within the Phishing-API directory. Then, `docker-compose up -d`. (`docker-compose down` will kill it)
+4) Run docker-compose via `docker-compose build` from within the PhishAPI directory. Then, `docker-compose up -d`. (`docker-compose down` will kill it)
 
 5) Optionally run Responder and BeEF in a screen session, but not required. (Coming soon to Docker!)
 
