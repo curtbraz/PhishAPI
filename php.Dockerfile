@@ -15,6 +15,7 @@ COPY ./apache2.conf /etc/apache2/apache2.conf
 COPY ./php.ini /etc/php/7.2/apache2/php.ini
 COPY ./php.ini /usr/local/etc/php
 COPY ./browscap.ini /var/www/browscap.ini
+COPY ./.htpasswd /var/www/.htpasswd
 RUN mkdir /var/www/uploads
 RUN mkdir /var/www/html/phishingdocs/hosted
 RUN chmod 777 /var/www/ -R
