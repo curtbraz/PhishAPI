@@ -6,7 +6,6 @@ services:
       context: .
     restart: always
     volumes:
-      - "./:/var/www/"
       - "./certs/ssl/:/etc/apache2/ssl/"
     ports:
       - "80:80"
