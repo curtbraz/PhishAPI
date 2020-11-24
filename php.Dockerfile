@@ -3,7 +3,9 @@ ENV DEBIAN_FRONTEND=noninteractive
 RUN docker-php-ext-install mysqli pdo_mysql
 RUN a2enmod ssl
 RUN apt-get update
-RUN apt-get install -y python2.7
+RUN apt-get install -y python
+RUN apt-get install -y python-pip
+RUN pip install python-docx
 RUN apt-get install -y zip
 RUN apt-get install -y apt-utils
 COPY ./000-default-le-ssl.conf /etc/apache2/sites-enabled/
