@@ -98,7 +98,7 @@ $DiscordWebhook = $row['DiscordWebhook'];
 $DiscordChannel = $row['DiscordChannel'];
 $IFTTTWebhook = $row['IFTTTWebhook'];
 
-$apitest = $APIDomain."?project=PhishAPI%20Test%20Project&redirect=".$APIDomain."/config&slackbotname=PhishBot&slackemoji=%3Afishing_pole_and_fish%3A&username=TestUser&password=TestPass";
+$apitest = $APIDomain."?project=PhishAPI%20Test%20Project&redirect=".$APIDomain."&slackbotname=PhishBot&slackemoji=%3Afishing_pole_and_fish%3A&username=TestUser&password=TestPass";
 
 $testmessage = "<h3><FONT COLOR=\"#FFFFFF\">Test your notifications here:</h3><a href=\"".$apitest."\">".$apitest."</a></FONT><BR><BR>";
 
