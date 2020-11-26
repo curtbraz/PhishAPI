@@ -104,6 +104,17 @@ $IFTTTWebhook = $row['IFTTTWebhook'];
 
 </HEAD>
 <BODY>
+<FORM ACTION="index.php" METHOD="GET">
+  <div class="w3-dropdown-hover w3-right">
+    <button class="w3-button w3-phishapi"><i class="fa fa-home fa-2x" aria-hidden="true" style="color: black;"></i> Home</button>
+    <div class="w3-dropdown-content w3-bar-block w3-border" style="right:0">
+      <a href="../index.php?fakesite=1" class="w3-bar-item w3-button"><i class="fa fa-user fa-1x" aria-hidden="true" style="color: black;"></i> Fake Portal</a>
+      <a href="../phishingdocs/" class="w3-bar-item w3-button"><i class="fa fa-file-text fa-1x" aria-hidden="true" style="color: black;"></i> Weaponized Documents</a>
+      <a href="../campaigns" class="w3-bar-item w3-button"><i class="fa fa-envelope fa-1x" aria-hidden="true" style="color: black;"></i> Email Campaigns</a>
+	  <a href="https://curtbraz.blogspot.com/2018/10/phishapi-tool-rapid-deployment-of-fake.html" class="w3-bar-item w3-button"><i class="fa fa-question-circle fa-1x" aria-hidden="true" style="color: black;"></i> Help / About</a>
+	  <a href="config.php" class="w3-bar-item w3-button"><i class="fa fa-gear fa-1x" aria-hidden="true" style="color: black;"></i> Settings</a>
+    </div>
+  </div></FORM><br><br>
 <CENTER>
     <h2><FONT COLOR="#FFFFFF">API Settings</FONT></h2>
 
