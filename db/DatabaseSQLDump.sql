@@ -510,8 +510,8 @@ BEGIN
 
 DELETE FROM Settings;
 
-INSERT INTO Settings (Domain,BeefHookURL,SlackWebhook,SlackBotToken,SlackChannel,DiscordWebhook,DiscordChannel,IFTTTWebhook) 
-VALUES (InDomain,InBeefHookURL,InSlackWebhook,InSlackBotToken,InSlackChannel,InDiscordWebhook,InDiscordChannel,InIFTTTWebhook);
+INSERT INTO Settings (Domain,BeefHookURL,BeefToken,SlackWebhook,SlackBotToken,SlackChannel,DiscordWebhook,DiscordChannel,IFTTTWebhook) 
+VALUES (InDomain,InBeefHookURL,InBeefToken,InSlackWebhook,InSlackBotToken,InSlackChannel,InDiscordWebhook,InDiscordChannel,InIFTTTWebhook);
     
 END ;;
 DELIMITER ;
@@ -1016,4 +1016,4 @@ DELIMITER ;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-11-26  0:18:03
+-- Dump completed on 2020-11-26  0:33:51
