@@ -2,6 +2,7 @@ FROM php:7.4.3-apache
 ENV DEBIAN_FRONTEND=noninteractive
 RUN docker-php-ext-install mysqli pdo_mysql
 RUN a2enmod ssl
+RUN a2enmod headers
 RUN apt-get update
 RUN apt-get install -y python
 RUN apt-get install -y python-pip
