@@ -36,26 +36,26 @@ $conn2->close();
 
 <HTML>
 <HEAD>
-<link rel="stylesheet" href="main.css">
-<link rel="stylesheet" href="w3.css">
+<link rel="stylesheet" href="../main.css">
+<link rel="stylesheet" href="../w3.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <TITLE>PhishAPI</TITLE>
-<link rel="apple-touch-icon" sizes="57x57" href="/images/favicon/apple-icon-57x57.png">
-<link rel="apple-touch-icon" sizes="60x60" href="/images/favicon/apple-icon-60x60.png">
-<link rel="apple-touch-icon" sizes="72x72" href="/images/favicon/apple-icon-72x72.png">
-<link rel="apple-touch-icon" sizes="76x76" href="/images/favicon/apple-icon-76x76.png">
-<link rel="apple-touch-icon" sizes="114x114" href="/images/favicon/apple-icon-114x114.png">
-<link rel="apple-touch-icon" sizes="120x120" href="/images/favicon/apple-icon-120x120.png">
-<link rel="apple-touch-icon" sizes="144x144" href="/images/favicon/apple-icon-144x144.png">
-<link rel="apple-touch-icon" sizes="152x152" href="/images/favicon/apple-icon-152x152.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-icon-180x180.png">
-<link rel="icon" type="image/png" sizes="192x192"  href="/images/favicon/android-icon-192x192.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="96x96" href="/images/favicon/favicon-96x96.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
-<link rel="manifest" href="/images/favicon/manifest.json">
+<link rel="apple-touch-icon" sizes="57x57" href="../images/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="../images/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../images/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="../images/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../images/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="../images/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="../images/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="../images/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../images/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="../images/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../images/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="../images/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../images/favicon/favicon-16x16.png">
+<link rel="manifest" href="../images/favicon/manifest.json">
 <meta name="msapplication-TileColor" content="#ffffff">
-<meta name="msapplication-TileImage" content="/images/favicon/ms-icon-144x144.png">
+<meta name="msapplication-TileImage" content="../images/favicon/ms-icon-144x144.png">
 <meta name="theme-color" content="#ffffff">
 <style>
 table.blank th {
@@ -98,13 +98,17 @@ $DiscordWebhook = $row['DiscordWebhook'];
 $DiscordChannel = $row['DiscordChannel'];
 $IFTTTWebhook = $row['IFTTTWebhook'];
 
+$apitest = $APIDomain."?project=PhishAPI%20Test%20Project&redirect=".$APIDomain."/config&slackbotname=PhishBot&slackemoji=%3Afishing_pole_and_fish%3A&username=TestUser&password=TestPass";
+
+$testmessage = "<h3><FONT COLOR=\"#FFFFFF\">Test your notifications here:</h3><a href=\"".$apitest."\">".$apitest."</a></FONT><BR><BR>";
+
 }
 	
 ?>
 
 </HEAD>
 <BODY>
-<FORM ACTION="index.php" METHOD="GET">
+<FORM ACTION="../index.php" METHOD="GET">
   <div class="w3-dropdown-hover w3-right">
     <button class="w3-button w3-phishapi"><i class="fa fa-home fa-2x" aria-hidden="true" style="color: black;"></i> Home</button>
     <div class="w3-dropdown-content w3-bar-block w3-border" style="right:0">
@@ -116,6 +120,7 @@ $IFTTTWebhook = $row['IFTTTWebhook'];
     </div>
   </div></FORM><br><br>
 <CENTER>
+<?php echo $testmessage; ?>
     <h2><FONT COLOR="#FFFFFF">API Settings</FONT></h2>
 
 
