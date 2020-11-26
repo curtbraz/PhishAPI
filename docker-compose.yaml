@@ -21,7 +21,6 @@ services:
       DB_HOST: 
     volumes:
       - mysql-data:/var/lib/mysql
-    volumes:
       - "./db/:/docker-entrypoint-initdb.d/"
 volumes:
   mysql-data:
