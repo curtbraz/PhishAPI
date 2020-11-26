@@ -1,6 +1,8 @@
 <?php
 
-require_once '../config.txt';
+ob_start();
+require 'config.php';
+ob_end_clean();
 
 $i = 1;
 
