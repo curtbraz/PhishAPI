@@ -39,7 +39,7 @@
 
 // Read Database Connection Variables
 ob_start();
-require '../../config.php';
+require '../../config/index.php';
 ob_end_clean();
 
 $dbname = "phishingdocs";

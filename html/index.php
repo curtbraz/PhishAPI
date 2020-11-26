@@ -2,7 +2,7 @@
 
 // Pulls in Required Connection Variables
 ob_start();
-require 'config.php';
+require 'config/index.php';
 ob_end_clean();
 
 header("Access-Control-Allow-Origin: *");
@@ -342,7 +342,7 @@ if($redirect == false && !isset($redirurl)){ ?>
     </div>
   </div></FORM><br><br>
 <CENTER><FONT COLOR="#FFFFFF"><H1>Welcome to PhishAPI</H1>
-<b><a href="config.php">Configure Notification Settings</a> and Then Choose an Option Below to Get Started!</b>
+<b><a href="config/">Configure Notification Settings</a> and Then Choose an Option Below to Get Started!</b>
 <BR><BR><BR>
 <TABLE>
 <TR><TH>Fake Portal</TH><TH>Weaponized Documents</TH><TH>Email Campaigns</TH></TR>

@@ -1,7 +1,7 @@
 <?php
 
 ob_start();
-require 'config.php';
+require 'config/index.php';
 ob_end_clean();
 
 $i = 1;
