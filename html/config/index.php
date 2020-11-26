@@ -84,7 +84,7 @@ if($row == null){
 
 $APIDomain = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]";
 
-
+$testmessage = "";
 
 } else {
 
@@ -138,14 +138,14 @@ $testmessage = "<h3><FONT COLOR=\"#FFFFFF\">Test your notifications here:</h3><a
 </TABLE><BR>
 
 <TABLE BORDER=1><TR><TH COLSPAN="2">Discord</TH></TR><TR><TH>Webook URL</TH><TH>Channel</TH></TR>
-<TR><TD><INPUT TYPE="text" VALUE="<?php echo $DiscordWebhook; ?>" NAME="DiscordWebhook"></TD><TD><INPUT TYPE="text" VALUE="<?php echo $DiscordChannel; ?>" NAME="DiscordChannel"></TD></TR>
+<TR><TD><INPUT TYPE="text" VALUE="<?php echo $DiscordWebhook; ?>" NAME="DiscordWebhook" disabled></TD><TD><INPUT TYPE="text" VALUE="<?php echo $DiscordChannel; ?>" NAME="DiscordChannel" disabled></TD></TR>
 </TABLE><BR>
 
 <TABLE BORDER=1><TR><TH>IFTTT</TH></TR><TR><TH>Webook URL</TH></TR>
-<TR><TD><INPUT TYPE="text" VALUE="<?php echo $IFTTTWebhook; ?>" NAME="IFTTTWebhook"></TD></TR>
+<TR><TD><INPUT TYPE="text" VALUE="<?php echo $IFTTTWebhook; ?>" NAME="IFTTTWebhook" disabled></TD></TR>
 </TABLE><BR>
 
-<TABLE BORDER=1><TR><TH>Desktop Notifications</TH></TR><TR><TD><BUTTON>Enable Web Alerts</BUTTON></TD></TR>
+<TABLE BORDER=1><TR><TH>Desktop Notifications</TH></TR><TR><TD><BUTTON TYPE="button">Enable Web Alerts</BUTTON></TD></TR>
 </TABLE><BR>
 
 <br>
