@@ -9,7 +9,6 @@ RUN pip install python-docx
 RUN apt-get install -y zip
 RUN apt-get install -y apt-utils
 ADD html /var/www/html
-COPY ./config.txt /var/www/config.txt
 COPY ./000-default-le-ssl.conf /etc/apache2/sites-enabled/
 COPY ./apache2.conf /etc/apache2/apache2.conf
 COPY ./php.ini /etc/php/7.2/apache2/php.ini
