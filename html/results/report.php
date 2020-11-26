@@ -28,7 +28,9 @@
 <?php
 
 // Read Database Connection Variables
-require_once '../../config.txt';
+ob_start();
+require '../config.php';
+ob_end_clean();
 
 // Create connection
 $conn = mysqli_connect($servername, $username, $password, $dbname);
