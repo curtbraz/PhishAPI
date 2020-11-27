@@ -51,7 +51,7 @@ CREATE TABLE `requests` (
   `IP` varchar(100) DEFAULT NULL,
   `Target` varchar(100) DEFAULT NULL,
   `Org` varchar(100) DEFAULT NULL,
-  `NTLMv2` varchar(1000) NOT NULL,
+  `NTLMv2` varchar(10000) NOT NULL,
   `UA` varchar(1000) DEFAULT NULL,
   `UUID` varchar(1000) NOT NULL,
   `User` varchar(100) DEFAULT NULL,
@@ -207,7 +207,7 @@ DELIMITER ;
 /*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
 /*!50003 SET sql_mode              = '' */ ;
 DELIMITER ;;
-CREATE DEFINER=`root`@`localhost` PROCEDURE `MatchHashes`(IN InIP VARCHAR(100), IN InHash VARCHAR(1000))
+CREATE DEFINER=`root`@`localhost` PROCEDURE `MatchHashes`(IN InIP VARCHAR(100), IN InHash VARCHAR(10000))
 BEGIN
 
 
