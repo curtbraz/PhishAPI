@@ -17,6 +17,15 @@ $DiscordWebhook = $_REQUEST['DiscordWebhook'];
 $DiscordChannel = $_REQUEST['DiscordChannel'];
 $IFTTTWebhook = $_REQUEST['IFTTTWebhook'];
 
+if ($BeefHookJSURL == ""){$BeefHookJSURL = "NULL";}
+if ($BeefToken == ""){$APIDomain = "NULL";}
+if ($SlackIncomingWebhookURL == ""){$SlackIncomingWebhookURL = "NULL";}
+if ($SlackBotOrLegacyToken == ""){$SlackBotOrLegacyToken = "NULL";}
+if ($slackchannel == ""){$slackchannel = "NULL";}
+if ($DiscordWebhook == ""){$DiscordWebhook = "NULL";}
+if ($DiscordChannel == ""){$DiscordChannel = "NULL";}
+if ($IFTTTWebhook == ""){$IFTTTWebhook = "NULL";}
+
 // Create connection
 $conn2 = mysqli_connect($servername, $username, $password, 'Config');
 // Check connection
@@ -98,6 +107,15 @@ $DiscordWebhook = $row['DiscordWebhook'];
 $DiscordChannel = $row['DiscordChannel'];
 $IFTTTWebhook = $row['IFTTTWebhook'];
 
+if ($BeefHookJSURL == "NULL"){$BeefHookJSURL = "";}
+if ($BeefToken == "NULL"){$APIDomain = "";}
+if ($SlackIncomingWebhookURL == "NULL"){$SlackIncomingWebhookURL = "";}
+if ($SlackBotOrLegacyToken == "NULL"){$SlackBotOrLegacyToken = "";}
+if ($slackchannel == "NULL"){$slackchannel = "";}
+if ($DiscordWebhook == "NULL"){$DiscordWebhook = "";}
+if ($DiscordChannel == "NULL"){$DiscordChannel = "";}
+if ($IFTTTWebhook == "NULL"){$IFTTTWebhook = "";}
+
 $apitest = $APIDomain."?project=PhishAPI%20Test%20Project&redirect=".$APIDomain."&slackbotname=PhishBot&slackemoji=%3Afishing_pole_and_fish%3A&username=TestUser&password=TestPass";
 
 $testmessage = "<h3><FONT COLOR=\"#FFFFFF\">Test your notifications here:</h3><a href=\"".$apitest."\">".$apitest."</a></FONT><BR><BR>";
@@ -147,6 +165,8 @@ $testmessage = "<h3><FONT COLOR=\"#FFFFFF\">Test your notifications here:</h3><a
 
 <TABLE BORDER=1><TR><TH>Desktop Notifications</TH></TR><TR><TD><BUTTON TYPE="button">Enable Web Alerts</BUTTON></TD></TR>
 </TABLE><BR>
+
+<INPUT TYPE="hidden" NAME="" VALUE="">
 
 <br>
 
