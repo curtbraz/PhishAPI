@@ -1,8 +1,8 @@
 <?php
 
-$servername = "mysql-server"; 
+$servername = "mysql-server";
 $username = "root";
-$password = "PhishAPIDef@ulT";  
+$password = "PhishAPIDef@ulT";
 $dbname = "fakesite";
 
 if(isset($_REQUEST['APIDomain'])){
@@ -17,8 +17,9 @@ $DiscordWebhook = $_REQUEST['DiscordWebhook'];
 $DiscordChannel = $_REQUEST['DiscordChannel'];
 $IFTTTWebhook = $_REQUEST['IFTTTWebhook'];
 
+if ($APIDomain == ""){$APIDomain = "NULL";}
 if ($BeefHookJSURL == ""){$BeefHookJSURL = "NULL";}
-if ($BeefToken == ""){$APIDomain = "NULL";}
+if ($BeefToken == ""){$BeefToken = "NULL";}
 if ($SlackIncomingWebhookURL == ""){$SlackIncomingWebhookURL = "NULL";}
 if ($SlackBotOrLegacyToken == ""){$SlackBotOrLegacyToken = "NULL";}
 if ($slackchannel == ""){$slackchannel = "NULL";}
@@ -38,8 +39,8 @@ $sql = "CALL UpdateSettings('$APIDomain','$BeefHookJSURL','$BeefToken','$SlackIn
 $result = $conn2->query($sql);
 
 $conn2->close();
-	
-}	
+
+}
 
 ?>
 
@@ -74,7 +75,7 @@ table.blank td {
 
 }
 </style>
-<?php 
+<?php
 
 // Create connection
 $conn = mysqli_connect($servername, $username, $password, 'Config');
@@ -107,8 +108,9 @@ $DiscordWebhook = $row['DiscordWebhook'];
 $DiscordChannel = $row['DiscordChannel'];
 $IFTTTWebhook = $row['IFTTTWebhook'];
 
+if ($APIDomain == "NULL"){$APIDomain = "";}
 if ($BeefHookJSURL == "NULL"){$BeefHookJSURL = "";}
-if ($BeefToken == "NULL"){$APIDomain = "";}
+if ($BeefToken == "NULL"){$BeefToken = "";}
 if ($SlackIncomingWebhookURL == "NULL"){$SlackIncomingWebhookURL = "";}
 if ($SlackBotOrLegacyToken == "NULL"){$SlackBotOrLegacyToken = "";}
 if ($slackchannel == "NULL"){$slackchannel = "";}
@@ -121,7 +123,7 @@ $apitest = $APIDomain."?project=PhishAPI%20Test%20Project&redirect=".$APIDomain.
 $testmessage = "<h3><FONT COLOR=\"#FFFFFF\">Test your notifications here:</h3><a href=\"".$apitest."\">".$apitest."</a></FONT><BR><BR>";
 
 }
-	
+
 ?>
 
 </HEAD>
@@ -133,8 +135,8 @@ $testmessage = "<h3><FONT COLOR=\"#FFFFFF\">Test your notifications here:</h3><a
       <a href="../index.php?fakesite=1" class="w3-bar-item w3-button"><i class="fa fa-user fa-1x" aria-hidden="true" style="color: black;"></i> Fake Portal</a>
       <a href="../phishingdocs/" class="w3-bar-item w3-button"><i class="fa fa-file-text fa-1x" aria-hidden="true" style="color: black;"></i> Weaponized Documents</a>
       <a href="../campaigns" class="w3-bar-item w3-button"><i class="fa fa-envelope fa-1x" aria-hidden="true" style="color: black;"></i> Email Campaigns</a>
-	  <a href="https://curtbraz.blogspot.com/2018/10/phishapi-tool-rapid-deployment-of-fake.html" class="w3-bar-item w3-button"><i class="fa fa-question-circle fa-1x" aria-hidden="true" style="color: black;"></i> Help / About</a>
-	  <a href="config/" class="w3-bar-item w3-button"><i class="fa fa-gear fa-1x" aria-hidden="true" style="color: black;"></i> Settings</a>
+          <a href="https://curtbraz.blogspot.com/2018/10/phishapi-tool-rapid-deployment-of-fake.html" class="w3-bar-item w3-button"><i class="fa fa-question-circle fa-1x" aria-hidden="true" style="color: black;"></i> Help / About</a>
+          <a href="config/" class="w3-bar-item w3-button"><i class="fa fa-gear fa-1x" aria-hidden="true" style="color: black;"></i> Settings</a>
     </div>
   </div></FORM><br><br>
 <CENTER>
@@ -165,8 +167,6 @@ $testmessage = "<h3><FONT COLOR=\"#FFFFFF\">Test your notifications here:</h3><a
 
 <TABLE BORDER=1><TR><TH>Desktop Notifications</TH></TR><TR><TD><BUTTON TYPE="button">Enable Web Alerts</BUTTON></TD></TR>
 </TABLE><BR>
-
-<INPUT TYPE="hidden" NAME="" VALUE="">
 
 <br>
 
