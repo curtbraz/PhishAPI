@@ -3,9 +3,9 @@
 ## DEFAULTS IF NOT FROM PHISHING DOCS
 QueryConfig=$(mysql -h mysql-server -u root -pPhishAPIDef@ulT Config -se "CALL GetSettings();");
 
-SlackURL=$(echo $QueryConfig | cut -f 2);
-SlackChannel=$(echo $QueryConfig | cut -f 4);
-APIURL=$(echo $QueryConfig | cut -f 1);
+SlackURL=$(echo $QueryConfig | cut -d " " -f 2);
+SlackChannel=$(echo $QueryConfig | cut -d " " -f 4);
+APIURL=$(echo $QueryConfig | cut -d " " -f 1);
 
 files=$(cd /var/log/Responder && ls *.txt | awk '{print $1}');
 
