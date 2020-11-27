@@ -4,7 +4,7 @@
 QueryConfig=$(mysql -h mysql-server -u root -pPhishAPIDef@ulT Config -se "CALL GetSettings();");
 
 SlackURL=$(echo $QueryConfig | cut -f 2);
-SlackChannel=$(echo $QueryConfig | cut -f 8);
+SlackChannel=$(echo $QueryConfig | cut -f 4);
 APIURL=$(echo $QueryConfig | cut -f 1);
 
 files=$(cd /var/log/Responder && ls *.txt | awk '{print $1}');
@@ -25,8 +25,6 @@ do
 
   Query=$(mysql -h mysql-server -u root -pPhishAPIDef@ulT phishingdocs -se "CALL MatchHashes('$IP','$Hashes');");
 
-echo $Query
-
   Title=$(echo $Query | cut -f 1);
   Target=$(echo $Query | cut -f 2);
   Org=$(echo $Query | cut -f 3);
@@ -40,14 +38,14 @@ if [ $Title = "PhishingDocs" ]
 then
   message=$(echo "> *HIT!!* Captured a" $HashType "hash ("$Module") for" $Target "at" $Org "(<"$APIURL/phishingdocs/results?UUID=$UUID"|"$IP">)");
   curl -s -X POST --data-urlencode 'payload={"channel": "'$Channel'", "username": "HashBot", "text": "'$message'", "icon_emoji": ":hash:"}' $Token
-  rm /var/log/Responder/logs/$file;
+  rm /var/log/Responder/$file;
 fi
 
 if [ $Title = "FakeSite" ]
 then
   message=$(echo "> *HIT!!* Captured a" $HashType "hash ("$Module") for "$Target" at <"$APIURL/results?project=$Target"|"$IP">");
   curl -s -X POST --data-urlencode 'payload={"channel": "'$SlackChannel'", "username": "HashBot", "text": "'$message'", "icon_emoji": ":hash:"}' $SlackURL
-  rm /var/log/Responder/logs/$file;
+  rm /var/log/Responder/$file;
 fi
 
   if [ -z "$Title" ]
@@ -55,7 +53,7 @@ fi
 ## COMMENT THE NEXT TWO LINES OUT IF YOU DO NOT WISH TO BE NOTIFIED FOR OUT OF SCOPE HASHES
       message=$(echo "> Captured an out of scope" $HashType "hash ("$Module") at" $IP"\r\n> \`\`\`"$Hashes"\`\`\`");
       curl -s -X POST --data-urlencode 'payload={"channel": "'$SlackChannel'", "username": "HashBot", "text": "'$message'", "icon_emoji": ":hash:"}' $SlackURL
-      rm /var/log/Responder/logs/$file;
+      rm /var/log/Responder/$file;
   fi
 
 done
