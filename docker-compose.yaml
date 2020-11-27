@@ -10,6 +10,18 @@ services:
     ports:
       - "80:80"
       - "443:443"
+  python:
+    build:
+      dockerfile: python.Dockerfile
+      context: .
+    restart: always
+    volumes:
+      - "./Responder/logs/:/var/log/Responder/"
+    ports:
+      - "445:445"
+      - "137:137"
+      - "138:138"
+      - "139:139"
   mysql-server:
     build:
       dockerfile: mysql.Dockerfile

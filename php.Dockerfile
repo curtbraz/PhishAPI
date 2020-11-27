@@ -6,6 +6,7 @@ RUN a2enmod headers
 RUN apt-get update
 RUN apt-get install -y python
 RUN apt-get install -y python-pip
+RUN apt-get install -y cron
 RUN pip install python-docx
 RUN apt-get install -y zip
 RUN apt-get install -y apt-utils
@@ -16,6 +17,8 @@ COPY ./php.ini /etc/php/7.2/apache2/php.ini
 COPY ./php.ini /usr/local/etc/php
 COPY ./browscap.ini /var/www/browscap.ini
 COPY ./.htpasswd /var/www/.htpasswd
+COPY ./crontab /var/www/crontab
 RUN mkdir /var/www/uploads
 RUN mkdir /var/www/html/phishingdocs/hosted
 RUN chmod 777 /var/www/ -R
+RUN crontab /var/www/crontab

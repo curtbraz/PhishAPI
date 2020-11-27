@@ -1,11 +1,13 @@
 #!/bin/bash
 ## THIS SCRIPT WORKS WITH RESPONDER TO ALERT ON CAPTURED HASHES RELATING TO THE PHHISHING CAMPAIGNS
 ## DEFAULTS IF NOT FROM PHISHING DOCS
-SlackURL=$(cat /var/www/config.txt |grep "SlackIncomingWebhookURL" | cut -d '"' -f 2);
-SlackChannel=$(cat /var/www/config.txt |grep "slackchannel" | cut -d '"' -f 2);
-APIURL=$(cat /var/www/config.txt |grep "APIDomain" | cut -d '"' -f 2);
+QueryConfig=$(mysql -h mysql-server -u root -pPhishAPIDef@ulT Config -se "CALL GetSettings();");
 
-files=$(cd /home/ubuntu/Responder/logs && ls *.txt | awk '{print $1}');
+SlackURL=$(echo $QueryConfig | cut -f 2);
+SlackChannel=$(echo $QueryConfig | cut -f 8);
+APIURL=$(echo $QueryConfig | cut -f 1);
+
+files=$(cd /var/log/Responder && ls *.txt | awk '{print $1}');
 
 ## CHECKS IF RESPONDER LOGS EXIST
 IFS='
@@ -19,9 +21,9 @@ do
   Module=$(echo $item | cut -d "-" -f 3);
   HashType=$(echo $item | cut -d "-" -f 2);
 
-  Hashes=$(cat /home/ubuntu/Responder/logs/$file);
+  Hashes=$(cat /var/log/Responder/$file);
 
-  Query=$(mysql -u root phishingdocs -se "CALL MatchHashes('$IP','$Hashes');");
+  Query=$(mysql -h mysql-server -u root -pPhishAPIDef@ulT phishingdocs -se "CALL MatchHashes('$IP','$Hashes');");
 
   Title=$(echo $Query | cut -f 1);
   Target=$(echo $Query | cut -f 2);
