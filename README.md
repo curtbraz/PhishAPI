@@ -30,7 +30,7 @@ This latest version no longer redirects users of the landing pages to the API di
 
 # To Setup (Ubuntu/Debian) :
 
-1) It's all in Docker now! Clone this repo (`git clone https://github.com/curtbraz/PhishAPI.git`), and `cd PhishAPI`. I typically host on an AWS EC2 Ubuntu instance or on WSL2 locally on Win 10 but you can host it anywhere.
+1) It's all in Docker now! Clone this repo (`git clone https://github.com/curtbraz/PhishAPI.git`), and `cd PhishAPI`. I typically host on an AWS EC2 Ubuntu instance or on WSL2 locally on Win 10 but you can host it anywhere. Be sure to open up ports TCP/80, 443, 445, & 137-139 to the Internet.
 
 2) Install docker-compose on Ubuntu with `sudo apt-get install docker-compose -y` and start Docker with `sudo systemctl start docker`.
 
@@ -38,9 +38,7 @@ This latest version no longer redirects users of the landing pages to the API di
 
 4) Run docker-compose via `docker-compose build` from within the PhishAPI directory. Then, `docker-compose up -d`. (`docker-compose down` will kill it)
 
-5) Optionally run Responder and BeEF in a screen session, but not required. (Coming soon to Docker!)
-
-6) Visit your URL and configure your settings for notifications first. The Default User/Pass for basic auth is PhishAPI:PhishAPI for the config and reporting pages but I recommend changing this by editing `.htpasswd`. You should be good to go!
+5) Visit your URL and configure your settings for notifications first. The Default User/Pass for basic auth is PhishAPI:PhishAPI for the config and reporting pages but I recommend changing this by editing `.htpasswd`. You should be good to go!
 
 
 
