@@ -17,7 +17,7 @@ services:
       context: .
     restart: always
     volumes:
-      - "./Responder/logs/:/var/log/Responder/"
+      - "./Responder/logs/:/logs/"
     ports:
       - "445:445"
       - "137:137"
