@@ -7,6 +7,7 @@ RUN apt-get update
 RUN apt-get install -y python
 RUN apt-get install -y python-pip
 RUN apt-get install -y cron
+RUN apt-get install -y mariadb-client
 RUN pip install python-docx
 RUN apt-get install -y zip
 RUN apt-get install -y apt-utils
