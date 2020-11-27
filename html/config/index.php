@@ -27,6 +27,16 @@ if ($DiscordWebhook == ""){$DiscordWebhook = "NULL";}
 if ($DiscordChannel == ""){$DiscordChannel = "NULL";}
 if ($IFTTTWebhook == ""){$IFTTTWebhook = "NULL";}
 
+$APIDomain = str_replace(' ', '', $APIDomain); 
+$BeefHookJSURL = str_replace(' ', '', $BeefHookJSURL);
+$BeefToken = str_replace(' ', '', $BeefToken);
+$SlackIncomingWebhookURL = str_replace(' ', '', $SlackIncomingWebhookURL);
+$SlackBotOrLegacyToken = str_replace(' ', '', $SlackBotOrLegacyToken);
+$slackchannel = str_replace(' ', '', $slackchannel);
+$DiscordWebhook = str_replace(' ', '', $DiscordWebhook);
+$DiscordChannel = str_replace(' ', '', $DiscordChannel);
+$IFTTTWebhook = str_replace(' ', '', $IFTTTWebhook);
+    
 // Create connection
 $conn2 = mysqli_connect($servername, $username, $password, 'Config');
 // Check connection
