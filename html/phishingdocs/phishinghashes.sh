@@ -4,7 +4,7 @@
 QueryConfig=$(mysql -h mysql-server -u root -pPhishAPIDef@ulT Config -se "CALL GetSettings();");
 
 SlackURL=$(echo $QueryConfig | cut -d " " -f 2);
-SlackChannel=$(echo $QueryConfig | cut -d " " -f 4);
+SlackChannel=$(echo $QueryConfig | cut -d " " -f 8);
 APIURL=$(echo $QueryConfig | cut -d " " -f 1);
 
 files=$(cd /var/log/Responder && ls *.txt | awk '{print $1}');
