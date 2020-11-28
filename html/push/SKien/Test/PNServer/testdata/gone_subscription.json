@@ -1,8 +1,0 @@
-{
-    "endpoint": "https:\/\/updates.push.services.mozilla.com\/wpush\/v2\/gAAAAABfKIqWCBGWyeyqE5H28w-FiTx0Q0QpD8EsXdaVNnfRdULc-op6Fuu9pKWIEmy1ifzb6Xx6c60wupNDOH3gskjbPh-6BY1zoSQ0mBMVHZmmy3Ze7SBTboY6etv7ZKBGGsU9wndBkoFq-OhTnXEHO_OIkEDlWrWYjHI-cyNdZzjNNzzCWlQ",
-    "keys": {
-        "auth": "Qvx9yoo1GwnKz7oGZLCU-w",
-        "p256dh": "BM_EDJoPgnwrfTM5119U4Ptt_eMXnNfGPnOCMoQQldN9JgZYZ5nnMXFgbZ5Sd2gI6xqSD1-amh4Dq4oaAV62kS8"
-    },
-    "userAgent": "Mozilla\/5.0 (X11; Ubuntu; Linux x86_64; rv:79.0) Gecko\/20100101 Firefox\/79.0"
-}
