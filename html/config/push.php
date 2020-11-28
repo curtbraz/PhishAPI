@@ -96,7 +96,7 @@ $oServer->setVapid(getMyVapid());
 //$url = "/where-to-go.php";
 //$subject = "Subject";
 
-$oPayload = new PNPayload($subject, $message, $icon);
+$oPayload = new PNPayload($subject, $message, './phishicon.png');
 $oPayload->setTag($title, true);
 $oPayload->setURL($link);
 
