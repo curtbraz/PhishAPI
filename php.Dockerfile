@@ -12,6 +12,11 @@ RUN pip install python-docx
 RUN apt-get install -y zip
 RUN apt-get install -y apt-utils
 ADD html /var/www/html
+RUN apt-get install -y libgmp-dev re2c libmhash-dev libmcrypt-dev file
+RUN docker-php-ext-configure gmp 
+RUN docker-php-ext-install gmp
+RUN docker-php-ext-configure bcmath 
+RUN docker-php-ext-install bcmath
 COPY ./000-default-le-ssl.conf /etc/apache2/sites-enabled/
 COPY ./apache2.conf /etc/apache2/apache2.conf
 COPY ./php.ini /etc/php/7.2/apache2/php.ini
