@@ -1,0 +1,7 @@
+{
+	"endpoint": "https:\/\/updates.push.services.mozilla.com\/wpush\/v2\/gAAAAABfKE05MszB8eQoPnOogKeJcf_XICRUipfcRqwjA3KeTrefmMWK1IE_yOJNdHERcdM2oXmsgpOuUMOTWw1sBG5AdZAnRwA8rCfIcRFY9x4bNEw50CwfcmET9l_fXprVVg_n-C2NPZmVJDeeEkHyzmUbRy3jKAM5FfwsYdhEMqvLnhRVcRA",
+    "keys": {
+        "auth": "ZL_m66okGUY5eiVKg1GQAw",
+        "p256dh": "BGgli2WV93JZbpmV825B7bPLCsUGCODFMtRJu4MPR3HEc8w4PKObnnVQZA5FIgGfGo5uFguA5m4f6k3q9fxGjH0"
+	}
+}
