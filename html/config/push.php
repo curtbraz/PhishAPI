@@ -8,10 +8,11 @@ use SKien\PNServer\PNSubscription;
 use SKien\PNServer\PNPayload;
 use SKien\PNServer\PNServer;
 
-$messsage = $_REQUEST['message'];
-$title = $_REQUEST['title'];
-$icon = $_REQUEST['icon'];
-$link = $_REQUEST['link'];
+if(isset($argv[1])){$message = strval($argv[1]);}else{$message="1";}
+if(isset($argv[2])){$title = strval($argv[2]);}else{$title="1";}
+if(isset($argv[3])){$icon = strval($argv[3]);}else{$icon="1";}
+if(isset($argv[4])){$link = strval($argv[4]);}else{$link="1";}
+if(isset($argv[5])){$subject = strval($argv[5]);}else{$subject="1";}
 
 /**
  * Example to send your push notifications.
@@ -42,22 +43,22 @@ $link = $_REQUEST['link'];
  */
 
 // check, if PHP version is sufficient and all required extensions are installed
-//$bExit = false;
+$bExit = false;
 if (version_compare(phpversion(), '7.4', '<')) {
 	trigger_error('At least PHP Version 7.4 is required (current Version is ' . phpversion() . ')!', E_USER_WARNING);
-	//echo "Version";
+	echo "Version";
 	$bExit = true;
 }
 $aExt = array('curl', 'gmp', 'mbstring', 'openssl', 'bcmath');
 foreach ($aExt as $strExt) {
 	if (!extension_loaded($strExt)) {
 		trigger_error('Extension ' . $strExt . ' must be installed!', E_USER_WARNING);
-		//echo "Extension".$strExt;
+		echo "Extension".$strExt;
 		$bExit = true;
 	}
 }
 if ($bExit) {
-	//echo "Exiting";
+	echo "Existing";
 	exit();
 }
 
@@ -69,7 +70,7 @@ if (!$oDP->isConnected()) {
 	exit();
 }
 
-
+//echo 'Count of subscriptions: ' . $oDP->count() . '<br/><br/>' . PHP_EOL;
 if (!$oDP->init()) {
 	echo $oDP->getError();
 	exit();
@@ -89,13 +90,19 @@ $oServer->setVapid(getMyVapid());
 //    * absolute from the homepage (begining with a '/')
 //    * complete URL (beginning with https://) 
 
-$message = 'sup';
+//$message = "Hello!";
+//$icon = "./elephpant.png";
+//$title = "news";
+//$url = "/where-to-go.php";
+//$subject = "Subject";
 
-$oPayload = new PNPayload('', $message, $icon);
+$oPayload = new PNPayload($subject, $message, $icon);
 $oPayload->setTag($title, true);
 $oPayload->setURL($link);
 
 $oServer->setPayload($oPayload);
+
+//echo "here?";
 
 // load subscriptions from database 
 if (!$oServer->loadSubscriptions()) {
@@ -103,9 +110,23 @@ if (!$oServer->loadSubscriptions()) {
     exit();
 }
 
+//echo "are we here?";
+
 // ... and finally push !
 if (!$oServer->push()) {
-	echo '<h2>' . $oServer->getError() . '</h2>' . PHP_EOL;
+//	echo '<h2>' . $oServer->getError() . '</h2>' . PHP_EOL;
 } else {
 	$aLog = $oServer->getLog();
+//	echo '<h2>Summary:</h2>' . PHP_EOL;
+	$summary = $oServer->getSummary();
+//	echo 'total:&nbsp;' . $summary['total'] . '<br/>' . PHP_EOL;
+//	echo 'pushed:&nbsp;' . $summary['pushed'] . '<br/>' . PHP_EOL;
+//	echo 'failed:&nbsp;' . $summary['failed'] . '<br/>' . PHP_EOL;
+//	echo 'expired:&nbsp;' . $summary['expired'] . '<br/>' . PHP_EOL;
+//	echo 'removed:&nbsp;' . $summary['removed'] . '<br/>' . PHP_EOL;
+	
+//	echo '<h2>Push - Log:</h2>' . PHP_EOL;
+	foreach ($aLog as $strEndpoint => $aMsg ) {
+//	    echo PNSubscription::getOrigin($strEndpoint) . ':&nbsp;' .$aMsg['msg'] . '<br/>' . PHP_EOL;	
+	}
 }

