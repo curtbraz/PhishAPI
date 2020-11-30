@@ -43,11 +43,12 @@ This latest version no longer redirects users of the landing pages to the API di
 OR, Copy and Paste the Following in Ubuntu:
 
 
-<code>sudo apt-get update</code><br>
-<code>sudo apt-get install docker-compose letsencrypt git -y</code><br>
-<code>git clone https://github.com/curtbraz/PhishAPI.git</code><br>
-<code>cd PhishAPI</code><br>
-<code>certbot certonly --standalone</code>
+```bash
+sudo apt-get update
+sudo apt-get install docker-compose letsencrypt git -y
+git clone https://github.com/curtbraz/PhishAPI.git
+cd PhishAPI
+certbot certonly --standalone```
 
 Then
 
