@@ -42,16 +42,16 @@ This latest version no longer redirects users of the landing pages to the API di
 
 OR, Copy and Paste the Following in Ubuntu:
 
-<code>sudo apt-get update</code>
-<code>sudo apt-get install docker-compose letsencrypt git -y</code>
-<code>git clone https://github.com/curtbraz/PhishAPI.git</code>
-<code>cd PhishAPI</code>
-<code>certbot certonly --standalone</code>
-<code>cp ``find /etc/letsencrypt/live/ -name cert.pem`` certs/ssl/crt/phishapi.crt</code>
-<code>cp ``find /etc/letsencrypt/live/ -name privkey.pem`` certs/ssl/key/phishapi.key</code>
-<code>sudo systemctl start docker</code>
-<code>docker-compose build</code>
-<code>docker-compose up -d</code>
+<code>sudo apt-get update</code><br>
+<code>sudo apt-get install docker-compose letsencrypt git -y</code><br>
+<code>git clone https://github.com/curtbraz/PhishAPI.git</code><br>
+<code>cd PhishAPI</code><br>
+<code>certbot certonly --standalone</code><br>
+<code>cp ``find /etc/letsencrypt/live/ -name cert.pem`` certs/ssl/crt/phishapi.crt</code><br>
+<code>cp ``find /etc/letsencrypt/live/ -name privkey.pem`` certs/ssl/key/phishapi.key</code><br>
+<code>sudo systemctl start docker</code><br>
+<code>docker-compose build</code><br>
+<code>docker-compose up -d</code><br>
 
 # 1) To Use the API for Capturing Credentials from Fake Sites : 
 
