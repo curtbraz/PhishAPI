@@ -27,7 +27,7 @@ if ($DiscordWebhook == ""){$DiscordWebhook = "NULL";}
 if ($DiscordChannel == ""){$DiscordChannel = "NULL";}
 if ($IFTTTWebhook == ""){$IFTTTWebhook = "NULL";}
 
-$APIDomain = str_replace(' ', '', $APIDomain); 
+$APIDomain = str_replace(' ', '', $APIDomain);
 $BeefHookJSURL = str_replace(' ', '', $BeefHookJSURL);
 $BeefToken = str_replace(' ', '', $BeefToken);
 $SlackIncomingWebhookURL = str_replace(' ', '', $SlackIncomingWebhookURL);
@@ -36,7 +36,7 @@ $slackchannel = str_replace(' ', '', $slackchannel);
 $DiscordWebhook = str_replace(' ', '', $DiscordWebhook);
 $DiscordChannel = str_replace(' ', '', $DiscordChannel);
 $IFTTTWebhook = str_replace(' ', '', $IFTTTWebhook);
-    
+
 // Create connection
 $conn2 = mysqli_connect($servername, $username, $password, 'Config');
 // Check connection
@@ -144,19 +144,19 @@ $IFTTTWebhook = "Coming Soon!";
     <script>
         function Load() {
             var msg = 'Secure context: ';
-            msg += window.isSecureContext ? 'true<br/>' : 'false<br/>'; 
-            msg += 'Notification: '; 
-            msg += ('Notification' in window) ? 'defined<br/>' : 'not defined<br/>'; 
-            msg += 'PushManager: '; 
-            msg += ('PushManager' in window) ? 'defined<br/>' : 'not defined<br/>'; 
-            msg += 'serviceWorker: '; 
+            msg += window.isSecureContext ? 'true<br/>' : 'false<br/>';
+            msg += 'Notification: ';
+            msg += ('Notification' in window) ? 'defined<br/>' : 'not defined<br/>';
+            msg += 'PushManager: ';
+            msg += ('PushManager' in window) ? 'defined<br/>' : 'not defined<br/>';
+            msg += 'serviceWorker: ';
             msg += ('serviceWorker' in navigator) ? 'defined<br/>' : 'not defined<br/>';
             msg += 'Notification.permission: ' + window.Notification.permission + '<br/>';
-            
+
             window.Notification.permission
-            
+
             document.getElementById('msg').innerHTML = msg;
-            
+
             if (window.Notification.permission === "denied") {
                 document.getElementById('subscribe').innerHTML = 'Permission was denied in the past...';
             } else {
@@ -165,13 +165,13 @@ $IFTTTWebhook = "Coming Soon!";
                     .then(function(subscribed) {
                         if (subscribed) {
                             document.getElementById('msg').innerHTML = 'PUSH Notifications are subscribed<br/><br/>' + msg;
-							var btn = document.getElementById("push");
-							btn.innerHTML = 'Disable Web Alerts on This Device';
+                                                        var btn = document.getElementById("push");
+                                                        btn.innerHTML = 'Disable Web Alerts on This Device';
                         } else {
                             document.getElementById('msg').innerHTML = 'PUSH Notifications are NOT subscribed<br/><br/>' + msg;
-							var btn = document.getElementById("push");
-							btn.innerHTML = 'Enable Web Alerts on This Device';
-                        }           
+                                                        var btn = document.getElementById("push");
+                                                        btn.innerHTML = 'Enable Web Alerts on This Device';
+                        }
                     });
             }
         }
@@ -179,17 +179,21 @@ $IFTTTWebhook = "Coming Soon!";
 <script>
 
 function change(){
-	var btn = document.getElementById("push");
-	var msg1 = document.getElementById("msg1")
-	if (btn.innerHTML == 'Enable Web Alerts on This Device'){
-	msg1.innerHTML = 'Enabled!<br><br>';
-	pnSubscribe();
-	btn.innerHTML = 'Disable Web Alerts on This Device';}
-	else {
-	msg1.innerHTML = 'Disabled!<br><br>';
-	pnUnsubscribe();
-	btn.innerHTML = 'Enable Web Alerts on This Device';}
-	Load();
+        var btn = document.getElementById("push");
+        var msg1 = document.getElementById("msg1")
+        if (btn.innerHTML == 'Enable Web Alerts on This Device'){
+        msg1.innerHTML = 'Enabled!<br><br>';
+        btn.innerHTML = 'Disable Web Alerts on This Device';
+        pnSubscribe();
+        Load();
+        }
+        else {
+        msg1.innerHTML = 'Disabled!<br><br>';
+        btn.innerHTML = 'Enable Web Alerts on This Device';
+        pnUnsubscribe();
+        setTimeout(() => { Load(); }, 1000);
+        //Load();
+        }
 }
 </script>
 
@@ -207,13 +211,13 @@ function change(){
     </div>
   </div></FORM><br><br>
 <CENTER>
-<?php 
+<?php
 
 $apitest = $APIDomain."?project=PhishAPI%20Test%20Project&redirect=&slackbotname=PhishBot&slackemoji=%3Afishing_pole_and_fish%3A&username=TestUser&password=TestPass";
 
 $testmessage = "<h3><FONT COLOR=\"#FFFFFF\">Test your notifications here:</h3><a href=\"".$apitest."\">".$apitest."</a></FONT><BR><BR>";
 
-echo $testmessage; 
+echo $testmessage;
 
 ?>
     <h2><FONT COLOR="#FFFFFF">API Settings</FONT></h2>
