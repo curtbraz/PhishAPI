@@ -40,7 +40,18 @@ This latest version no longer redirects users of the landing pages to the API di
 
 5) Visit your URL and configure your settings for notifications first. The Default User/Pass for basic auth is PhishAPI:PhishAPI for the config and reporting pages but I recommend changing this by editing `.htpasswd`. You should be good to go!
 
+OR, Copy and Paste the Following in Ubuntu:
 
+`sudo apt-get update`
+`sudo apt-get install docker-compose letsencrypt git -y`
+`git clone https://github.com/curtbraz/PhishAPI.git`
+`cd PhishAPI`
+`certbot certonly --standalone`
+`cp `find /etc/letsencrypt/live/ -name cert.pem` certs/ssl/crt/phishapi.crt`
+`cp `find /etc/letsencrypt/live/ -name privkey.pem` certs/ssl/key/phishapi.key`
+`sudo systemctl start docker`
+`docker-compose build`
+`docker-compose up -d``
 
 # 1) To Use the API for Capturing Credentials from Fake Sites : 
 
