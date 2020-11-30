@@ -104,6 +104,10 @@ if($row == null){
 
 $APIDomain = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]";
 
+$DiscordWebhook = "Coming Soon!";
+$DiscordChannel = "Coming Soon!";
+$IFTTTWebhook = "Coming Soon!";
+
 $testmessage = "";
 
 } else {
@@ -127,6 +131,10 @@ if ($slackchannel == "NULL"){$slackchannel = "";}
 if ($DiscordWebhook == "NULL"){$DiscordWebhook = "";}
 if ($DiscordChannel == "NULL"){$DiscordChannel = "";}
 if ($IFTTTWebhook == "NULL"){$IFTTTWebhook = "";}
+
+$DiscordWebhook = "Coming Soon!";
+$DiscordChannel = "Coming Soon!";
+$IFTTTWebhook = "Coming Soon!";
 
 }
 
@@ -247,9 +255,9 @@ echo $testmessage;
 
 $conn->close();
 
-$APIDomain = str_replace("/", "\/", $APIDomain);
+$APIDomainCmd = str_replace("/", "\/", $APIDomain);
 
-$ReplaceSubscriber = "sed -i 's/\(URL=\"\)[^\"]*/\1URL=\"".trim($APIDomain)."\/config\/PNSubscriber.php/' /var/www/html/config/PNServiceWorker.js";
+$ReplaceSubscriber = "sed -i 's/\(URL=\"\)[^\"]*/\1URL=\"".trim($APIDomainCmd)."\/config\/PNSubscriber.php/' /var/www/html/config/PNServiceWorker.js";
 
 $ReplaceSubscriber = preg_replace('/[\x00-\x1F\x80-\xFF]/', '', $ReplaceSubscriber);
 
