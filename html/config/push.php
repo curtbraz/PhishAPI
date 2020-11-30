@@ -8,11 +8,11 @@ use SKien\PNServer\PNSubscription;
 use SKien\PNServer\PNPayload;
 use SKien\PNServer\PNServer;
 
-if(isset($argv[1])){$message = strval($argv[1]);}else{$message="1";}
-if(isset($argv[2])){$title = strval($argv[2]);}else{$title="1";}
-if(isset($argv[3])){$icon = strval($argv[3]);}else{$icon="1";}
-if(isset($argv[4])){$link = strval($argv[4]);}else{$link="1";}
-if(isset($argv[5])){$subject = strval($argv[5]);}else{$subject="1";}
+if(isset($argv[1])){$message = strval($argv[1]);}else{$message="You caught a phish!";}
+if(isset($argv[2])){$title = strval($argv[2]);}else{$title="PhishAPI";}
+if(isset($argv[3])){$icon = strval($argv[3]);}else{$icon="./phishicon.png";}
+if(isset($argv[4])){$link = strval($argv[4]);}else{$link="";}
+if(isset($argv[5])){$subject = strval($argv[5]);}else{$subject="PhishAPI";}
 
 /**
  * Example to send your push notifications.
