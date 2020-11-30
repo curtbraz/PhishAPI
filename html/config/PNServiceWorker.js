@@ -2,12 +2,14 @@
  * Serviceworker for web push notifications
  * @package PNServer
  */
+
+var "https://localhost/config/PNSubscriber.php";
  
 // values to be modified for own project
 // VAPID appPublic key
 const strAppPublicKey  = 'BLCn4Y00pgJc73iH3io5pdKJ0Oqch0-6lCi_GkvZ5TZ7-PSk4SWvXsav7uG0jA-dSfjXMSZmo9xMYV0RoCHYPy8';
 // URL to save subscription on server via Fetch API
-const strSubscriberURL = 'https://authportals.com/push/PNSubscriber.php';
+const strSubscriberURL = URL;
 // default Notification Title if not pushed by server
 const strDefTitle      = 'Your company or product';
 // default Notification Icon if not pushed by server
