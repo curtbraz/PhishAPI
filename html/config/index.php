@@ -179,7 +179,6 @@ $IFTTTWebhook = "Coming Soon!";
 <script>
 
 function change(){
-    	Load();
 	var btn = document.getElementById("push");
 	var msg1 = document.getElementById("msg1")
 	if (btn.innerHTML == 'Enable Web Alerts on This Device'){
@@ -190,6 +189,7 @@ function change(){
 	msg1.innerHTML = 'Disabled!<br><br>';
 	pnUnsubscribe();
 	btn.innerHTML = 'Enable Web Alerts on This Device';}
+	Load();
 }
 </script>
 
