@@ -44,14 +44,23 @@ OR, Copy and Paste the Following in Ubuntu:
 
 <code>
 sudo apt-get update
+	
 sudo apt-get install docker-compose letsencrypt git -y
+
 git clone https://github.com/curtbraz/PhishAPI.git
+
 cd PhishAPI
+
 certbot certonly --standalone
+
 cp `find /etc/letsencrypt/live/ -name cert.pem` certs/ssl/crt/phishapi.crt
+
 cp `find /etc/letsencrypt/live/ -name privkey.pem` certs/ssl/key/phishapi.key
+
 sudo systemctl start docker
+
 docker-compose build
+
 docker-compose up -d
 </code>
 
