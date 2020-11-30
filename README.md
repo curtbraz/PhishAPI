@@ -42,7 +42,7 @@ This latest version no longer redirects users of the landing pages to the API di
 
 OR, Copy and Paste the Following in Ubuntu:
 
-<markup>
+
 <code>sudo apt-get update</code><br>
 <code>sudo apt-get install docker-compose letsencrypt git -y</code><br>
 <code>git clone https://github.com/curtbraz/PhishAPI.git</code><br>
@@ -53,7 +53,7 @@ OR, Copy and Paste the Following in Ubuntu:
 <code>sudo systemctl start docker</code><br>
 <code>docker-compose build</code><br>
 <code>docker-compose up -d</code><br>
-</markup>
+
 
 # 1) To Use the API for Capturing Credentials from Fake Sites : 
 
