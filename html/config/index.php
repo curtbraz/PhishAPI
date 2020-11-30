@@ -247,12 +247,6 @@ $ReplaceSubscriber = preg_replace('/[\x00-\x1F\x80-\xFF]/', '', $ReplaceSubscrib
 
 exec($ReplaceSubscriber,$SubscriberOutput);
 
-
-
-echo $ReplaceSubscriber;
-
-var_dump($SubscriberOutput);
-
 ?>
 
 </CENTER>

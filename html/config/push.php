@@ -96,9 +96,7 @@ $oServer->setVapid(getMyVapid());
 //$url = "/where-to-go.php";
 //$subject = "Subject";
 
-echo "Icon is ".$icon;
-
-$oPayload = new PNPayload($subject, $message, './elephpant.png');
+$oPayload = new PNPayload($subject, $message, $icon);
 $oPayload->setTag($title, true);
 $oPayload->setURL($link);
 
