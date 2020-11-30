@@ -157,8 +157,12 @@ if ($IFTTTWebhook == "NULL"){$IFTTTWebhook = "";}
                     .then(function(subscribed) {
                         if (subscribed) {
                             document.getElementById('msg').innerHTML = 'PUSH Notifications are subscribed<br/><br/>' + msg;
+							var btn = document.getElementById("push");
+							btn.innerHTML = 'Disable Web Alerts on This Device';
                         } else {
                             document.getElementById('msg').innerHTML = 'PUSH Notifications are NOT subscribed<br/><br/>' + msg;
+							var btn = document.getElementById("push");
+							btn.innerHTML = 'Enable Web Alerts on This Device';
                         }           
                     });
             }
@@ -169,14 +173,14 @@ if ($IFTTTWebhook == "NULL"){$IFTTTWebhook = "";}
 function change(){
     var btn = document.getElementById("push");
 	var msg1 = document.getElementById("msg1")
-	if (btn.innerHTML == 'Enable Web Alerts'){
+	if (btn.innerHTML == 'Enable Web Alerts on This Device'){
 	msg1.innerHTML = 'Enabled!<br><br>';
 	pnSubscribe();
-	btn.innerHTML = 'Disable Web Alerts';}
+	btn.innerHTML = 'Disable Web Alerts on This Device';}
 	else {
 	msg1.innerHTML = 'Disabled!<br><br>';
 	pnUnsubscribe();
-	btn.innerHTML = 'Enable Web Alerts';}
+	btn.innerHTML = 'Enable Web Alerts on This Device';}
 }
 </script>
 
