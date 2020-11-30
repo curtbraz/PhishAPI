@@ -3,7 +3,7 @@
  * @package PNServer
  */
 
-var "https://localhost/config/PNSubscriber.php";
+var URL="https://localhost/config/PNSubscriber.php";
  
 // values to be modified for own project
 // VAPID appPublic key

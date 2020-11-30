@@ -128,10 +128,6 @@ if ($DiscordWebhook == "NULL"){$DiscordWebhook = "";}
 if ($DiscordChannel == "NULL"){$DiscordChannel = "";}
 if ($IFTTTWebhook == "NULL"){$IFTTTWebhook = "";}
 
-$apitest = $APIDomain."?project=PhishAPI%20Test%20Project&redirect=&slackbotname=PhishBot&slackemoji=%3Afishing_pole_and_fish%3A&username=TestUser&password=TestPass";
-
-$testmessage = "<h3><FONT COLOR=\"#FFFFFF\">Test your notifications here:</h3><a href=\"".$apitest."\">".$apitest."</a></FONT><BR><BR>";
-
 }
 
 ?>
@@ -198,7 +194,15 @@ function change(){
     </div>
   </div></FORM><br><br>
 <CENTER>
-<?php echo $testmessage; ?>
+<?php 
+
+$apitest = $APIDomain."?project=PhishAPI%20Test%20Project&redirect=&slackbotname=PhishBot&slackemoji=%3Afishing_pole_and_fish%3A&username=TestUser&password=TestPass";
+
+$testmessage = "<h3><FONT COLOR=\"#FFFFFF\">Test your notifications here:</h3><a href=\"".$apitest."\">".$apitest."</a></FONT><BR><BR>";
+
+echo $testmessage; 
+
+?>
     <h2><FONT COLOR="#FFFFFF">API Settings</FONT></h2>
 
 
@@ -241,11 +245,15 @@ $conn->close();
 
 $APIDomain = str_replace("/", "\/", $APIDomain);
 
-$ReplaceSubscriber = "sed -i 's/\(URL=\"\)[^\"]*/\1\"".trim($APIDomain)."\/config\/PNSubscriber.php/' PNServiceWorker.js";
+$ReplaceSubscriber = "sed -i 's/\(URL=\"\)[^\"]*/\1\"".trim($APIDomain)."\/config\/PNSubscriber.php/' /var/www/html/config/PNServiceWorker.js";
 
 $ReplaceSubscriber = preg_replace('/[\x00-\x1F\x80-\xFF]/', '', $ReplaceSubscriber);
 
+echo $ReplaceSubscriber;
+
 exec($ReplaceSubscriber,$SubscriberOutput);
+
+var_dump($SubscriberOutput);
 
 ?>
 
