@@ -47,8 +47,8 @@ OR, Copy and Paste the Following in Ubuntu:
 <code>git clone https://github.com/curtbraz/PhishAPI.git</code><br>
 <code>cd PhishAPI</code><br>
 <code>certbot certonly --standalone</code><br>
-`cp ``find /etc/letsencrypt/live/ -name cert.pem`` certs/ssl/crt/phishapi.crt`<br>
-cp ``find /etc/letsencrypt/live/ -name privkey.pem`` certs/ssl/key/phishapi.key`<br>
+``cp `find /etc/letsencrypt/live/ -name cert.pem` certs/ssl/crt/phishapi.crt``<br>
+``cp `find /etc/letsencrypt/live/ -name privkey.pem` certs/ssl/key/phishapi.key``<br>
 <code>sudo systemctl start docker</code><br>
 <code>docker-compose build</code><br>
 <code>docker-compose up -d</code><br>
