@@ -44,7 +44,7 @@ OR, Copy and Paste the Following in Ubuntu:
 
 <code>
 sudo apt-get update
-	
+
 sudo apt-get install docker-compose letsencrypt git -y
 
 git clone https://github.com/curtbraz/PhishAPI.git
