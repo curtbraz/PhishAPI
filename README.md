@@ -34,7 +34,7 @@ This latest version no longer redirects users of the landing pages to the API di
 
 2) Install docker-compose on Ubuntu with `sudo apt-get install docker-compose -y` and start Docker with `sudo systemctl start docker`.
 
-3) For HTTPS (RECOMMENDED!), replace the certificate and key (keeping the filenames the same) in `/certs/ssl/` with yours (LetsEncrypt?) and update the domain (ServerName) in `000-default-le-ssl.conf`. Otherwise, skip this step but browsers will warn against POSTing to insecure sites.
+3) For HTTPS (RECOMMENDED!), replace the certificate and key (keeping the filenames the same) in `/certs/ssl/` with yours (LetsEncrypt?) and update the domain (ServerName) in `000-default-le-ssl.conf`. Otherwise, skip this step but browsers will warn against POSTing to insecure sites and web push notifications won't work.
 
 4) Run docker-compose via `docker-compose build` from within the PhishAPI directory. Then, `docker-compose up -d`. (`docker-compose down` will kill it)
 

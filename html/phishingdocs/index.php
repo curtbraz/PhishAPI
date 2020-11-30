@@ -175,7 +175,7 @@ $sqlinsert = "CALL InsertRequests('$ip','$target','$org','$useragent','$id','$ba
 $sqlinsert = "CALL InsertRequests('$ip','$target','$org','$useragent','$id','','');";
 }
 }
-echo $sqlinsert;
+//echo $sqlinsert;
 $resultinsert = $conn3->query($sqlinsert);
 
 //printf($conn3->error);
@@ -237,7 +237,7 @@ $cmd = 'curl -s -X POST --data-urlencode \'payload={"channel": "'.$slackchannel.
 exec($cmd);
 
 // Execute Web Push Notifications
-$cmdpush = 'cd config && php push.php "'.$messagepush.'" "PhishBot" "./doc.png" "'.$APIResultsURL.'?UUID='.$id.'" "PhishBot"';
+$cmdpush = 'cd ../config && php push.php "'.$messagepush.'" "PhishBot" "./doc.png" "'.$APIResultsURL.'?UUID='.$id.'" "PhishBot"';
 
 exec($cmdpush);
 
