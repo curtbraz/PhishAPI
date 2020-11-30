@@ -13,7 +13,7 @@ RUN docker-php-ext-configure bcmath
 RUN docker-php-ext-install bcmath
 RUN docker-php-ext-install curl
 RUN wget -O "/var/www/browscap.ini" https://browscap.org/stream?q=Full_PHP_BrowsCapINI
-COPY ./crontab /var/www/crontab
+COPY ./conf/crontab /var/www/crontab
 RUN mkdir /var/www/uploads
 RUN mkdir /var/www/html/phishingdocs/hosted
 RUN chmod 777 /var/www/ -R
