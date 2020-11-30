@@ -8,6 +8,18 @@ services:
     volumes:
       - "./certs/ssl/:/etc/apache2/ssl/"
       - "./Responder/logs/:/var/log/Responder/"
+      - type: bind
+        source: ./.htpasswd
+        target: /var/www/.htpasswd
+      - type: bind
+        source: ./apache2.conf
+        target: /etc/apache2/apache2.conf
+      - type: bind
+        source: ./000-default-le-ssl.conf
+        target: /etc/apache2/sites-enabled/000-default-le-ssl.conf
+      - type: bind
+        source: ./php.ini
+        target: /usr/local/etc/php/php.ini
     ports:
       - "80:80"
       - "443:443"
