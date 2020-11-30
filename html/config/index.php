@@ -245,15 +245,15 @@ $conn->close();
 
 $APIDomain = str_replace("/", "\/", $APIDomain);
 
-$ReplaceSubscriber = "sed -i 's/\(URL=\"\)[^\"]*/\1\"".trim($APIDomain)."\/config\/PNSubscriber.php/' /var/www/html/config/PNServiceWorker.js";
+$ReplaceSubscriber = "sed -i 's/\(URL=\"\)[^\"]*/\1URL=\"".trim($APIDomain)."\/config\/PNSubscriber.php/' /var/www/html/config/PNServiceWorker.js";
 
 $ReplaceSubscriber = preg_replace('/[\x00-\x1F\x80-\xFF]/', '', $ReplaceSubscriber);
 
-echo $ReplaceSubscriber;
+//echo $ReplaceSubscriber;
 
 exec($ReplaceSubscriber,$SubscriberOutput);
 
-var_dump($SubscriberOutput);
+//var_dump($SubscriberOutput);
 
 ?>
 
