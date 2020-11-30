@@ -32,7 +32,7 @@ function sendWelcome(PNSubscription $oSubscription)
     $oServer = new PNServer();
     
     // create payload message for welcome...
-    $oPayload = new PNPayload('PhishAPI Push Notifications are now set up on this device!', './phishicon.png');
+    $oPayload = new PNPayload('PhishAPI Push Notifications are now set up on This Device!', '');
     
     // set VAPID, payload and the passed subscription
     $oServer->setVapid(getMyVapid());
