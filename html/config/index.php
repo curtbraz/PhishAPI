@@ -132,8 +132,6 @@ if ($DiscordWebhook == "NULL"){$DiscordWebhook = "";}
 if ($DiscordChannel == "NULL"){$DiscordChannel = "";}
 if ($IFTTTWebhook == "NULL"){$IFTTTWebhook = "";}
 
-$DiscordWebhook = "Coming Soon!";
-$DiscordChannel = "Coming Soon!";
 $IFTTTWebhook = "Coming Soon!";
 
 }
@@ -240,12 +238,12 @@ echo $testmessage;
 <TR><TD><INPUT TYPE="text" VALUE="<?php echo $SlackIncomingWebhookURL; ?>" NAME="SlackIncomingWebhookURL" placeholder="https://hooks.slack.com/services/T20G2WG7/..."></TD><TD><INPUT TYPE="text" VALUE="<?php echo $SlackBotOrLegacyToken; ?>" NAME="SlackBotOrLegacyToken" placeholder="xoxb-..."></TD><TD><INPUT TYPE="text" VALUE="<?php echo $slackchannel; ?>" NAME="slackchannel" placeholder="#phishing"></TD></TR>
 </TABLE><BR>
 
-<TABLE BORDER=1><TR><TH COLSPAN="2">Discord</TH></TR><TR><TH>Webook URL</TH><TH>Channel</TH></TR>
-<TR><TD><INPUT TYPE="text" VALUE="<?php echo $DiscordWebhook; ?>" NAME="DiscordWebhook" disabled></TD><TD><INPUT TYPE="text" VALUE="<?php echo $DiscordChannel; ?>" NAME="DiscordChannel" disabled></TD></TR>
+<TABLE BORDER=1><TR><TH COLSPAN="1">Discord</TH></TR><TR><TH>Webook URL</TH><!--<TH>Channel</TH>--></TR>
+<TR><TD><INPUT TYPE="text" VALUE="<?php echo $DiscordWebhook; ?>" NAME="DiscordWebhook" placeholder="https://discordapp.com/api/webhooks/...." size="50"><INPUT TYPE="hidden" VALUE="<?php echo $DiscordChannel; ?>" NAME="DiscordChannel"></TD></TR>
 </TABLE><BR>
 
 <TABLE BORDER=1><TR><TH>IFTTT</TH></TR><TR><TH>Webook URL</TH></TR>
-<TR><TD><INPUT TYPE="text" VALUE="<?php echo $IFTTTWebhook; ?>" NAME="IFTTTWebhook" disabled></TD></TR>
+<TR><TD><INPUT TYPE="text" VALUE="<?php echo $IFTTTWebhook; ?>" NAME="IFTTTWebhook" disabled size="50"></TD></TR>
 </TABLE><BR>
 
 <br>

