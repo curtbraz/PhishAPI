@@ -38,7 +38,7 @@ This latest version no longer redirects users of the landing pages to the API di
 
 4) Run docker-compose via `docker-compose build` from within the PhishAPI directory. Then, `docker-compose up -d`. (`docker-compose down` will kill it)
 
-5) Visit your URL and configure your settings for notifications first. The Default User/Pass for basic auth is PhishAPI:PhishAPI for the config and reporting pages but I recommend changing this by editing `.htpasswd`. You should be good to go!
+5) Visit your URL and configure your settings for notifications first. The Default User/Pass for basic auth is PhishAPI:PhishAPI for the config and reporting pages but I recommend changing this by editing `.htpasswd`. You should be good to go! (By default the web server listens on HTTP/80 and HTTPS/443)
 
 OR, Copy and Paste the Following in Ubuntu:
 
