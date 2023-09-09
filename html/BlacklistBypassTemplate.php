@@ -47,8 +47,6 @@ array_push($blockorgs, $txt);
 }
 
 //Block via blacklist
-// Can whitelist your IP only (useful before "go live" for campaign). Need to switch comments for IF statements below.
-//if($ip != "75.103.132.161") {
 if( preg_match("(".implode("|",array_map("preg_quote",$blockorgs)).")",$org,$m) OR $isIP == true) {
 
 // Content for Orgs to see on the Blacklist (What everyone else sees)
