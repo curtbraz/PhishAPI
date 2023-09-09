@@ -1,5 +1,10 @@
 <?php
 
+//AutoBlock Mode "true" means every IP but yours will get auto-added to the blacklist
+$AutoBlock = true;
+// Your public IP (your client)
+$myip = "YOUR_IP_HERE";
+
 // Gets URI that's accessed
 $url = (empty($_SERVER['HTTPS']) ? 'http' : 'https') . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 
@@ -16,6 +21,14 @@ $ip = $_SERVER['REMOTE_ADDR'];
 $details = json_decode(file_get_contents("http://ipinfo.io/{$ip}/json"));
 $org = $details->org;
 
+// AutoBlock Function
+if ($AutoBlock == true && $ip != $myip){
+$myfile = fopen("/var/www/html/blacklist.txt", "a") or die("Unable to open file!");
+$txt = explode(' ', $org, 2)[1];
+fwrite($myfile, "\r\n". $txt);
+fclose($myfile);
+}
+
 // List of Orgs to be Blacklisted
 $filename = "/var/www/html/blacklist.txt";
 
@@ -26,9 +39,10 @@ $fp = @fopen($filename, 'r');
 if ($fp) {
    $blockorgs = explode("\r\n", fread($fp, filesize($filename)));
 }
+
 //Block via blacklist
 // Can whitelist your IP only (useful before "go live" for campaign). Need to switch comments for IF statements below.
-//if($ip != "YOUR_IP_HERE!") {
+//if($ip != "75.103.132.161") {
 if( preg_match("(".implode("|",array_map("preg_quote",$blockorgs)).")",$org,$m) OR $isIP == true) {
 
 // Content for Orgs to see on the Blacklist (What everyone else sees)
