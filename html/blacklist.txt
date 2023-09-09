@@ -5,45 +5,6 @@ A1 Telekom Austria AG
 ALGAR TELECOM S/A
 AOFEI DATA INTERNATIONAL COMPANY LIMITED
 ARABIAN INTERNET & COMMUNICATIONS SERVICES CO.LTD
-AS11042
-AS12083
-AS12389
-AS1257
-AS12978
-AS131111
-AS133119
-AS174
-AS17552
-AS18002
-AS205100
-AS208323
-AS24151
-AS262997
-AS267124
-AS28006
-AS28753
-AS3356
-AS34665
-AS38511
-AS41887
-AS42831
-AS42926
-AS43754
-AS45090
-AS45974
-AS4800
-AS5089
-AS51852
-AS52967
-AS53667
-AS55720
-AS58224
-AS61317
-AS6730
-AS6849
-AS7459
-AS852
-AS855
 AVAST
 AVAST Software s.r.o.
 Ace Host, LLC
@@ -227,3 +188,40 @@ Zenlayer Inc
 Zwiebelfreunde e.V.
 myLoc managed IT AG
 networksdelmanana.com
+Hyonix LLC
+Amazon.com, Inc.
+Quad9
+Tier.Net Technologies LLC
+Universo Online S.A.
+Cellcom Fixed Line Communication L.P
+Telefonica UK Limited
+Keliweb S.R.L
+PrivateSystems Networks
+Smart Technology LLC
+Latitude.sh
+Corporación Dana S.A.
+Core-Backbone GmbH
+Owl Limited
+Tech Futures Interactive Inc.
+Orion Network Limited
+i3D.net B.V
+Web2Objects LLC
+Alibaba (US) Technology Co., Ltd.
+Asahi Net
+Leaseweb Deutschland GmbH
+Verizon Business
+Bitdefender SRL
+CHINANET-BACKBONE
+Powerhouse Management, Inc.
+INTERNET MEASUREMENT
+F3 Netze e.V.
+AEZA GROUP Ltd
+GSL Networks Pty LTD
+Obenetwork AB
+Huawei Cloud Service data center
+QuadraNet Enterprises LLC
+Contabo GmbH
+A2B IP B.V.
+TerraHost AS
+TeleData GmbH
+Bell Canada
