@@ -3,7 +3,7 @@
 //AutoBlock Mode "true" means every IP but yours will get auto-added to the blacklist
 $AutoBlock = true;
 // Your public IP (your client)
-$myip = "75.103.132.161";
+$myip = "YOUR_IP_ADDRESS";
 
 // Gets URI that's accessed
 $url = (empty($_SERVER['HTTPS']) ? 'http' : 'https') . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
