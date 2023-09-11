@@ -1,7 +1,8 @@
 <?php
 
 //AutoBlock Mode "true" means every IP but yours will get auto-added to the blacklist
-$AutoBlock = true;
+// "false" means everyone is allowed except if they're on the blacklist
+$AutoBlock = false;
 // Your public IP (your client)
 $myip = "YOUR_IP_ADDRESS";
 
