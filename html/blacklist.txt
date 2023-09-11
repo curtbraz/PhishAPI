@@ -225,3 +225,23 @@ A2B IP B.V.
 TerraHost AS
 TeleData GmbH
 Bell Canada
+CHINATELECOM Guangxi Nanning IDC networkdescr: Nanning , Guangxi Province, P.R.China.
+G-Core Labs S.A.
+Leaseweb Asia Pacific pte. ltd.
+trafficforce, UAB
+Commtouch Inc.
+Hivelocity Inc
+net4sec UG
+Clouvider
+My Tech BZ
+Vodafone GmbH
+GMO Internet,Inc
+PT Telekomunikasi Indonesia
+IONOS SE
+Limestone Networks, Inc.
+Foundation for Applied Privacy
+GREEN FLOID LLC
+RCS & RDS SA
+Shenzhen Tencent Computer Systems Company Limited
+ANJANI BROADBAND SOLUTIONS PVT.LTD.
+Level 3 Parent, LLC
