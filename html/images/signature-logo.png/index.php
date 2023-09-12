@@ -1,6 +1,6 @@
 <?php
-// open the file in a binary mode
-$name = 'SignatureTorch.png';
+// Replace this with an image you want to use for an email signature
+$name = '../SignatureTorch.png';
 $fp = fopen($name, 'rb');
 
 // send the right headers
@@ -95,7 +95,7 @@ $message = ">".$url." was opened by ".$ip.". ".$allowed." (`".$org."`)";
 }
 
 // Set Slack Information Here
-$cmd = 'curl -s -X POST --data-urlencode \'payload={"channel": "#general", "username": "PhishBot", "text": "'.$message.'", "icon_emoji": ":bell:"}\' https://hooks.slack.com/services/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';
+$cmd = 'curl -s -X POST --data-urlencode \'payload={"channel": "#general", "username": "PhishBot", "text": "'.$message.'", "icon_emoji": ":bell:"}\' https://hooks.slack.com/services/YOUR_SLACK_API_HERE';
 //echo $cmd;
 exec($cmd);
 
