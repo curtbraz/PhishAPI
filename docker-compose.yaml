@@ -8,7 +8,7 @@ services:
     volumes:
       - "./certs/ssl/:/etc/apache2/ssl/"
       - "./Responder/logs/:/var/log/Responder/"
-      - "./html/:/var/html/"
+      - "./html/:/var/www/html/"
       - type: bind
         source: ./conf/.htpasswd
         target: /var/www/.htpasswd
