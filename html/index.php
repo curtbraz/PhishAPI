@@ -28,8 +28,8 @@ $blockorgs = array("1337 Services GmbH","31173 Services AB","321net","A1 Telekom
 //block via blacklist
 
 // UNCOMMENT AND ADD YOUR IP TO WHITELIST ONLY YOU BEFORE STARTING, THEN SWITCH COMMENTS TO ALLOW ALL BUT BLACKLIST
-if($ip != "75.103.132.161") {
-//if( preg_match("(".implode("|",array_map("preg_quote",$blockorgs)).")",$org,$m) OR $isIP == true) {
+//if($ip != "YOUR_IP_HERE") {
+if( preg_match("(".implode("|",array_map("preg_quote",$blockorgs)).")",$org,$m) OR $isIP == true) {
 
 // Content for Orgs to see on the Blacklist
 //echo "<HTML><BODY><IMG SRC=\"https://i.imgflip.com/42oih3.jpg\"></HTML></BODY>";
@@ -149,24 +149,24 @@ while($row = $resulttrophy->fetch_assoc()) {
 
 if($row["Title"] == "MostDedicated"){
 $cmdtrophy = "curl -F file=@awardgifs/TrophyMostDedicated.gif -F 'initial_comment=Third Times a Charm! - ".$user." @ ".$portal."' -F channels=".$slackchannel." -H 'Authorization: Bearer ".$SlackBotOrLegacyToken."' https://slack.com/api/files.upload";
-exec($cmdtrophy);
+//exec($cmdtrophy);
 }
 
 
 if($row["Title"] == "MostDelayed"){
 $cmdtrophy2 = "curl -F file=@awardgifs/TrophyMostDelayed.gif -F 'initial_comment=Partys over! - ".$user." @ ".$portal."' -F channels=".$slackchannel." -H 'Authorization: Bearer ".$SlackBotOrLegacyToken."' https://slack.com/api/files.upload";
-exec($cmdtrophy2);
+//exec($cmdtrophy2);
 }
 
 if($row["Title"] == "MostDisclosedPWs"){
 $cmdtrophy3 = "curl -F file=@awardgifs/TrophyMostDisclosed.gif -F 'initial_comment=Here Try This One.. - ".$user." @ ".$portal."' -F channels=".$slackchannel." -H 'Authorization: Bearer ".$SlackBotOrLegacyToken."' https://slack.com/api/files.upload";
-exec($cmdtrophy3);
+//exec($cmdtrophy3);
 }
 
 
 if($row["Title"] == "MostPhish"){
 $cmdtrophy4 = "curl -F file=@awardgifs/TrophyMostPhish.gif -F 'initial_comment=Gonna need a bigger boat.. ".$row["username"]." phish! - ".$portal."' -F channels=".$slackchannel." -H 'Authorization: Bearer ".$SlackBotOrLegacyToken."' https://slack.com/api/files.upload";
-exec($cmdtrophy4);
+//exec($cmdtrophy4);
 }
 
 }
@@ -464,7 +464,7 @@ $connhibp->close();
 // If the Password is so non-unique, give a Trophy
 if ($haveibeenpwnedhits >= "3000"){
 $cmdtrophy5 = "curl -F file=@awardgifs/TrophyLeastUniquePassword.gif -F 'initial_comment=That PW Gets Around.. (".number_format($haveibeenpwnedhits)." times!) - ".$user." @ ".$portal."' -F channels=".$slackchannel." -H 'Authorization: Bearer ".$SlackBotOrLegacyToken."' https://slack.com/api/files.upload";
-exec($cmdtrophy5);
+//exec($cmdtrophy5);
 }
 
 } else $TroyHunt = "no";
