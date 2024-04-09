@@ -508,7 +508,7 @@ if($SlackIncomingWebhookURL != ""){
 $cmd = 'curl -s -X POST --data-urlencode \'payload={"channel": "'.$slackchannel.'", "username": "PhishBot", "text": "'.$message.'", "icon_emoji": "'.$slackemoji.'"}\' '.$SlackIncomingWebhookURL.'';
 
 exec($cmd,$cmdoutput);
-echo $cmd;
+//echo $cmd;
 
 //var_dump($cmdoutput);
 
