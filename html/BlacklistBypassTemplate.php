@@ -84,7 +84,9 @@ $message = ">".$url." was visited by ".$ip.". ".$allowed." (`".$org."`)";
 }
 
 // Set Slack Information Here       ************** MAKE SURE YOU SET THIS ****************
-$cmd = 'curl -s -X POST --data-urlencode \'payload={"channel": "#general", "username": "PhishBot", "text": "'.$message.'", "icon_emoji": ":bell:"}\' https://hooks.slack.com/services/YOUR_SLACK_API_KEY_HERE';
+if($jedi == 1){$webhookurl = "https://hooks.slack.com/services/BLOCKED_CHANNEL_WEBHOOK_HERE";}else{$webhookurl = "https://hooks.slack.com/services/ALLOWED_CHANNEL_WEBHOOK_HERE";}
+
+$cmd = 'curl -s -X POST --data-urlencode \'payload={"channel": "'.$channel.'", "username": "PhishBot", "text": "'.$message.'", "icon_emoji": ":bell:"}\' '.$webhookurl;
 //echo $cmd;
 exec($cmd);
 
