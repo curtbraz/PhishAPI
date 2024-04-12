@@ -87,7 +87,7 @@ $message = ">".$url." was visited by ".$ip.". ".$allowed." (`".$org."`)";
 if($ip != $myip){
 
 // Use a Slack webhook for a #blocked channel you can mute (first) and a #phishing one (second)
-if($jedi == 1){$webhookurl = "https://hooks.slack.com/services/UPDATE_WEBHOOK_FOR_BLOCKED_CHANNEL_BOT"; $icon = ":no_entry:";}else{$webhookurl = "https://hooks.slack.com/services/UPDATE_WEBHOOK_FOR_PHISHING_CHANNEL_BOT"; $icon = ":fishing_pole_and_fish:";}
+if($jedi == 1){$webhookurl = "https://hooks.slack.com/services/REPLACE_WITH_WEBHOOK_1"; $icon = ":no_entry:"; $channel = "#blocked";}else{$webhookurl = "https://hooks.slack.com/services/REPLACE_WITH_WEBHOOK_2"; $icon = ":fishing_pole_and_fish:"; $channel = "#phishing";}
 
 // Set Slack Information Here       ************** MAKE SURE YOU SET THIS ****************
 $cmd = 'curl -s -X POST --data-urlencode \'payload={"channel": "'.$channel.'", "username": "PhishBot", "text": "'.$message.'", "icon_emoji": "'.$icon.'"}\' '.$webhookurl;
@@ -102,6 +102,10 @@ $cmdanalytics = 'curl -s -k -X POST -d \'IP='.$ip.'&URL='.$url.'&Org='.$org.'&St
 exec($cmdanalytics,$result);
 
 ?>
+
+
+
+
 
 
 
