@@ -90,7 +90,7 @@ if($ip != $myip){
 if($jedi == 1){$webhookurl = "https://hooks.slack.com/services/UPDATE_WEBHOOK_FOR_BLOCKED_CHANNEL_BOT"; $icon = ":no_entry:";}else{$webhookurl = "https://hooks.slack.com/services/UPDATE_WEBHOOK_FOR_PHISHING_CHANNEL_BOT"; $icon = ":fishing_pole_and_fish:";}
 
 // Set Slack Information Here       ************** MAKE SURE YOU SET THIS ****************
-$cmd = 'curl -s -X POST --data-urlencode \'payload={"channel": "'.$channel.'", "username": "PhishBot", "text": "'.$message.'", "'.$icon.'": ":bell:"}\' '.$webhookurl;
+$cmd = 'curl -s -X POST --data-urlencode \'payload={"channel": "'.$channel.'", "username": "PhishBot", "text": "'.$message.'", "icon_emoji": "'.$icon.'"}\' '.$webhookurl;
 //echo $cmd;
 exec($cmd);
 
