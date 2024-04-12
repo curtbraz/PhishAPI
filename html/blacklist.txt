@@ -109,7 +109,6 @@ Massachusetts Institute of Technology
 McAfee
 Merit Network
 Microsoft
-Microsoft Corporation
 Mimecast
 MivoCloud SRL
 NForce Entertainment
@@ -271,3 +270,97 @@ Sichuan Chuanxn IDC
 FranTech Solutions
 SIA VEESP
 VIVID-HOSTING LLC
+Datacamp Limited
+Amazon.com, Inc.
+DigitalOcean, LLC
+EGIHosting
+QuickPacket, LLC
+Google LLC
+Hetzner Online GmbH
+INCX Global, LLC
+TalkTalk Communications Limited
+SCALEWAY S.A.S.
+HostRoyale Technologies Pvt Ltd
+Geekyworks IT Solutions Pvt Ltd
+iWeb Technologies Inc.
+Zemlyaniy Dmitro Leonidovich
+M247 Europe SRL
+IP Volume inc
+Hostwinds LLC.
+Wholesale Services Provider
+tzulo, inc.
+QuadraNet Enterprises LLC
+LLC Digital Network
+JSC "ER-Telecom Holding"
+F3 Netze e.V.
+Servers Australia Customers
+OVH SAS
+Performive LLC
+Alibaba (US) Technology Co., Ltd.
+Viettel Group
+WEB3 Leaders INC
+Clouvider
+Cogent Communications
+ISP4Life INC
+Stanford University
+Akamai Connected Cloud
+Lantek LLC
+Facebook, Inc.
+EDINAYA SET LIMITED LIABILITY COMPANY
+B2 Net Solutions Inc.
+networksdelmanana.com
+Zayo Bandwidth
+Censys, Inc.
+WhiteLabelColo
+INTERNET MEASUREMENT
+Pfcloud UG
+China Mobile communications corporation
+Shenzhen Tencent Computer Systems Company Limited
+Kansas Fiber Network, LLC
+Nexlogic Telecommunications Network, Inc.
+DataClub S.A.
+Datacamp Limited
+Vodafone GmbH
+Cloudflare, Inc.
+GTT Communications Inc.
+Cogent Communications
+Verizon Business
+Innsbrucker Kommunalbetriebe AG
+Kamatera, Inc.
+Hathway IP Over Cable Internet
+Voxility LLP
+PALO ALTO NETWORKS
+China Unicom Guangdong IP network
+AVAST Software s.r.o.
+Microsoft Corporation
+CenturyLink Communications, LLC
+Crown Castle Fiber LLC
+KeFF Networks Ltd
+Smart Technology LLC
+GLOBAL COLOCATION LIMITED
+IPXO LIMITED
+INVITE Systems SRL
+QUALYS, Inc.
+Oracle Corporation
+HostPapa
+Core-Backbone GmbH
+The Constant Company, LLC
+Bitdefender SRL
+Orion Network Limited
+TerraTransit AG
+Intelligence Network Online, Inc.
+Foreningen for digitala fri- och rattigheter
+Stiftung Erneuerbare Freiheit
+Forcepoint, LLC
+Cyber_Folks SRL
+VIVID-HOSTING LLC
+Latitude.sh
+Proservice LLC
+Tahoe Internet Exchange (TahoeIX)
+SS-Net
+Bhwani Cable and Broadband Services
+CS LOXINFO PUBLIC COMPANY LIMITED
+Ferdinand Zink trading as Tube-Hosting
+China Mobile Communications Group Co., Ltd.
+Shenzhen Tencent Computer Systems Company Limited
+TOTAL PLAY TELECOMUNICACIONES SA DE CV
