@@ -39,7 +39,7 @@ $conn->close();
 $message = "Email opened by ".$ip." (".$Org.")!";
 
 // Set Slack Information Here       ************** MAKE SURE YOU SET THIS ****************
-$cmd = 'curl -s -X POST --data-urlencode \'payload={"channel": "#phishing", "username": "PhishBot", "text": "'.$message.'", "icon_emoji": ":bell:"}\' https://hooks.slack.com/services/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';
+$cmd = 'curl -s -X POST --data-urlencode \'payload={"channel": "#phishing", "username": "PhishBot", "text": "'.$message.'", "icon_emoji": ":bell:"}\' https://hooks.slack.com/services/SLACK_WEBHOOK_HERE';
 //echo $cmd;
 exec($cmd);
 
