@@ -36,7 +36,7 @@ services:
       - "137:137"
       - "138:138"
       - "139:139"
-  db:
+  mysql:
    image: mysql:latest
    environment:
      MYSQL_ROOT_PASSWORD: PhishAPI
