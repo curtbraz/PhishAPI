@@ -44,7 +44,7 @@ services:
     environment:
       - MYSQL_DATABASE=fakesite
       - MYSQL_ROOT_PASSWORD=PhishAPI
-      - MYSQL_ROOT_HOST: '%'
+      - MYSQL_ROOT_HOST=%
     ports:
       - '3306:3306'
     volumes:
