@@ -43,9 +43,7 @@ services:
     image: mysql:8.0
     restart: always
     environment:
-      MYSQL_DATABASE: fakesite
-      MYSQL_ROOT_HOST: %
-      MYSQL_ROOT_PASSWORD: PhishAPI
+      - MYSQL_ALLOW_EMPTY_PASSWORD=yes
     volumes:
       - ./mysql_data:/var/lib/mysql
       - "./db/:/docker-entrypoint-initdb.d/"
