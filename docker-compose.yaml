@@ -37,16 +37,19 @@ services:
       - "138:138"
       - "139:139"
   db:
-    build:
-      dockerfile: mysql.Dockerfile
-      context: .
     image: mysql:8.0
     cap_add:
       - SYS_NICE
     restart: always
     environment:
       - MYSQL_DATABASE=fakesite
-      - MYSQL_ROOT_HOST=%
       - MYSQL_ROOT_PASSWORD=PhishAPI
+      - MYSQL_ROOT_HOST: '%'
     ports:
       - '3306:3306'
+    volumes:
+      - db:/var/lib/mysql
+      - ./db/DatabaseSQLDump.sql:/docker-entrypoint-initdb.d/init.sql
+volumes:
+  db:
+    driver: local
