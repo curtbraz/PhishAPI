@@ -36,19 +36,16 @@ services:
       - "137:137"
       - "138:138"
       - "139:139"
-  db:
-    image: mysql:8.0
-    cap_add:
-      - SYS_NICE
-    restart: always
-    environment:
-      - MYSQL_DATABASE=fakesite
-      - MYSQL_HOST=0.0.0.0
-      - MYSQL_ROOT_PASSWORD=PhishAPIDef@ulT
-    volumes:
-      - db:/var/lib/mysql
-      - "./db/:/docker-entrypoint-initdb.d/"
-    ports:
-      - '3306:3306'
+  database:
+   image: mysql:latest
+   environment:
+     MYSQL_ROOT_PASSWORD: PhishAPI
+     MYSQL_DATABASE: fakesite
+     MYSQL_USER: user
+     MYSQL_PASSWORD: PhishAPI
+   ports:
+     - 3306:3306
+   volumes:
+     - mysql_data:/var/lib/mysql
 volumes:
-  db:
+  mysql_data:
