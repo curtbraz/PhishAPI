@@ -37,6 +37,9 @@ services:
       - "138:138"
       - "139:139"
   database:
+    build:
+      dockerfile: mysql.Dockerfile
+      context: .
     image: mysql:8.0
     restart: always
     environment:
