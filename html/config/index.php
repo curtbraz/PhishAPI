@@ -1,6 +1,6 @@
 <?php
 
-$servername = "db";
+$servername = "database";
 $username = "root";
 $password = "PhishAPI";
 $dbname = "fakesite";
