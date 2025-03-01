@@ -43,13 +43,12 @@ services:
     restart: always
     environment:
       - MYSQL_DATABASE=fakesite
-      - MYSQL_ROOT_PASSWORD=PhishAPI
       - MYSQL_ROOT_HOST=%
-    ports:
-      - '3306:3306'
+      - MYSQL_ROOT_PASSWORD=PhishAPI
     volumes:
       - db:/var/lib/mysql
-      - ./db/DatabaseSQLDump.sql:/docker-entrypoint-initdb.d/init.sql
+      - ./db/DatabaseSQLDump.sql:/docker-entrypoint-initdb.d/DatabaseSQLDump.sql
+    ports:
+      - '3306:3306'
 volumes:
   db:
-    driver: local
