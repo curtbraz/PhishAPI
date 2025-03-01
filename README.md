@@ -57,8 +57,8 @@ Then
 cp `find /etc/letsencrypt/live/ -name cert.pem` certs/ssl/crt/phishapi.crt
 cp `find /etc/letsencrypt/live/ -name privkey.pem` certs/ssl/key/phishapi.key
 sudo systemctl start docker
-docker-compose build
-docker-compose up -d
+sudo docker-compose build
+sudo docker-compose up -d
 ```
 
 
