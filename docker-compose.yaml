@@ -36,7 +36,7 @@ services:
       - "137:137"
       - "138:138"
       - "139:139"
-  database:
+  db:
    image: mysql:latest
    environment:
      MYSQL_ROOT_PASSWORD: PhishAPI
@@ -44,8 +44,8 @@ services:
      MYSQL_USER: user
      MYSQL_PASSWORD: PhishAPI
    ports:
-     - 3306:3306
+     - "3306:3306"
    volumes:
-     - mysql_data:/var/lib/mysql
+     - "mysql_data:/var/lib/mysql"
 volumes:
   mysql_data:
