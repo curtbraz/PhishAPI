@@ -1,4 +1,4 @@
-version: "3.8"
+version: "3.7"
 services:
   web-server:
     build:
@@ -43,11 +43,11 @@ services:
     restart: always
     environment:
       - MYSQL_DATABASE=fakesite
-      - MYSQL_ROOT_HOST=%
-      - MYSQL_ROOT_PASSWORD=PhishAPI
+      - MYSQL_HOST=0.0.0.0
+      - MYSQL_ROOT_PASSWORD=PhishAPIDef@ulT
     volumes:
       - db:/var/lib/mysql
-      - ./db/DatabaseSQLDump.sql:/docker-entrypoint-initdb.d/DatabaseSQLDump.sql
+      - "./db/:/docker-entrypoint-initdb.d/"
     ports:
       - '3306:3306'
 volumes:
