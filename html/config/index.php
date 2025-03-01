@@ -1,8 +1,8 @@
 <?php
 
-$servername = "mysql-server";
+$servername = "db";
 $username = "root";
-$password = "PhishAPIDef@ulT";
+$password = "PhishAPI";
 $dbname = "fakesite";
 
 if(isset($_REQUEST['APIDomain'])){
