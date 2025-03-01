@@ -44,7 +44,6 @@ services:
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: PhishAPI
-      MYSQL_DATABASE: fakesite
       MYSQL_USER: user
       MYSQL_PASSWORD: PhishAPI
     volumes:
