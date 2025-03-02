@@ -1,7 +1,7 @@
 <?php
 
 $servername = "database";
-$username = "phishapi";
+$username = "root";
 $password = "password";
 $dbname = "fakesite";
 
