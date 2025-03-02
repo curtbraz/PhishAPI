@@ -552,6 +552,8 @@ $message = ">".$url." was visited by ".$ip.". ".$allowed." (`".$org."`)";
 }
 
 // Set Slack Information Here
+if(isset($_REQUEST['slackchannel'])){$slackchannel = $_REQUEST['slackchannel'];}else{$slackchannel = 'general';}
+if(isset($_REQUEST['SlackIncomingWebhookURL'])){$SlackIncomingWebhookURL = $_REQUEST['SlackIncomingWebhookURL'];}else{$SlackIncomingWebhookURL = 'https://';}
 $cmd = 'curl -s -X POST --data-urlencode \'payload={"channel": "'.$slackchannel.'", "username": "PhishBot", "text": "'.$message.'", "icon_emoji": ":bell:"}\' '.$SlackIncomingWebhookURL.'';
 
 // UNCOMMENT THIS IF YOU WANT ALERTS WHEN PEOPLE VISIT THE API
