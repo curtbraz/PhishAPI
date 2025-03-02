@@ -40,12 +40,12 @@ OR, Copy and Paste the Following in Ubuntu: (skip the certbot and "cp" steps if 
 sudo apt-get update
 sudo apt-get install docker-compose letsencrypt git -y
 git clone https://github.com/curtbraz/PhishAPI.git
+cd PhishAPI
 ```
 
 Skip this step if you don't have your certs yet.
 
 ```
-cd PhishAPI
 certbot certonly --standalone
 cp `find /etc/letsencrypt/live/ -name cert.pem` certs/ssl/crt/phishapi.crt
 cp `find /etc/letsencrypt/live/ -name privkey.pem` certs/ssl/key/phishapi.key
