@@ -1,11 +1,4 @@
 # PhishAPI
-See my blog @ https://curtbraz.blogspot.com/2018/10/phishapi-tool-rapid-deployment-of-fake.html for more details.  This API has three main features.  One allows you to easily deploy cloned landing pages for credential stealing, another is weaponized Word doc creation, and the third is saved email campaign templates.  Both attack methods are integrated into Slack for real-time alerting.  <b>Unfortunately, I'm no longer running this code as a free service @ https://phishapi.com due to cost, sorry!</b>
-
-
-## Update
-
-This latest version no longer redirects users of the landing pages to the API directly by default, but instead sends an AJAX request to the API server prior to posting the form data to the legitimate target site.  This provides for a more seamless experience for the "victim" and will actually log them into the target site when they submit their credentials, instead of performing what appears to be a refresh on the login page.  CSRF protection is bypassed by the API grabbing the token beforehand!  However, I haven't yet gotten around to updating all of the cloned portal pages to use this new method so many will still perform the redirect.  FYI!
-
 
 <p align="center">
 <img src="https://i.imgur.com/M6H7jfg.gif" width="60%"><br />
@@ -40,27 +33,32 @@ This latest version no longer redirects users of the landing pages to the API di
 
 5) Visit your URL and configure your settings for notifications first. The Default User/Pass for basic auth is PhishAPI:PhishAPI for the config and reporting pages but I recommend changing this by editing `.htpasswd`. You should be good to go! (By default the web server listens on HTTP/80 and HTTPS/443)
 
-OR, Copy and Paste the Following in Ubuntu:
+OR, Copy and Paste the Following in Ubuntu: (skip the certbot and "cp" steps if you don't have a cert ready yet)
 
 
 ```
 sudo apt-get update
 sudo apt-get install docker-compose letsencrypt git -y
 git clone https://github.com/curtbraz/PhishAPI.git
+```
+
+Skip this step if you don't have your certs yet.
+
+```
 cd PhishAPI
 certbot certonly --standalone
+cp `find /etc/letsencrypt/live/ -name cert.pem` certs/ssl/crt/phishapi.crt
+cp `find /etc/letsencrypt/live/ -name privkey.pem` certs/ssl/key/phishapi.key
 ```
 
 Then
 
 ```
-cp `find /etc/letsencrypt/live/ -name cert.pem` certs/ssl/crt/phishapi.crt
-cp `find /etc/letsencrypt/live/ -name privkey.pem` certs/ssl/key/phishapi.key
 sudo systemctl start docker
 sudo docker-compose build
 sudo docker-compose up -d
 ```
-
+Finally, if you only want to allowlist yourself while you obtain the certs (highly recommended), edit PhishAPI/html/index.php and change Line 31 to YOUR workstation's public IP address, not the IP of the server. Then comment out Line 32. Otherwise, leave it as-is and it will only block the denylist by default.
 
 # 1) To Use the API for Capturing Credentials from Fake Sites : 
 
