@@ -45,7 +45,7 @@ services:
     environment:
       - MYSQL_ROOT_PASSWORD=password
 #      - MYSQL_DATABASE=fakesite
-      - MYSQL_USER=root
+      - MYSQL_USER=user
       - MYSQL_PASSWORD=password
     volumes:
       - ./mysql_data:/var/lib/mysql
