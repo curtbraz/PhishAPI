@@ -44,7 +44,7 @@ services:
     restart: always
     environment:
       - MYSQL_ROOT_PASSWORD=password
-      - MYSQL_DATABASE=fakesite
+#      - MYSQL_DATABASE=fakesite
       - MYSQL_USER=root
       - MYSQL_PASSWORD=password
     volumes:
