@@ -2,7 +2,7 @@
 
 $servername = "database";
 $username = "root";
-$password = "PhishAPI";
+$password = "password";
 $dbname = "fakesite";
 
 if(isset($_REQUEST['APIDomain'])){
