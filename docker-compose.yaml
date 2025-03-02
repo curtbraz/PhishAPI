@@ -45,11 +45,12 @@ services:
     environment:
       - MYSQL_ROOT_PASSWORD=password
 #      - MYSQL_DATABASE=fakesite
-      - MYSQL_USER=root
+      - MYSQL_USER=user
       - MYSQL_PASSWORD=password
     volumes:
       - ./mysql_data:/var/lib/mysql
-#      - /db/:/docker-entrypoint-initdb.d/
+      - ./db/:/docker-entrypoint-initdb.d/
+    command: --default-authentication-plugin=mysql_native_password
     ports:
       - "3306:3306"
 volumes:
