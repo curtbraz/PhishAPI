@@ -1,7 +1,7 @@
 <?php
 
 $servername = "database";
-$username = "root";
+$username = "user";
 $password = "password";
 $dbname = "fakesite";
 
