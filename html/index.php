@@ -28,7 +28,7 @@ $blockorgs = array("1337 Services GmbH","31173 Services AB","321net","A1 Telekom
 //block via blacklist
 
 // UNCOMMENT AND ADD YOUR IP TO WHITELIST ONLY YOU BEFORE STARTING, THEN SWITCH COMMENTS TO ALLOW ALL BUT BLACKLIST
-if($ip != "75.103.132.161") {
+if($ip != "REPLACE_WITH_YOUR_IP_HERE") {
 //if( preg_match("(".implode("|",array_map("preg_quote",$blockorgs)).")",$org,$m) OR $isIP == true) {
 
 // Content for Orgs to see on the Blacklist
