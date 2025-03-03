@@ -6,6 +6,9 @@ $AutoBlock = false;
 // Your public IP (your client)        ************** MAKE SURE YOU SET THIS ****************
 $myip = "YOUR_IP_HERE";
 
+// I recommend registering at ipinfo to hit the API a lot, in case of large traffic volumes
+$ipinfoToken = "IPINFO_TOKEN_HERE";
+
 // Gets URI that's accessed
 $url = (empty($_SERVER['HTTPS']) ? 'http' : 'https') . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 
@@ -20,7 +23,7 @@ $ip = $_SERVER['REMOTE_ADDR'];
 
 // Can set your IP manually to see what Google sees
 //$ip = "8.8.8.8";
-$details = json_decode(file_get_contents("http://ipinfo.io/{$ip}/json"));
+$details = json_decode(file_get_contents("http://ipinfo.io/{$ip}/json?token={$ipinfoToken}"));
 $org = $details->org;
 
 // List of Orgs to be Blacklisted
