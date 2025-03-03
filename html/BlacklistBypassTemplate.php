@@ -48,7 +48,7 @@ array_push($blockorgs, $txt);
 }
 
 //Block via blacklist
-if( preg_match("(".implode("|",array_map("preg_quote",$blockorgs)).")",$org,$m) OR $isIP == true OR $org == "") {
+if( preg_match("(".implode("|",array_map("preg_quote",$blockorgs)).")",$org,$m) OR $isIP == true && $ip != $myip OR $org == "") {
 
 // Content for Orgs to see on the Blacklist
 // Point this to file containing HTML you want the blacklisters to see
