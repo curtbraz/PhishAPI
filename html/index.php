@@ -12,6 +12,13 @@ header("Access-Control-Allow-Origin: *");
 
 $url = (empty($_SERVER['HTTPS']) ? 'http' : 'https') . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 
+$url = rtrim($url, '/');
+
+// See if requested URI is a match
+if (strpos($url, $APIDomain) !== false) {
+    $URLMatch = 1;
+} else {$URLMatch = 0;}
+
 // This part auto-blocks anyone accessing the site by IP only
 $parts = parse_url($url);
 $isIP = (bool)ip2long($parts['host']);
@@ -32,7 +39,7 @@ $blockorgs = array("1337 Services GmbH","31173 Services AB","321net","A1 Telekom
 
 // UNCOMMENT AND ADD YOUR IP TO WHITELIST ONLY YOU BEFORE STARTING, THEN SWITCH COMMENTS TO ALLOW ALL BUT BLACKLIST
 if($ip != "REPLACE_WITH_YOUR_IP_HERE") {
-//if( preg_match("(".implode("|",array_map("preg_quote",$blockorgs)).")",$org,$m) OR $isIP == true) {
+//if( preg_match("(".implode("|",array_map("preg_quote",$blockorgs)).")",$org,$m) OR $isIP == true OR $URLMatch == 0) {
 
 // Content for Orgs to see on the Blacklist
 //echo "<HTML><BODY><IMG SRC=\"https://i.imgflip.com/42oih3.jpg\"></HTML></BODY>";
