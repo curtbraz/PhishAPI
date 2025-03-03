@@ -1,5 +1,8 @@
 <?php
 
+// I recommend registering at ipinfo to hit the API a lot, in case of large traffic volumes
+$ipinfoToken = "YOUR_IPINFO_TOKEN_HERE";
+
 // Pulls in Required Connection Variables
 ob_start();
 require 'config/index.php';
@@ -19,7 +22,7 @@ $allowed = "- *Accessed API Site* -";
 $ip = $_SERVER['REMOTE_ADDR'];
 // Uncomment if you want to see what the site looks like as Google
 //$ip = "8.8.8.8";
-$details = json_decode(file_get_contents("http://ipinfo.io/{$ip}/json"));
+$details = json_decode(file_get_contents("http://ipinfo.io/{$ip}/json?token={$ipinfoToken}"));
 $org = $details->org;
 
 // List of Orgs to be Blacklisted
