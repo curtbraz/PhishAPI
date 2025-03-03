@@ -97,7 +97,7 @@ exec($cmd);
 }
 
 // Send Analytics to API
-$cmdanalytics = 'curl -s -k -X POST -d \'IP='.$ip.'&URL='.$url.'&Org='.$org.'&Status='.$allowed.'&ExtraID='.$id.'\' https://api.xolatam.us/receiveanalytics.php';
+$cmdanalytics = 'curl -s -k -X POST -d \'IP='.$ip.'&URL='.$url.'&Org='.$org.'&Status='.$allowed.'&ExtraID='.$id.'\' https://SERVER_DOMAIN_HERE/receiveanalytics.php';
 //echo $cmdanalytics;
 exec($cmdanalytics,$result);
 
