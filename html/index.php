@@ -575,13 +575,13 @@ $message = ">".$url." was visited by ".$ip.". ".$allowed." (`".$org."`)";
 
 if($jedi == 1){
 if($blocked == 1){
-$message = $message." - Blocked va Blacklist";
+$message = $message." - Blocked API via Blacklist";
 }
 if($blocked == 2){
-$message = $message." - Blocked via IP";
+$message = $message." - Blocked API via IP";
 }
 if($blocked == 3){
-$message = $message." - Blocked via URL Mismatch";
+$message = $message." - Blocked API via URL Mismatch";
 }
 }
 
