@@ -2,15 +2,25 @@
 
 //AutoBlock Mode "true" means every IP but yours will get auto-added to the blacklist
 // "false" means everyone is allowed except if they're on the blacklist
-$AutoBlock = false;
+$AutoBlock = true;
 // Your public IP (your client)        ************** MAKE SURE YOU SET THIS ****************
 $myip = "YOUR_IP_HERE";
+// Set your expected URL here (ie https://phishu.net) in case you use a subdomain
+$lpurl = "https://YOUR_DOMAIN_HERE";
 
 // I recommend registering at ipinfo to hit the API a lot, in case of large traffic volumes
-$ipinfoToken = "IPINFO_TOKEN_HERE";
+$ipinfoToken = "YOUR_IPINFO_TOKEN_HERE";
 
 // Gets URI that's accessed
 $url = (empty($_SERVER['HTTPS']) ? 'http' : 'https') . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+$blocked = 0;
+$url = rtrim($url, '/');
+
+// See if requested URI is a match
+if (strpos($url, $lpurl) !== false) {
+    $URLMatch = 1;
+} else {$URLMatch = 0;}
+
 
 // Determines if the URI is an IP or Domain (blocks if IP)
 $parts = parse_url($url);
@@ -47,16 +57,16 @@ $myfile = fopen("/var/www/html/blacklist.txt", "a") or die("Unable to open file!
 fwrite($myfile, "\r\n". $txt);
 fclose($myfile);
 array_push($blockorgs, $txt);
-}
+$blocked = 1;
+}else{$blocked = 2;}
 }
 
 //Block via blacklist
-if( preg_match("(".implode("|",array_map("preg_quote",$blockorgs)).")",$org,$m) OR $isIP == true && $ip != $myip OR $org == "") {
+if( preg_match("(".implode("|",array_map("preg_quote",$blockorgs)).")",$org,$m) OR $isIP == true && $ip != $myip OR $org == "" OR $URLMatch == 0) {
 
-// Content for Orgs to see on the Blacklist
-// Point this to file containing HTML you want the blacklisters to see
-$fakehtml = file_get_contents('/var/www/html/fakecontent.html');
-echo $fakehtml;
+if($isIP == true OR $URLMatch == 0){
+$blocked = 3;	
+}
 
 // Respond With 404 Instead of Image. More Likely to Fool URL Checkers
 //header('HTTP/1.0 404 not found'); 
@@ -86,11 +96,23 @@ $id = "";
 $message = ">".$url." was visited by ".$ip.". ".$allowed." (`".$org."`)";
 }
 
+if($jedi == 1){
+if($blocked == 1){
+$message = $message." - Added to Blacklist";
+}
+if($blocked == 2){
+$message = $message." - Blocked via Blacklist";
+}
+if($blocked == 3){
+$message = $message." - Blocked via URL Mismatch";
+}
+}
+
 // Don't alert slack when I visit the page
 if($ip != $myip){
 
 // Use a Slack webhook for a #blocked channel you can mute (first) and a #phishing one (second)
-if($jedi == 1){$webhookurl = "https://hooks.slack.com/services/REPLACE_WITH_WEBHOOK_1"; $icon = ":no_entry:"; $channel = "#blocked";}else{$webhookurl = "https://hooks.slack.com/services/REPLACE_WITH_WEBHOOK_2"; $icon = ":fishing_pole_and_fish:"; $channel = "#phishing";}
+if($jedi == 1){$webhookurl = "https://hooks.slack.com/services/YOUR_SLACK_WEBHOOK_HERE"; $icon = ":no_entry:"; $channel = "#blocked";}else{$webhookurl = "https://hooks.slack.com/services/YOUR_SLACK_WEBHOOK_HERE"; $icon = ":fishing_pole_and_fish:"; $channel = "#phishing";}
 
 // Set Slack Information Here       ************** MAKE SURE YOU SET THIS ****************
 $cmd = 'curl -s -X POST --data-urlencode \'payload={"channel": "'.$channel.'", "username": "PhishBot", "text": "'.$message.'", "icon_emoji": "'.$icon.'"}\' '.$webhookurl;
@@ -100,7 +122,7 @@ exec($cmd);
 }
 
 // Send Analytics to API
-$cmdanalytics = 'curl -s -k -X POST -d \'IP='.$ip.'&URL='.$url.'&Org='.$org.'&Status='.$allowed.'&ExtraID='.$id.'\' https://SERVER_DOMAIN_HERE/receiveanalytics.php';
+$cmdanalytics = 'curl -s -k -X POST -d \'IP='.$ip.'&URL='.$url.'&Org='.$org.'&Status='.$allowed.'&ExtraID='.$id.'\' https://YOUR_API_DOMAIN_HERE/receiveanalytics.php';
 //echo $cmdanalytics;
 exec($cmdanalytics,$result);
 
