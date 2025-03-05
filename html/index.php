@@ -335,7 +335,7 @@ if($redirect == false && !isset($redirurl)){ ?>
 
 <HTML>
 <HEAD>
-<!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="main.css">
 <link rel="stylesheet" href="w3.css">
 <TITLE>PhishAPI</TITLE>
@@ -377,8 +377,11 @@ if($redirect == false && !isset($redirurl)){ ?>
 <TR><TD><a href="index.php?fakesite=1"><i class="fa fa-user fa-5X" aria-hidden="true" style="color: black;  font-size: 150px;"></i></a></TD><TD><a href="/phishingdocs/"><i class="fa fa-file-text fa-5X" aria-hidden="true"  style="color: black; font-size: 150px;"></a></TD><TD><a href="campaigns/"><i class="fa fa-envelope fa-5X" aria-hidden="true" style="color: black; font-size: 150px;"></i></a></TD></TR>
 </TABLE>
 </CENTER>
--->
+
+<!--
+	Can comment out the above and uncomment below to avoid bots seeing the PhishAPI interface once you're ready
 {"api_status":"healthy"}
+	-->
 </BODY>
 </HTML>
 
@@ -541,7 +544,8 @@ exec($cmd,$cmdoutput);
 // Execute Web Push Notifications
 $cmdpush = 'cd config && php push.php "'.$messagepush.'" "PhishBot" "./phishicon.png" "'.$slacklink.'" "PhishBot"';
 
-exec($cmdpush);
+// COMMENTED THIS OUT DUE TO CRASHING ISSUES WHEN THE BROWSER GRANT EXPIRES
+//exec($cmdpush);
 
 if($DiscordWebhook != ""){
 
