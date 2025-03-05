@@ -121,6 +121,18 @@ exec($cmd);
 
 }
 
+// Cleans up the status in the database and adds specifics
+if($allowed == "- *Allowed* -"){$allowed = "Allowed";}else{
+if($blocked == 1){
+$allowed = "Blocked and Added to Blacklist";
+}
+if($blocked == 2){
+$allowed = "Blocked via Blacklist";
+}
+if($blocked == 3){
+$allowed = "Blocked via URL Mismatch";
+}
+}
 // Send Analytics to API
 $cmdanalytics = 'curl -s -k -X POST -d \'IP='.$ip.'&URL='.$url.'&Org='.$org.'&Status='.$allowed.'&ExtraID='.$id.'\' https://YOUR_API_DOMAIN_HERE/receiveanalytics.php';
 //echo $cmdanalytics;
