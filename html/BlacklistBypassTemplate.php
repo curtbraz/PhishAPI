@@ -58,8 +58,8 @@ fwrite($myfile, "\r\n". $txt);
 fclose($myfile);
 array_push($blockorgs, $txt);
 $blocked = 1;
-}
 }else{$blocked = 2;}
+}
 
 //Block via blacklist
 if( preg_match("(".implode("|",array_map("preg_quote",$blockorgs)).")",$org,$m) OR $isIP == true && $ip != $myip OR $org == "" OR $URLMatch == 0) {
