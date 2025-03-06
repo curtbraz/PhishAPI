@@ -587,7 +587,7 @@ $message = $message." - Blocked API via IP";
 if($blocked == 3){
 $message = $message." - Blocked API via URL Mismatch";
 }
-}
+} else {$emoji = ":bell:";}
 
 // Set Slack Information Here
 if(!isset($slackchannel)){$slackchannel = $_REQUEST['slackchannel'];}
