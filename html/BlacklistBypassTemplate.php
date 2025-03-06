@@ -68,7 +68,9 @@ if($isIP == true OR $URLMatch == 0){
 $blocked = 3;	
 }
 
-// Respond With 404 Instead of Image. More Likely to Fool URL Checkers
+// Respond with a fake message for blacklisted content
+echo "{'status':'healthy'}";
+// Respond With 404 
 //header('HTTP/1.0 404 not found'); 
   
 $allowed = "- *Jedi Mind Trick Successful* -";
