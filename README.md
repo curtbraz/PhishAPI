@@ -59,8 +59,6 @@ sudo docker-compose build
 sudo docker-compose up -d
 ```
 
-Because of a glitch I can't seem to figure out, the database schema needs to be manually created. Do a `docker ps -a` to list the docker instances. Find the mysql one, and do a `docker exec -i <instance id> /bin/sh` and then `mysql -u root -ppassword < /etc/DatabaseSQLDump.sql`. 
-
 Finally, if you only want to allowlist yourself while you obtain the certs (highly recommended), edit PhishAPI/html/index.php and change Line 31 to YOUR workstation's public IP address, not the IP of the server. Then comment out Line 32. Otherwise, leave it as-is and it will only block the denylist by default.
 
 # 1) To Use the API for Capturing Credentials from Fake Sites : 
