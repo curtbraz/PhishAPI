@@ -73,7 +73,6 @@ CT-SHANXI-MAN-2
 Cyber_Folks SRL
 Data Center Experts LTD
 Data Communication Business Group
-Datacamp Limited
 DataClub S.A.
 DataHata
 DediPath
@@ -320,5 +319,31 @@ Zenlayer
 Zenlayer Inc
 ZSCALER
 Zwiebelfreunde e.V.
-T-Mobile USA, Inc.
 Ritter Communications
+Colocation America Corporation
+Telia Finland Oyj
+Closeness S.L.
+Virgin Media Limited
+Keminet SHPK
+QuxLabs AB
+BrainStorm Network, Inc
+Afrihost (Pty) Ltd
+Mythic Beasts Ltd
+w1n ltd
+CHINANET SHAANXI province Cloud Base network
+LeaseWeb Netherlands B.V.
+Jiangxi Jiujiang IDC
+Perimeter 81 LLC
+Paradise Networks LLC
+EKABI
+Cloud Computing Corporation
+UCLOUD INFORMATION TECHNOLOGY (HK) LIMITED
+Nybula LLC
+CYBERHOP LTD
+1&1 Versatel Deutschland GmbH
+Global Layer B.V.
+Datacamp Limited
+Iway AG
+Leaseweb Canada Inc.
+UK-2 Limited
+Driftnet Ltd
