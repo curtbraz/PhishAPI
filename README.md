@@ -2,6 +2,8 @@
 
 ## Update: As of 3/13/2025 the Community Edition of PhishAPI is no longer supported. A major new release is available for sale under a Commercial License. Please contact curtis@phishu.net if interested!
 
+
+
 <p align="center">
 <img src="https://i.imgur.com/M6H7jfg.gif" width="60%"><br />
 <b>Auto-Generate Fake Portal</b>
