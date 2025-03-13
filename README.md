@@ -1,7 +1,7 @@
 # PhishAPI
 
 ## Update: As of 3/13/2025 the Community Edition of PhishAPI is no longer supported. A major new release is available for sale under a Commercial License. Please contact curtis@phishu.net if interested!
-
+<br><br>
 
 
 <p align="center">
